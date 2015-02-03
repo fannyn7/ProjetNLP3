@@ -27,7 +27,7 @@ public class ExtractionPipeline {
 		    	throws UIMAException, IOException
 		    {
 		   		//http://allrecipes.com/Recipe/Alisons-Slow-Cooker-Vegetable-Beef-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=alison%20slow%20cooker&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1	
-		        String webpage = "http://allrecipes.com/Recipe/Feta-Chicken-Salad/Detail.aspx?event8=1&prop24=SR_Title&e11=feta%20chicken%20salad&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i1";
+		        String webpage = "http://allrecipes.com/recipe/almond-buttercrunch/";
 
 		        CollectionReader reader = createReader(
 		                WebPageReader.class,  WebPageReader.PARAM_URL, webpage 
@@ -79,6 +79,7 @@ public class ExtractionPipeline {
 		        		unitWriter,
 		        		ingredientAnnotator,
 		        		directivesAnnotator,
+		        		//writer
 		        		unitWriter,
 		        		ingredientWriter
 		        		);

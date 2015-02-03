@@ -75,6 +75,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 					int nbVP = 0;
 					for (Annotation b : list){
 						if (b.getType().getShortName().equals("VP")) nbVP++;
+						if (b.getType().getShortName().equals("NEG")) a.setEnd(a.getBegin());
 					}
 					if (nbVP==1){
 						String previous = resultingEntity;
