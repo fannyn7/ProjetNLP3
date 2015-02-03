@@ -1,0 +1,10 @@
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/'9os_Style_Chicken_Salad.xml -->
+cups
+teaspoons
+can
+cup
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$20,000_Prize-Winning_Chili.xml>
+pounds
+tablespoons
+teaspoon
+tablespoon
