@@ -1,6 +1,0 @@
-cup
-cube (bouillon)
-ounce
-pound
-tablespoon
-teaspoon

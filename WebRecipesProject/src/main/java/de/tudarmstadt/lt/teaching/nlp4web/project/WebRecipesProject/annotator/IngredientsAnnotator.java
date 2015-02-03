@@ -1,9 +1,13 @@
 package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.util.JCasUtil;
@@ -25,6 +29,50 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
 
 public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
  
+	private List<String> ingredientDatabase;
+
+	public List<String> getIngredientDatabase(){
+		return ingredientDatabase;	
+	}
+
+	private void initializeIngredientDatabase() {
+		ingredientDatabase = new ArrayList<String>();
+		try {
+			String f = FileUtils.readFileToString(new File("src/main/resources/databases/ingredient.txt"));
+			String[] lines = f.split("(\r\n|\n)");
+			for (String line : lines){
+				if (!line.startsWith("<--!")) {
+					// quantity unit word  
+					ingredientDatabase.add(line.toLowerCase());
+				} // else source acknowledgement
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private List<String> unitDatabase;
+
+	public List<String> getUnitDatabase(){
+		return unitDatabase;	
+	}
+
+	private void initializeUnitDatabase() {
+		unitDatabase = new ArrayList<String>();
+		try {
+			String f = FileUtils.readFileToString(new File("src/main/resources/databases/quantityUnit.txt"));
+			String[] lines = f.split("(\r\n|\n)");
+			for (String line : lines){
+				if (!line.startsWith("<--!")) {
+					// quantity unit word  
+					unitDatabase.add(line.toLowerCase());
+				} // else source acknowledgement
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 //        String NOMBRE = "[[1-9][0-9]*]"; //| [0-9].[0-9]* | y \in Numbers_in_letters
@@ -38,6 +86,12 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 //        String REGEX4 = QUALIFIERS+" "+INGREDIENT;
 //        String REGEX5 = INGREDIENT+" "+QUALIFIERS;
         
+		
+		
+		// Initialize databases
+		initializeIngredientDatabase();
+		initializeUnitDatabase();
+		
 		// we are processing the Ingredient patterns sentence by sentence
 		for (TextIngredients text : JCasUtil.select(jcas, TextIngredients.class))
 		for (Sentence sentence : JCasUtil.selectCovered(jcas, Sentence.class, text)) {
@@ -62,7 +116,46 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 					List<NP> nps = JCasUtil.selectCovered(jcas, NP.class,
 							beginSearch, sentence.getEnd());
 					NP np = nps.get(0);
-					NN ingredient = checkNP(jcas, np, quantity.getEnd()+1, quantity, sentence);
+					Annotation ingredient = checkNP(jcas, np, quantity.getEnd()+1, quantity, sentence);
+					
+					// PARTIE SENSIBLE
+					if (ingredient == null) {
+						// use Joker : database!
+						List<Token> tokens = JCasUtil.selectCovered(jcas, Token.class,
+								beginSearch, sentence.getEnd());
+						boolean found = false;
+						int j = 0;
+						while(!found && (j<tokens.size()) ) {
+							found = getIngredientDatabase().contains(tokens.get(j).getCoveredText());
+							j++;
+						}
+						
+						if (found) {
+							ingredient = tokens.get(j-1);
+						} else {
+							// get the unit from the UnitAnnotation 
+							// TODO : quantity unit should have type annotation in UnitAnnotation
+							 List<Annotation> l = JCasUtil.selectCovered(jcas, Annotation.class,
+									quantity.getBegin(), quantity.getEnd());
+							 Annotation quantityUnit = l.get(l.size());
+							// if the current unit quantity is in the unitDatabase
+							if (getUnitDatabase().contains(quantityUnit.getCoveredText())) {
+								// then : ?? for now, take the last token of the sentence
+								ingredient = tokens.get(tokens.size()-1);
+							} else {
+								// else roll back :
+								// remove it from text covered by the UnitAnnotation
+								System.out.println("quantity unit removed : "
+										+ quantityUnit.getCoveredText());
+								quantity.setUnit(null);
+								quantity.setEnd(ingredient.getBegin() - 1);
+								// set it as ingredient
+								ingredient = quantity;
+							}
+						}
+						
+					}// PARTIE SENSIBLE . FIN
+					
 					setIngredientAnnotation(jcas, ingredient, quantity);
 				} catch (IndexOutOfBoundsException e) {
 					System.out.println("IndexOutOfBoundsException");
@@ -110,7 +203,8 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 					System.out.println("units.size() > 0 "+quantity.getCoveredText()+"<>"+nextNP.getCoveredText());
 					return null;
 				}
-				// if nextNP is outside of the quantity sentence then roll back
+				// if nextNP is outside of the quantity sentence 
+				// then roll back
 				if (nextNP.getEnd() > sentence.getEnd()) {
 					System.out.println("nextNP out of sentence "+quantity.getCoveredText()+"<>"+nextNP.getCoveredText());
 					return null;
@@ -127,21 +221,11 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 		}
 	}
 
-	private void setIngredientAnnotation(JCas jcas, NN ingredient, UnitAnnotation quantity) {
+	private void setIngredientAnnotation(JCas jcas, Annotation ingredient, UnitAnnotation quantity) {
 		/*
 		 * create a new IngredientAnnotation
 		 */
 		IngredientAnnotation a = new IngredientAnnotation(jcas);
-		if (ingredient == null) {
-			// roll back
-			// get the wrong unit from the UnitAnnotation 
-			ingredient = JCasUtil.selectCovered(jcas, NN.class,
-								quantity.getBegin(), quantity.getEnd()).get(0);
-			// remove it from text covered by the UnitAnnotation
-			System.out.println("NN removed : "+ingredient.getCoveredText());
-			quantity.setUnit(null);
-			quantity.setEnd(ingredient.getBegin() - 1);
-		} 
 		// get the lemmata
 		Lemma lemma = JCasUtil.selectCovered(jcas, Lemma.class,
 				ingredient.getBegin(), ingredient.getEnd()).get(0);

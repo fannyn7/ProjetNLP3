@@ -1,0 +1,20 @@
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/'9os_Style_Chicken_Salad.xml -->
+chicken
+oranges
+dates
+pepper
+mayonnaise
+coconut
+lettuce
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$20,000_Prize-Winning_Chili.xml -->
+pork
+onion
+garlic
+beer
+water
+cumin
+sugar
+cocoa
+coriander
+flour
+

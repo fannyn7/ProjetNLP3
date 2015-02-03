@@ -1,5 +1,10 @@
 package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -21,7 +26,8 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
 
 /**
  * Questions :
- * 	.Q1 : cover the expression in bracket ? ex: 1 (16 ounce) small onion -> "1" or "1 (16 ounce)"   
+ * 	.Q1 : cover the expression in bracket ? ex: 1 (16 ounce) small onion -> "1" or "1 (16 ounce)"
+ *  .A1 : No   
  * 
  * Examples : 1 teaspoon 1/2 onion 1 cup
  * 
@@ -30,9 +36,32 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
  */
 public class UnitAnnotator extends JCasAnnotator_ImplBase {
 
+	private List<String> unitDatabase;
+
+	public List<String> getUnitDatabase(){
+		return unitDatabase;	
+	}
+
+	private void initializeUnitDatabase() {
+		unitDatabase = new ArrayList<String>();
+		try {
+			String f = FileUtils.readFileToString(new File("src/main/resources/databases/quantityUnit.txt"));
+			String[] lines = f.split("(\r\n|\n)");
+			for (String line : lines){
+				if (!line.startsWith("<--!")) {
+					// quantity unit word  
+					unitDatabase.add(line.toLowerCase());
+				} // else source acknowledgement
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 
+		initializeUnitDatabase();
 		splitByToken(jcas);
 		// splitByCoveredNP(jcas);
 
@@ -80,7 +109,7 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 							throw new RuntimeException(
 									"Fatal error : POS attribute of Token not initialized !! ");
 						} else {
-							if (posValue.equals("NN") || posValue.equals("NNS")) {
+							if (posValue.equals("NN") || posValue.equals("NNS") || getUnitDatabase().contains(unit_ingredient.getCoveredText()) ) {
 
 								// pattern : ( QUANTITY _ UNIT )
 								// pattern : ( QUANTITY ) _ INGREDIENT
@@ -88,9 +117,7 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 										unit_ingredient, "splitByToken");
 							} else {
 								// pattern : ( QUANTITY ) _ QUALIFIERS
-								// except if token.getCoveredText \in {can,
-								// ...}
-								// because then, pattern : ( QUANTITY _ UNIT)
+
 								int end = number.getEnd();
 								if (prn != null) {
 									end = prn.getEnd(); // cover the PRN ?
