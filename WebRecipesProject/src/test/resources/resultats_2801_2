@@ -1,0 +1,152 @@
+TODO				   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByFollowingNP 	| 11/11	| 1/11	|		1/2		|		0/2		|	1/13	|	12/13	|
+splitByCoveredNP   	| 4/11	| 7/11	|		0/2		|		2/2		|	9/13	|	1/13	|
+splitByToken       	| 1/11	| 11/11	|		0/2		|		2/2		|	12/13	|	1/11	|
+http://allrecipes.com/recipe/alisons-slow-cooker-vegetable-beef-soup/
+-- Document Text --
+
+1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+
+Place beef in a slow cooker. Pour in water. Stir in onion, tomatoes, mixed vegetables and potatoes. Season with bouillon, pepper, salt and basil. Cook on low 8 hours.
+
+-- UnitAnnotation --
+[UnitAnnotation] (1, 13) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByToken] 1 1/2 pounds
+[UnitAnnotation] (36, 42) [Quantity: 2][Unit: cup][TypeOf: splitByToken] 2 cups
+[UnitAnnotation] (50, 51) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (74, 86) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1 (28 ounce)
+[UnitAnnotation] (109, 129) [Quantity: 1][Unit: package][TypeOf: splitByToken] 1 (16 ounce) package
+[UnitAnnotation] (155, 165) [Quantity: 2][Unit: potato][TypeOf: splitByToken] 2 potatoes
+[UnitAnnotation] (185, 193) [Quantity: 10][Unit: cube][TypeOf: splitByToken] 10 cubes
+[UnitAnnotation] (219, 230) [Quantity: 2][Unit: teaspoon][TypeOf: splitByToken] 2 teaspoons
+[UnitAnnotation] (252, 253) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (271, 283) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+
+-- IngredientAnnotation --
+[IngredientAnnotation] (30, 34) [Amount: 1 1/2 pounds][NormalizedName: meat] meat
+[IngredientAnnotation] (43, 48) [Amount: 2 cups][NormalizedName: water] water
+[IngredientAnnotation] (58, 63) [Amount: 1][NormalizedName: onion] onion
+[IngredientAnnotation] (99, 107) [Amount: 1 (28 ounce)][NormalizedName: tomato] tomatoes
+[IngredientAnnotation] (143, 153) [Amount: 1 (16 ounce) package][NormalizedName: vegetable] vegetables
+[IngredientAnnotation] (157, 165) [Amount: 2][NormalizedName: potato] potatoes
+[IngredientAnnotation] (199, 207) [Amount: 10 cubes][NormalizedName: bouillon] bouillon
+[IngredientAnnotation] (244, 250) [Amount: 2 teaspoons][NormalizedName: pepper] pepper
+[IngredientAnnotation] (265, 269) [Amount: 1][NormalizedName: salt] salt
+KO basil (but correct w.r.t. the algorithm) [IngredientAnnotation] (273, 283) [Amount: 1][NormalizedName: tablespoon] tablespoon
+
+------------------------------------------
+------------------------------------------
+
+
+TODO				   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByFollowingNP 	| 11/11	| 1/11	|		1/2		|		0/2		|	1/13	|	12/13	|
+splitByCoveredNP   	| 4/11	| 7/11	|		0/2		|		2/2		|	9/13	|	1/13	|
+splitByToken       	| 1/11	| 11/11	|		0/2		|		2/2		|	12/13	|	1/11	|
+http://allrecipes.com/recipe/1-pot-3-bean-chicken-stew/
+
+janv. 29, 2015 11:19:06 AM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.IngredientWriter process(46)
+INFOS: === CAS ===
+-- Document Text --
+
+1 tablespoon canola oil.
+1 3/4 pounds boneless, skinless chicken breast or thighs, cut in chunks.
+1 large yellow onion, chopped.
+1 cup sliced celery.
+1 cup thinly sliced carrots.
+3 cups no-salt-added chopped tomatoes.
+1 (14.25 ounce) can fat-free, less-sodium chicken broth.
+1 (15 ounce) can no-salt-added black beans.
+1 (15 ounce) can no salt-added navy beans.
+1 (15 ounce) can no salt-added kidney beans.
+1 cup dry red wine.
+1 bay leaf.
+1 tablespoon Italian herbs.
+1 cup smoked chicken breast, cubed.
+1 cup fresh Italian parsley, chopped.
+1 cup fresh cilantro, chopped.
+
+
+Heat oil in a large pot; brown chicken. Remove chicken and set aside. Saute onions until soft, about 5 minutes. Add broth, beans, tomatoes, celery, carrots, wine, bay leaf, herbs and all the chicken; cover and simmer for 40 minutes. Add parsley, cilantro, salt, and pepper, and simmer 5 more minutes.
+-- IngredientAnnotation --
+[IngredientAnnotation] (21, 24) [Amount: 1 tablespoon][NormalizedName: oil] oil
+[IngredientAnnotation] (76, 82) [Amount: 1 3/4 pounds][NormalizedName: thigh] thighs
+[IngredientAnnotation] (114, 119) [Amount: 1][NormalizedName: onion] onion
+[IngredientAnnotation] (132, 135) [Amount: 1][NormalizedName: cup] cup
+[IngredientAnnotation] (153, 156) [Amount: 1][NormalizedName: cup] cup
+[IngredientAnnotation] (209, 217) [Amount: 3 cups][NormalizedName: tomato] tomatoes
+[IngredientAnnotation] (269, 274) [Amount: 1 (14.25 ounce)][NormalizedName: broth] broth
+[IngredientAnnotation] (313, 318) [Amount: 1 (15 ounce)][NormalizedName: bean] beans
+[IngredientAnnotation] (356, 361) [Amount: 1 (15 ounce)][NormalizedName: bean] beans
+[IngredientAnnotation] (401, 406) [Amount: 1 (15 ounce)][NormalizedName: bean] beans
+[IngredientAnnotation] (422, 426) [Amount: 1 cup][NormalizedName: wine] wine
+[IngredientAnnotation] (430, 433) [Amount: 1][NormalizedName: bay] bay
+[IngredientAnnotation] (461, 466) [Amount: 1][NormalizedName: herb] herbs
+[IngredientAnnotation] (489, 495) [Amount: 1 cup][NormalizedName: breast] breast
+[IngredientAnnotation] (524, 531) [Amount: 1 cup][NormalizedName: parsley] parsley
+[IngredientAnnotation] (554, 562) [Amount: 1 cup][NormalizedName: cilantro] cilantro
+
+-- DirectivesAnnotation --
+[DirectivesAnnotation] (615, 643) set  []
+[DirectivesAnnotation] (615, 629) remove  []
+[DirectivesAnnotation] (634, 643) set  []
+[DirectivesAnnotation] (651, 685) onion  []
+[DirectivesAnnotation] (651, 668) onion  []
+[DirectivesAnnotation] (687, 806) simmer  [broth, bean, bean, bean, tomato, wine, bay, bay, tomato, herb, parsley, cilantro]
+[DirectivesAnnotation] (687, 780) cover  [broth, bean, bean, bean, tomato, wine, bay, bay, tomato, herb, parsley, cilantro]
+[DirectivesAnnotation] (687, 773) add  [broth, bean, bean, bean, tomato, wine, bay, bay, tomato, herb, parsley, cilantro]
+[DirectivesAnnotation] (775, 780) cover  []
+[DirectivesAnnotation] (785, 806) simmer  []
+[DirectivesAnnotation] (808, 874) simmer  [parsley, cilantro]
+[DirectivesAnnotation] (808, 848) add  [parsley, cilantro]
+[DirectivesAnnotation] (853, 874) simmer  []
+
+
+janv. 29, 2015 11:19:06 AM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitWriter process(38)
+INFOS: === CAS ===
+-- Document Text --
+
+1 tablespoon canola oil.
+1 3/4 pounds boneless, skinless chicken breast or thighs, cut in chunks.
+1 large yellow onion, chopped.
+1 cup sliced celery.
+1 cup thinly sliced carrots.
+3 cups no-salt-added chopped tomatoes.
+1 (14.25 ounce) can fat-free, less-sodium chicken broth.
+1 (15 ounce) can no-salt-added black beans.
+1 (15 ounce) can no salt-added navy beans.
+1 (15 ounce) can no salt-added kidney beans.
+1 cup dry red wine.
+1 bay leaf.
+1 tablespoon Italian herbs.
+1 cup smoked chicken breast, cubed.
+1 cup fresh Italian parsley, chopped.
+1 cup fresh cilantro, chopped.
+
+
+Heat oil in a large pot; brown chicken. Remove chicken and set aside. Saute onions until soft, about 5 minutes. Add broth, beans, tomatoes, celery, carrots, wine, bay leaf, herbs and all the chicken; cover and simmer for 40 minutes. Add parsley, cilantro, salt, and pepper, and simmer 5 more minutes.
+-- UnitAnnotation --
+[UnitAnnotation] (1, 13) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+[UnitAnnotation] (26, 38) [Quantity: 1 3/4][Unit: pound][TypeOf: splitByToken] 1 3/4 pounds
+[UnitAnnotation] (99, 100) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (130, 131) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (151, 152) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (180, 186) [Quantity: 3][Unit: cup][TypeOf: splitByToken] 3 cups
+[UnitAnnotation] (219, 234) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1 (14.25 ounce)
+[UnitAnnotation] (276, 288) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1 (15 ounce)
+[UnitAnnotation] (320, 332) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1 (15 ounce)
+[UnitAnnotation] (363, 375) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1 (15 ounce)
+[UnitAnnotation] (408, 413) [Quantity: 1][Unit: cup][TypeOf: splitByToken] 1 cup
+[UnitAnnotation] (428, 429) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (440, 441) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (468, 473) [Quantity: 1][Unit: cup][TypeOf: splitByToken] 1 cup
+[UnitAnnotation] (504, 509) [Quantity: 1][Unit: cup][TypeOf: splitByToken] 1 cup
+[UnitAnnotation] (542, 547) [Quantity: 1][Unit: cup][TypeOf: splitByToken] 1 cup

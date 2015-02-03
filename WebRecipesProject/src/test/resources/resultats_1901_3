@@ -1,0 +1,46 @@
+TODO				   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByFollowingNP 	| 11/11	| 1/11	|		1/2		|		0/2		|	1/13	|	12/13	|
+splitByCoveredNP   	| 4/11	| 7/11	|		0/2		|		2/2		|	9/13	|	1/13	|
+splitByToken       	| 1/11	| 11/11	|		0/2		|		2/2		|	12/13	|	1/11	|
+http://allrecipes.com/recipe/alisons-slow-cooker-vegetable-beef-soup/
+
+janv. 19, 2015 7:13:09 PM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitWriter process(38)
+INFOS: === CAS ===
+-- Document Text --
+Alison's Slow Cooker Vegetable Beef Soup
+Place beef in a slow cooker. Pour in water. Stir in onion, tomatoes, mixed vegetables and potatoes. Season with bouillon, pepper, salt and basil. Cook on low 8 hours.
+1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+-- UnitAnnotation --
+[UnitAnnotation] (199, 206) [Quantity: 8][Unit: hour][TypeOf: splitByToken] 8 hours
+[UnitAnnotation] (208, 220) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByToken] 1 1/2 pounds
+[UnitAnnotation] (243, 249) [Quantity: 2][Unit: cup][TypeOf: splitByToken] 2 cups
+[UnitAnnotation] (257, 258) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (284, 292) [Quantity: 28][Unit: ounce][TypeOf: splitByToken] 28 ounce
+[UnitAnnotation] (319, 327) [Quantity: 16][Unit: ounce][TypeOf: splitByToken] 16 ounce
+ KO [UnitAnnotation] (362, 372) [Quantity: 2][Unit: potato][TypeOf: splitByToken] 2 potatoes
+[UnitAnnotation] (392, 400) [Quantity: 10][Unit: cube][TypeOf: splitByToken] 10 cubes
+[UnitAnnotation] (426, 437) [Quantity: 2][Unit: teaspoon][TypeOf: splitByToken] 2 teaspoons
+[UnitAnnotation] (478, 490) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+KO 1 tablespoon
+
+-- IngredientAnnotation --
+[IngredientAnnotation] (237, 241) [Amount: 1 1/2 pounds][NormalizedName: meat] meat
+[IngredientAnnotation] (250, 255) [Amount: 2 cups][NormalizedName: water] water
+[IngredientAnnotation] (265, 270) [Amount: 1][NormalizedName: onion] onion
+[IngredientAnnotation] (306, 314) [Amount: 28 ounce][NormalizedName: tomato] tomatoes
+vegetable KO [IngredientAnnotation] (329, 336) [Amount: 16 ounce][NormalizedName: package] package
+[IngredientAnnotation] (364, 372) [Amount: 2][NormalizedName: potato] potatoes
+[IngredientAnnotation] (406, 414) [Amount: 10 cubes][NormalizedName: bouillon] bouillon
+[IngredientAnnotation] (451, 457) [Amount: 2 teaspoons][NormalizedName: pepper] pepper
+KO salt (1 tablespoon)
+KO basil (1 tablespoon)

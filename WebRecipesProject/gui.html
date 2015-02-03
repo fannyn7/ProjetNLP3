@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="User interface">
+  <link rel="stylesheet" type="text/css" href="input_weblink.css" --/>
+  <title>Recipe information extraction</title>
+</head>
+<body class="saisie">
+<div id="main-wrapper">
+
+	<!--  <header><h1>Annuaire de restaurants</h1></header> -->
+
+	<section id="contenu">
+<!-- Creation-->
+	<form action="Creation"  method="post" name="formRG" onsubmit="return validerForm()">
+		<input type = "hidden" name ="item" value ="restaurant_gerant"/>
+		
+		<fieldset>
+			<legend>Input</legend>
+		   	<label>Recipe link</label>	<input name="recipeLink" type="text" value=""/>
+		   	<input id="valider" name="OK" value="Analyze" type="submit"></input>
+		</fieldset>
+	</form>
+</div>
+
+
+<!-- javascript -->
+<script language="javascript">
+
+/* Vérifie que tous les champs ont été bien remplis */
+function validerForm() {
+	alert("Validation du formulaire...."+"\n");
+	
+	// infos restaurant
+	var nomR = document.formRG.nomR.value;
+	//alert("nomR extrait\n");
+	var nbPlaces = parseInt(document.formRG.places.value);
+	//alert("nbPlaces extrait: "+nbPlaces+"\n");
+	var tel = document.formRG.tel.value;
+	//alert("tel extrait");
+	var adresse = document.formRG.adresse.value;
+	//alert("adresse extrait");
+	var ville = document.formRG.ville.value;
+	//alert("ville extrait");
+	var descrp = document.formRG.description.value; // peut être vide
+	//alert("descrp extrait");
+	
+	//alert("infos restaurant extraites");
+	
+	// infos gérant
+	var identG = document.formRG.ident.value;
+	//alert("identG extrait");
+	var nomG = document.formRG.nomG.value;
+	//alert("nomG extrait");
+	var prenomG = document.formRG.prenomG.value;
+	//alert("prenomG extrait");
+	var emailG = document.formRG.mailG.value;
+	//alert("emailG extrait");
+	var mdpG = document.formRG.mdp.value;
+	//alert("mdpG extrait");
+	
+	//alert("infos gérant extraites");
+	
+	// champs obligatoires non vides
+	if ( (nomR == "") ||  (tel == "") || (adresse == "") || (ville == "") ||
+			(identG == "") || (nomG == "") || (prenomG == "") || (emailG == "") || (mdpG == "") ) {
+				alert("Remplissez tous les champs SVP");
+	} else {
+		//alert("Champs obligatoires remplis");
+	}
+	
+	// places est un entier si il existe
+	var entier = new RegExp("([0-9])+",""); //ne teste pas toute la chaine!
+	var nb = parseInt(nbPlaces);
+	/*if ( (nbPlaces != "") && !entier.test(eval(nbPlaces)) ) {
+		//alert("Le nombre de places doit être entier");
+		document.formRG.places.value = "Entrez un entier svp"+nbPlaces;
+		document.formRG.places.select();
+	} else {
+		alert("nb places = "+nb);
+	}
+	return false;*/
+	return true;
+	/*alert ("nomR = "+ nomR + "\n"+
+			"prenomR = "+ prenomR);
+	
+	if ( (nomR == "") )  || (nbPlaces == "") || (tel == "") || (adresse == "") || (ville == "") ||
+			(identG == "") || (nomG == "") || (prenomG == "") || (emailG == "") || (mdpG == "") ) {
+		//reponse = false;
+		alert ("nomR = "+ nomR + "\n"+
+				"prenomR = "+ prenomR);
+		== "") || (nbPlaces == "") || (tel == "") || (adresse == "") || (ville == "") ||
+			(identG == "") || (nomG == "") || (prenomG == "") || (emailG == "") || (mdpG == "") ) {)
+	}*/
+	
+	
+}
+</script>
+<!-- fin javascript -->
+</body>
+</html>

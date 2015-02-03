@@ -1,0 +1,41 @@
+     			   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByToken       	| 4/10	| 6/10	|		0/2		|		2/2		|	8/12	|	4/12	|
+http://allrecipes.com/recipe/alisons-slow-cooker-vegetable-beef-soup/
+
+janv. 18, 2015 11:47:27 PM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.IngredientWriter process(46)
+INFOS: === CAS ===
+-- Document Text --
+1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+-- UnitAnnotation --
+pound OK[UnitAnnotation] (0, 12) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByToken] 1 1/2 pounds
+cup OK[UnitAnnotation] (35, 41) [Quantity: 2][Unit: cup][TypeOf: splitByToken] 2 cups
+NULL OK[UnitAnnotation] (49, 50) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+KO 1 (28 ounce) can [TypeOf: splitByToken]
+ounce OK[UnitAnnotation] (76, 84) [Quantity: 28][Unit: ounce][TypeOf: splitByToken] 28 ounce
+KO 1 (16 ounce) package [TypeOf: splitByToken]
+ounce OK[UnitAnnotation] (111, 119) [Quantity: 16][Unit: ounce][TypeOf: splitByToken] 16 ounce
+NULL KO[UnitAnnotation] (154, 164) [Quantity: 2][Unit: potato][TypeOf: splitByToken] 2 potatoes
+cube OK[UnitAnnotation] (184, 192) [Quantity: 10][Unit: cube][TypeOf: splitByToken] 10 cubes
+teaspoon OK[UnitAnnotation] (218, 229) [Quantity: 2][Unit: teaspoon][TypeOf: splitByToken] 2 teaspoons
+tablespoon OK[UnitAnnotation] (270, 282) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+KO : 1 tablespoon (forgotten) 
+
+-- IngredientAnnotation --
+meat OK [IngredientAnnotation] (29, 33) [Amount: 1 1/2 pounds][NormalizedName: meat] meat
+water OK [IngredientAnnotation] (42, 47) [Amount: 2 cups][NormalizedName: water] water
+onion OK [IngredientAnnotation] (57, 62) [Amount: 1][NormalizedName: onion] onion
+[IngredientAnnotation] (98, 106) [Amount: 28 ounce][NormalizedName: tomato] tomatoes
+[IngredientAnnotation] (121, 128) [Amount: 16 ounce][NormalizedName: package] package
+[IngredientAnnotation] (198, 206) [Amount: 2 potatoes][NormalizedName: bouillon] bouillon
+[IngredientAnnotation] (198, 206) [Amount: 10 cubes][NormalizedName: bouillon] bouillon
+[IngredientAnnotation] (243, 249) [Amount: 2 teaspoons][NormalizedName: pepper] pepper

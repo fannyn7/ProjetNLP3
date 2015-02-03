@@ -1,0 +1,54 @@
+TODO				   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByFollowingNP 	| 11/11	| 1/11	|		1/2		|		0/2		|	1/13	|	12/13	|
+splitByCoveredNP   	| 4/11	| 7/11	|		0/2		|		2/2		|	9/13	|	1/13	|
+splitByToken       	| 1/11	| 11/11	|		0/2		|		2/2		|	12/13	|	1/11	|
+http://allrecipes.com/recipe/alisons-slow-cooker-vegetable-beef-soup/
+
+TODO				   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByFollowingNP 	| 11/11	| 1/11	|		1/2		|		0/2		|	1/13	|	12/13	|
+splitByCoveredNP   	| 4/11	| 7/11	|		0/2		|		2/2		|	9/13	|	1/13	|
+splitByToken       	| 1/11	| 11/11	|		0/2		|		2/2		|	12/13	|	1/11	|
+http://allrecipes.com/Recipe/Grilled-Shrimp-Scampi/?prop24=hn_slide1_Grilled-Shrimp-Scampi&evt19=1
+
+janv. 16, 2015 12:08:05 PM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitWriter process(38)
+INFOS: === CAS ===
+-- Document Text --
+Alison's Slow Cooker Vegetable Beef Soup
+Place beef in a slow cooker. Pour in water. Stir in onion, tomatoes, mixed vegetables and potatoes. Season with bouillon, pepper, salt and basil. Cook on low 8 hours.
+1 1/2 pounds cubed beef stew meat 2 cups water 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+-- UnitAnnotation --
+[UnitAnnotation] (199, 206) [Quantity: 8][Unit: hour][TypeOf: splitByToken] 8 hours
+[UnitAnnotation] (208, 220) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByToken] 1 1/2 pounds
+[UnitAnnotation] (242, 248) [Quantity: 2][Unit: cup][TypeOf: splitByToken] 2 cups
+[UnitAnnotation] (255, 256) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1
+[UnitAnnotation] (278, 290) [Quantity: 1][Unit: null][TypeOf: splitByToken] 1 (28 ounce)
+[UnitAnnotation] (281, 289) [Quantity: 28][Unit: ounce][TypeOf: splitByToken] 28 ounce
+[UnitAnnotation] (312, 332) [Quantity: 1][Unit: package][TypeOf: splitByToken] 1 (16 ounce) package
+[UnitAnnotation] (315, 323) [Quantity: 16][Unit: ounce][TypeOf: splitByToken] 16 ounce
+[UnitAnnotation] (357, 367) [Quantity: 2][Unit: potato][TypeOf: splitByToken] 2 potatoes
+[UnitAnnotation] (386, 394) [Quantity: 10][Unit: cube][TypeOf: splitByToken] 10 cubes
+[UnitAnnotation] (419, 430) [Quantity: 2][Unit: teaspoon][TypeOf: splitByToken] 2 teaspoons
+[UnitAnnotation] (451, 463) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+[UnitAnnotation] (469, 481) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+
+janv. 16, 2015 12:20:54 PM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitWriter process(38)
+INFOS: === CAS ===
+-- Document Text --
+Grilled Shrimp Scampi
+In a large, non-reactive bowl, stir together the olive oil, lemon juice, parsley, garlic, and black pepper. Season with crushed red pepper, if desired. Add shrimp, and toss to coat. Marinate in the refrigerator for 30 minutes. Preheat grill for high heat. Thread shrimp onto skewers, piercing once near the tail and once near the head. Discard any remaining marinade. Lightly oil grill grate. Grill for 2 to 3 minutes per side, or until opaque.
+1/4 cup olive oil 1/4 cup lemon juice 3 tablespoons chopped fresh parsley 1 tablespoon minced garlic ground black pepper to taste crushed red pepper flakes to taste (optional) 1 1/2 pounds medium shrimp, peeled and deveined
+-- UnitAnnotation --
+[UnitAnnotation] (237, 247) [Quantity: 30][Unit: minute][TypeOf: splitByToken] 30 minutes
+
+KO 2 to 3 minutes [UnitAnnotation] (425, 426) [Quantity: 2][Unit: null][TypeOf: splitByToken] 2
+KO 2 to 3 minutes [UnitAnnotation] (430, 439) [Quantity: 3][Unit: minute][TypeOf: splitByToken] 3 minutes
+
+[UnitAnnotation] (467, 474) [Quantity: 1/4][Unit: cup][TypeOf: splitByToken] 1/4 cup
+
+[UnitAnnotation] (485, 492) [Quantity: 1/4][Unit: cup][TypeOf: splitByToken] 1/4 cup
+
+KO 3 tablespoon [TypeOf: splitByToken] 3 not annotated as CARD but only as ADVMOD, ADVP
+
+[UnitAnnotation] (541, 553) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+
+[UnitAnnotation] (643, 655) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByToken] 1 1/2 pounds

@@ -1,0 +1,66 @@
+				   	  KO	| OK	| KO secondary	| OK secondary	| Total OK	| Total KO	| 
+splitByFollowingNP 	| 11/11	| 1/11	|		1/2		|		0/2		|	1/13	|	12/13	|
+splitByCoveredNP   	| 5/11	| 6/11	|		0/2		|		2/2		|	9/13	|	2/13	|
+splitByToken       	| 4/11	| 8/11	|		0/2		|		2/2		|	10/13	|	4/11	|
+http://allrecipes.com/recipe/alisons-slow-cooker-vegetable-beef-soup/
+
+janv. 15, 2015 7:51:51 PM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitWriter process(38)
+INFOS: === CAS ===
+-- Document Text --
+Alison's Slow Cooker Vegetable Beef Soup
+Place beef in a slow cooker. Pour in water. Stir in onion, tomatoes, mixed vegetables and potatoes. Season with bouillon, pepper, salt and basil. Cook on low 8 hours.
+1 1/2 pounds cubed beef stew meat 2 cups water 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+
+-- UnitAnnotation --
+hour KO [UnitAnnotation] (199, 493) [Quantity: 8][Unit: pound][TypeOf: splitByFollowingNP] 8 hours.
+1 1/2 pounds cubed beef stew meat 2 cups water 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+hour KO [UnitAnnotation] (199, 493) [Quantity: 8][Unit: pound][TypeOf: splitByCoveredNP] 8 hours.
+1 1/2 pounds cubed beef stew meat 2 cups water 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+hour OK [UnitAnnotation] (199, 206) [Quantity: 8][Unit: hour][TypeOf: splitByToken] 8 hours
+
+pound OK [UnitAnnotation] (208, 493) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByCoveredNP] 1 1/2 pounds cubed beef stew meat 2 cups water 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+pound KO [UnitAnnotation] (208, 248) [Quantity: 1 1/2][Unit: beef][TypeOf: splitByFollowingNP] 1 1/2 pounds cubed beef stew meat 2 cups
+pound OK [UnitAnnotation] (208, 220) [Quantity: 1 1/2][Unit: pound][TypeOf: splitByToken] 1 1/2 pounds
+
+cup KO [UnitAnnotation] (242, 256) [Quantity: 2][Unit: water][TypeOf: splitByFollowingNP] 2 cups water 1
+cup OK [UnitAnnotation] (242, 248) [Quantity: 2][Unit: cup][TypeOf: splitByToken] 2 cups
+cup OK [UnitAnnotation] (242, 248) [Quantity: 2][Unit: cup][TypeOf: splitByCoveredNP] 2 cups
+
+ KO [UnitAnnotation] (255, 493) [Quantity: 1][Unit: onion][TypeOf: splitByFollowingNP] 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+ KO [UnitAnnotation] (255, 493) [Quantity: 1][Unit: onion][TypeOf: splitByCoveredNP] 1 small onion, chopped 1 (28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+ K0 [UnitAnnotation] (255, 262) [Quantity: 1][Unit: small][TypeOf: splitByToken] 1 small
+
+KO 1 can [UnitAnnotation] (278, 290) [Quantity: 1][Unit: ounce][TypeOf: splitByCoveredNP] 1 (28 ounce)
+KO 1 can [UnitAnnotation] (278, 289) [Quantity: 1][Unit: ounce][TypeOf: splitByFollowingNP] 1 (28 ounce
+KO 1 can [UnitAnnotation] (278, 281) [Quantity: 1][Unit: (][TypeOf: splitByToken] 1 (
+KO 1 can [UnitAnnotation] (281, 493) [Quantity: 28][Unit: tomato][TypeOf: splitByFollowingNP] 28 ounce) can crushed tomatoes 1 (16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon, crumbled 2 teaspoons ground black pepper 1 tablespoon salt 1 tablespoon dried basil
+
+ounce OK secondary [UnitAnnotation] (281, 289) [Quantity: 28][Unit: ounce][TypeOf: splitByToken] 28 ounce
+ounce OK secondary [UnitAnnotation] (281, 289) [Quantity: 28][Unit: ounce][TypeOf: splitByCoveredNP] 28 ounce
+
+KO 1 package [UnitAnnotation] (312, 323) [Quantity: 1][Unit: ounce][TypeOf: splitByFollowingNP] 1 (16 ounce
+KO 1 package [UnitAnnotation] (312, 315) [Quantity: 1][Unit: (][TypeOf: splitByToken] 1 (
+KO 1 package [TypeOf: splitByCoveredNP]
+
+ounce KO secondary [UnitAnnotation] (315, 409) [Quantity: 16][Unit: potato][TypeOf: splitByFollowingNP] 16 ounce) package frozen mixed vegetables 2 potatoes, peeled and cubed 10 cubes beef bouillon,
+ounce OK secondary [UnitAnnotation] (315, 323) [Quantity: 16][Unit: ounce][TypeOf: splitByToken] 16 ounce
+ounce OK secondary [UnitAnnotation] (315, 323) [Quantity: 16][Unit: ounce][TypeOf: splitByCoveredNP] 16 ounce
+
+ KO [UnitAnnotation] (357, 409) [Quantity: 2][Unit: potato][TypeOf: splitByCoveredNP] 2 potatoes, peeled and cubed 10 cubes beef bouillon,
+ KO [UnitAnnotation] (357, 408) [Quantity: 2][Unit: cube][TypeOf: splitByFollowingNP] 2 potatoes, peeled and cubed 10 cubes beef bouillon
+ KO [UnitAnnotation] (357, 367) [Quantity: 2][Unit: potato][TypeOf: splitByToken] 2 potatoes
+
+cube K0 [UnitAnnotation] (386, 408) [Quantity: 10][Unit: beef][TypeOf: splitByFollowingNP] 10 cubes beef bouillon
+cube OK [UnitAnnotation] (386, 408) [Quantity: 10][Unit: cube][TypeOf: splitByCoveredNP] 10 cubes beef bouillon
+cube OK [UnitAnnotation] (386, 394) [Quantity: 10][Unit: cube][TypeOf: splitByToken] 10 cubes
+
+teaspoon KO [UnitAnnotation] (419, 437) [Quantity: 2][Unit: ground][TypeOf: splitByFollowingNP] 2 teaspoons ground
+teaspoon OK [UnitAnnotation] (419, 430) [Quantity: 2][Unit: teaspoon][TypeOf: splitByToken] 2 teaspoons
+teaspoon OK [UnitAnnotation] (419, 430) [Quantity: 2][Unit: teaspoon][TypeOf: splitByCoveredNP] 2 teaspoons
+
+tablespoon OK [UnitAnnotation] (451, 481) [Quantity: 1][Unit: tablespoon][TypeOf: splitByFollowingNP] 1 tablespoon salt 1 tablespoon
+tablespoon OK [UnitAnnotation] (451, 481) [Quantity: 1][Unit: tablespoon][TypeOf: splitByCoveredNP] 1 tablespoon salt 1 tablespoon
+tablespoon OK [UnitAnnotation] (451, 463) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+
+tablespoon OK [UnitAnnotation] (469, 481) [Quantity: 1][Unit: tablespoon][TypeOf: splitByToken] 1 tablespoon
+tablespoon OK [UnitAnnotation] (469, 481) [Quantity: 1][Unit: tablespoon][TypeOf: splitByCoveredNP] 1 tablespoon

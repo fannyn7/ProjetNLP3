@@ -1,0 +1,53 @@
+private void splitByCoveredNP(JCas jcas) throws AnalysisEngineProcessException {
+		// TODO Auto-generated method stub
+
+		// we are processing the Unit patterns sentence by sentence
+		for (Sentence sentence : JCasUtil.select(jcas, Sentence.class)) {
+
+			// for all cardinal number in this sentence
+			for (CARD number : JCasUtil.selectCovered(jcas, CARD.class,
+					sentence)) {
+				if (JCasUtil.selectCovered(CARD.class, number).size() > 0) {
+					continue;
+				}
+				try {
+
+					// check the covered NP (noun chunk)
+					NP unit_ingredient = JCasUtil.selectCovered(jcas,
+							NP.class, number.getBegin(), jcas.getDocumentText().length()).get(0);
+					if (unit_ingredient.getCoveredText().contains("(")) {
+						Token nextNumber = JCasUtil.selectFollowing(jcas, Token.class, number, 1).get(0);
+						if (nextNumber.equals("(")) {
+							// find the next NP witch not part of a PRN (parenthesed expression)
+							Token npBegin = JCasUtil.selectCovered(jcas, Token.class, unit_ingredient).get(0);
+							PRN prn = JCasUtil.selectFollowing(jcas, PRN.class, number, 1).get(0);
+							unit_ingredient = JCasUtil.selectFollowing(jcas, NP.class, prn, 1).get(0);
+						}
+					}
+					System.out.println("unit_ingredient : "
+							+ unit_ingredient.getCoveredText());
+					// Idea? : check the (longest?) NP (noun chunk) that covers
+					// the number
+
+					{
+						// get the list of tokens between the number and the
+						// chunk
+						List<Token> tokens = JCasUtil.selectCovered(jcas,
+								Token.class, number.getEnd(),
+								unit_ingredient.getBegin());
+
+						setUnitAnnotation(jcas, number, unit_ingredient,
+								"splitByCoveredNP");
+					}
+				} catch (IndexOutOfBoundsException e) {
+
+					System.out.println("IndexOutOfBoundsException");
+					// empty select() calls arrive here
+
+				} // catch
+
+			} // for all noun chunks in the sentence
+
+		} // for all sentences
+
+	}

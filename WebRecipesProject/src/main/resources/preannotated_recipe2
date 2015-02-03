@@ -1,0 +1,674 @@
+janv. 18, 2015 11:32:09 PM de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.WebPageConsumer process(35)
+INFOS: === CAS ===
+-- Document Text --
+1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+-- All Annotations --
+[DocumentAnnotation] (0, 296) 1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+
+[TagsetDescription] (0, 296) 1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+
+[TagsetDescription] (0, 296) 1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+
+[TagsetDescription] (0, 296) 1 1/2 pounds cubed beef stew meat.
+2 cups water.
+1 small onion, chopped.
+1 (28 ounce) can crushed tomatoes.
+1 (16 ounce) package frozen mixed vegetables.
+2 potatoes, peeled and cubed.
+10 cubes beef bouillon, crumbled.
+2 teaspoons ground black pepper.
+1 tablespoon salt.
+1 tablespoon dried basil.
+
+
+[ROOT] (0, 34) 1 1/2 pounds cubed beef stew meat.
+
+[S] (0, 34) 1 1/2 pounds cubed beef stew meat.
+
+[Sentence] (0, 34) 1 1/2 pounds cubed beef stew meat.
+
+[NP] (0, 12) 1 1/2 pounds
+
+[CARD] (0, 5) 1 1/2
+
+[NUM] (0, 5) 1 1/2
+
+[Lemma] (0, 5) 1 1/2
+
+[Token] (0, 5) 1 1/2
+
+[NN] (6, 12) pounds
+
+[Lemma] (6, 12) pounds
+
+[NSUBJ] (6, 12) pounds
+
+[Token] (6, 12) pounds
+
+[VP] (13, 33) cubed beef stew meat
+
+[Lemma] (13, 18) cubed
+
+[V] (13, 18) cubed
+
+[Token] (13, 18) cubed
+
+[NP] (19, 33) beef stew meat
+
+[NN] (19, 23) beef
+
+[Lemma] (19, 23) beef
+
+[Token] (19, 23) beef
+
+[NN] (19, 23) beef
+
+[NN] (24, 28) stew
+
+[Lemma] (24, 28) stew
+
+[Token] (24, 28) stew
+
+[NN] (24, 28) stew
+
+[DOBJ] (29, 33) meat
+
+[NN] (29, 33) meat
+
+[Lemma] (29, 33) meat
+
+[Token] (29, 33) meat
+
+[PUNC] (33, 34) .
+
+[Lemma] (33, 34) .
+
+[Token] (33, 34) .
+
+[ROOT] (35, 48) 2 cups water.
+
+[NP] (35, 48) 2 cups water.
+
+[Sentence] (35, 48) 2 cups water.
+
+[NP] (35, 41) 2 cups
+
+[CARD] (35, 36) 2
+
+[NUM] (35, 36) 2
+
+[Lemma] (35, 36) 2
+
+[Token] (35, 36) 2
+
+[NN] (37, 41) cups
+
+[Lemma] (37, 41) cups
+
+[Token] (37, 41) cups
+
+[DEP] (42, 47) water
+
+[NN] (42, 47) water
+
+[Lemma] (42, 47) water
+
+[NP] (42, 47) water
+
+[Token] (42, 47) water
+
+[PUNC] (47, 48) .
+
+[Lemma] (47, 48) .
+
+[Token] (47, 48) .
+
+[ROOT] (49, 72) 1 small onion, chopped.
+
+[S] (49, 72) 1 small onion, chopped.
+
+[Sentence] (49, 72) 1 small onion, chopped.
+
+[NP] (49, 62) 1 small onion
+
+[CARD] (49, 50) 1
+
+[NUM] (49, 50) 1
+
+[Lemma] (49, 50) 1
+
+[Token] (49, 50) 1
+
+[AMOD] (51, 56) small
+
+[Lemma] (51, 56) small
+
+[ADJ] (51, 56) small
+
+[Token] (51, 56) small
+
+[NN] (57, 62) onion
+
+[Lemma] (57, 62) onion
+
+[NSUBJ] (57, 62) onion
+
+[Token] (57, 62) onion
+
+[PUNC] (62, 63) ,
+
+[Lemma] (62, 63) ,
+
+[Token] (62, 63) ,
+
+[VP] (64, 71) chopped
+
+[Lemma] (64, 71) chopped
+
+[V] (64, 71) chopped
+
+[Token] (64, 71) chopped
+
+[PUNC] (71, 72) .
+
+[Lemma] (71, 72) .
+
+[Token] (71, 72) .
+
+[ROOT] (73, 107) 1 (28 ounce) can crushed tomatoes.
+
+[S] (73, 107) 1 (28 ounce) can crushed tomatoes.
+
+[Sentence] (73, 107) 1 (28 ounce) can crushed tomatoes.
+
+[DEP] (73, 74) 1
+
+[Lemma] (73, 74) 1
+
+[O] (73, 74) 1
+
+[LST] (73, 74) 1
+
+[Token] (73, 74) 1
+
+[PRN] (75, 85) (28 ounce)
+
+[NP] (75, 85) (28 ounce)
+
+[PUNCT] (75, 76) (
+
+[Lemma] (75, 76) (
+
+[O] (75, 76) (
+
+[Token] (75, 76) (
+
+[NP] (76, 84) 28 ounce
+
+[CARD] (76, 78) 28
+
+[NUM] (76, 78) 28
+
+[Lemma] (76, 78) 28
+
+[Token] (76, 78) 28
+
+[NN] (79, 84) ounce
+
+[Lemma] (79, 84) ounce
+
+[NSUBJ] (79, 84) ounce
+
+[Token] (79, 84) ounce
+
+[PUNCT] (84, 85) )
+
+[Lemma] (84, 85) )
+
+[O] (84, 85) )
+
+[Token] (84, 85) )
+
+[VP] (86, 106) can crushed tomatoes
+
+[Lemma] (86, 89) can
+
+[V] (86, 89) can
+
+[Token] (86, 89) can
+
+[S] (90, 106) crushed tomatoes
+
+[NP] (90, 106) crushed tomatoes
+
+[AMOD] (90, 97) crushed
+
+[Lemma] (90, 97) crushed
+
+[ADJ] (90, 97) crushed
+
+[Token] (90, 97) crushed
+
+[DEP] (98, 106) tomatoes
+
+[NN] (98, 106) tomatoes
+
+[Lemma] (98, 106) tomatoes
+
+[Token] (98, 106) tomatoes
+
+[PUNC] (106, 107) .
+
+[Lemma] (106, 107) .
+
+[Token] (106, 107) .
+
+[ROOT] (108, 153) 1 (16 ounce) package frozen mixed vegetables.
+
+[S] (108, 153) 1 (16 ounce) package frozen mixed vegetables.
+
+[Sentence] (108, 153) 1 (16 ounce) package frozen mixed vegetables.
+
+[ADVMOD] (108, 109) 1
+
+[ADVP] (108, 109) 1
+
+[Lemma] (108, 109) 1
+
+[O] (108, 109) 1
+
+[Token] (108, 109) 1
+
+[PRN] (110, 120) (16 ounce)
+
+[PUNCT] (110, 111) (
+
+[Lemma] (110, 111) (
+
+[O] (110, 111) (
+
+[Token] (110, 111) (
+
+[NP] (111, 119) 16 ounce
+
+[CARD] (111, 113) 16
+
+[NUM] (111, 113) 16
+
+[Lemma] (111, 113) 16
+
+[Token] (111, 113) 16
+
+[DEP] (114, 119) ounce
+
+[NN] (114, 119) ounce
+
+[Lemma] (114, 119) ounce
+
+[Token] (114, 119) ounce
+
+[PUNCT] (119, 120) )
+
+[Lemma] (119, 120) )
+
+[O] (119, 120) )
+
+[Token] (119, 120) )
+
+[NN] (121, 128) package
+
+[Lemma] (121, 128) package
+
+[NSUBJ] (121, 128) package
+
+[NP] (121, 128) package
+
+[Token] (121, 128) package
+
+[VP] (129, 152) frozen mixed vegetables
+
+[Lemma] (129, 135) frozen
+
+[V] (129, 135) frozen
+
+[Token] (129, 135) frozen
+
+[NP] (136, 152) mixed vegetables
+
+[AMOD] (136, 141) mixed
+
+[Lemma] (136, 141) mixed
+
+[ADJ] (136, 141) mixed
+
+[Token] (136, 141) mixed
+
+[DOBJ] (142, 152) vegetables
+
+[NN] (142, 152) vegetables
+
+[Lemma] (142, 152) vegetables
+
+[Token] (142, 152) vegetables
+
+[PUNC] (152, 153) .
+
+[Lemma] (152, 153) .
+
+[Token] (152, 153) .
+
+[ROOT] (154, 183) 2 potatoes, peeled and cubed.
+
+[S] (154, 183) 2 potatoes, peeled and cubed.
+
+[Sentence] (154, 183) 2 potatoes, peeled and cubed.
+
+[NP] (154, 176) 2 potatoes, peeled and
+
+[NP] (154, 164) 2 potatoes
+
+[CARD] (154, 155) 2
+
+[NUM] (154, 155) 2
+
+[Lemma] (154, 155) 2
+
+[Token] (154, 155) 2
+
+[NN] (156, 164) potatoes
+
+[Lemma] (156, 164) potatoes
+
+[NSUBJ] (156, 164) potatoes
+
+[Token] (156, 164) potatoes
+
+[PUNC] (164, 165) ,
+
+[Lemma] (164, 165) ,
+
+[Token] (164, 165) ,
+
+[VP] (166, 176) peeled and
+
+[Dependency] (166, 172) peeled
+
+[Lemma] (166, 172) peeled
+
+[V] (166, 172) peeled
+
+[Token] (166, 172) peeled
+
+[ADVMOD] (173, 176) and
+
+[ADVP] (173, 176) and
+
+[Lemma] (173, 176) and
+
+[Token] (173, 176) and
+
+[CONJ] (173, 176) and
+
+[VP] (177, 182) cubed
+
+[Lemma] (177, 182) cubed
+
+[V] (177, 182) cubed
+
+[Token] (177, 182) cubed
+
+[PUNC] (182, 183) .
+
+[Lemma] (182, 183) .
+
+[Token] (182, 183) .
+
+[ROOT] (184, 217) 10 cubes beef bouillon, crumbled.
+
+[S] (184, 217) 10 cubes beef bouillon, crumbled.
+
+[Sentence] (184, 217) 10 cubes beef bouillon, crumbled.
+
+[NP] (184, 207) 10 cubes beef bouillon,
+
+[NP] (184, 206) 10 cubes beef bouillon
+
+[NP] (184, 192) 10 cubes
+
+[CARD] (184, 186) 10
+
+[NUM] (184, 186) 10
+
+[Lemma] (184, 186) 10
+
+[Token] (184, 186) 10
+
+[NN] (187, 192) cubes
+
+[Lemma] (187, 192) cubes
+
+[NSUBJ] (187, 192) cubes
+
+[Token] (187, 192) cubes
+
+[NP] (193, 206) beef bouillon
+
+[NN] (193, 197) beef
+
+[Lemma] (193, 197) beef
+
+[Token] (193, 197) beef
+
+[NN] (193, 197) beef
+
+[DEP] (198, 206) bouillon
+
+[NN] (198, 206) bouillon
+
+[Lemma] (198, 206) bouillon
+
+[Token] (198, 206) bouillon
+
+[PUNC] (206, 207) ,
+
+[Lemma] (206, 207) ,
+
+[Token] (206, 207) ,
+
+[VP] (208, 216) crumbled
+
+[Lemma] (208, 216) crumbled
+
+[V] (208, 216) crumbled
+
+[Token] (208, 216) crumbled
+
+[PUNC] (216, 217) .
+
+[Lemma] (216, 217) .
+
+[Token] (216, 217) .
+
+[ROOT] (218, 250) 2 teaspoons ground black pepper.
+
+[S] (218, 250) 2 teaspoons ground black pepper.
+
+[Sentence] (218, 250) 2 teaspoons ground black pepper.
+
+[NP] (218, 229) 2 teaspoons
+
+[CARD] (218, 219) 2
+
+[NUM] (218, 219) 2
+
+[Lemma] (218, 219) 2
+
+[Token] (218, 219) 2
+
+[NN] (220, 229) teaspoons
+
+[Lemma] (220, 229) teaspoons
+
+[NSUBJ] (220, 229) teaspoons
+
+[Token] (220, 229) teaspoons
+
+[VP] (230, 249) ground black pepper
+
+[Lemma] (230, 236) ground
+
+[V] (230, 236) ground
+
+[Token] (230, 236) ground
+
+[NP] (237, 249) black pepper
+
+[AMOD] (237, 242) black
+
+[Lemma] (237, 242) black
+
+[ADJ] (237, 242) black
+
+[Token] (237, 242) black
+
+[DOBJ] (243, 249) pepper
+
+[NN] (243, 249) pepper
+
+[Lemma] (243, 249) pepper
+
+[Token] (243, 249) pepper
+
+[PUNC] (249, 250) .
+
+[Lemma] (249, 250) .
+
+[Token] (249, 250) .
+
+[ROOT] (251, 269) 1 tablespoon salt.
+
+[S] (251, 269) 1 tablespoon salt.
+
+[Sentence] (251, 269) 1 tablespoon salt.
+
+[DEP] (251, 252) 1
+
+[Lemma] (251, 252) 1
+
+[O] (251, 252) 1
+
+[LST] (251, 252) 1
+
+[Token] (251, 252) 1
+
+[VP] (253, 268) tablespoon salt
+
+[Lemma] (253, 263) tablespoon
+
+[V] (253, 263) tablespoon
+
+[Token] (253, 263) tablespoon
+
+[DOBJ] (264, 268) salt
+
+[NN] (264, 268) salt
+
+[Lemma] (264, 268) salt
+
+[NP] (264, 268) salt
+
+[Token] (264, 268) salt
+
+[PUNC] (268, 269) .
+
+[Lemma] (268, 269) .
+
+[Token] (268, 269) .
+
+[ROOT] (270, 295) 1 tablespoon dried basil.
+
+[S] (270, 295) 1 tablespoon dried basil.
+
+[Sentence] (270, 295) 1 tablespoon dried basil.
+
+[NP] (270, 282) 1 tablespoon
+
+[CARD] (270, 271) 1
+
+[NUM] (270, 271) 1
+
+[Lemma] (270, 271) 1
+
+[Token] (270, 271) 1
+
+[NN] (272, 282) tablespoon
+
+[Lemma] (272, 282) tablespoon
+
+[NSUBJ] (272, 282) tablespoon
+
+[Token] (272, 282) tablespoon
+
+[VP] (283, 294) dried basil
+
+[Lemma] (283, 288) dried
+
+[V] (283, 288) dried
+
+[Token] (283, 288) dried
+
+[ADJP] (289, 294) basil
+
+[ACOMP] (289, 294) basil
+
+[Lemma] (289, 294) basil
+
+[ADJ] (289, 294) basil
+
+[Token] (289, 294) basil
+
+[PUNC] (294, 295) .
+
+[Lemma] (294, 295) .
+
+[Token] (294, 295) .

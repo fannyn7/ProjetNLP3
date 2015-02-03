@@ -1,0 +1,64 @@
+private void splitByToken(JCas jcas) throws AnalysisEngineProcessException {
+		// we are processing the Unit patterns sentence by sentence
+		for (Sentence sentence : JCasUtil.select(jcas, Sentence.class)) {
+			
+			// for all cardinal number in this sentence
+			for (CARD number : JCasUtil.selectCovered(jcas, CARD.class, sentence)) {
+				if(JCasUtil.selectCovered(CARD.class, number).size()>0){
+					continue;
+				}
+				try {
+
+					// check the next token 
+					Token unit_ingredient = JCasUtil.selectFollowing(jcas, Token.class, number, 1).get(0);
+					if (unit_ingredient.getCoveredText().equals("(")) {
+						// find the next token witch not part of a PRN (parenthesed expression)
+						PRN prn = JCasUtil.selectFollowing(jcas, PRN.class, number, 1).get(0);
+						unit_ingredient = JCasUtil.selectFollowing(jcas, Token.class, prn, 1).get(0);
+					}
+					System.out.println("unit_ingredient : "+unit_ingredient.getCoveredText());
+					// Idea? : check the (longest?) NP (noun chunk) that covers the number
+					
+					{
+						// get the list of tokens between the number and the chunk
+						List<Token> tokens = JCasUtil.selectCovered(jcas,
+								Token.class, number.getEnd(), unit_ingredient.getBegin());
+
+						setUnitAnnotation(jcas, number, unit_ingredient, "splitByToken");
+											}
+					} catch (IndexOutOfBoundsException e) {
+
+						System.out.println("IndexOutOfBoundsException");
+						// empty select() calls arrive here
+						
+					} // catch
+
+				} // for all noun chunks in the sentence
+
+			} // for all sentences
+	}
+
+	private void setUnitAnnotation(JCas jcas, CARD number, Token token,
+			String type) {
+		/*
+		 * create a new UnitAnnotation
+		 */
+		UnitAnnotation a = new UnitAnnotation(jcas);
+		a.setBegin(number.getBegin());
+		a.setEnd(token.getEnd());
+		a.setTypeOf(type);
+		a.setQuantity(number.getCoveredText());
+		String unit_ingredient;
+		// test that unit_ingredient is a noun
+		if (JCasUtil.selectCovered(jcas, NN.class,
+			token.getBegin(), token.getEnd()).size() > 0) {
+			unit_ingredient = token.getLemma().getValue();
+		} else {
+			unit_ingredient = "";
+			// except if token.getCoveredText \in {can, ...}
+		}
+		a.setUnit(unit_ingredient);
+		
+		a.addToIndexes();
+
+	} // setUnitAnnotation()
