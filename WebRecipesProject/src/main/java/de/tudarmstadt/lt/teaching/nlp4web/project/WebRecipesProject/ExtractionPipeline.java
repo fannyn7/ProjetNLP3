@@ -28,7 +28,7 @@ public class ExtractionPipeline {
 	   public static void main(String[] args)
 		    	throws UIMAException, IOException
 		    {
-		   		//http://allrecipes.com/Recipe/Alisons-Slow-Cooker-Vegetable-Beef-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=alison%20slow%20cooker&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1	
+		   		//String webpage ="http://allrecipes.com/Recipe/Alisons-Slow-Cooker-Vegetable-Beef-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=alison%20slow%20cooker&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1";	
 		        String webpage = "http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1";
 		        String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		        CollectionReader reader = createReader(
@@ -85,10 +85,9 @@ public class ExtractionPipeline {
 		        		unitWriter,
 		        		ingredientAnnotator,
 		        		directivesAnnotator,
-		        		//writer
-		        		//unitWriter,
-		        		//ingredientWriter
-		        		analyzeResults
+		        		unitWriter,
+		        		ingredientWriter/*,
+		        		analyzeResults*/
 		        		);
 		    }
 

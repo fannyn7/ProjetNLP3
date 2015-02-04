@@ -102,7 +102,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 //				if (JCasUtil.selectCovered(UnitAnnotation.class, quantity).size() > 0) {
 //					continue;
 //				}
-				try {
+				/*try {*/
 					// check the covered NP (noun chunk) but don't consider the expressions
 					// in brackets
 					int beginSearch;
@@ -135,34 +135,35 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 						} else {
 							// get the unit from the UnitAnnotation 
 							// TODO : quantity unit should have type annotation in UnitAnnotation
-							 List<Annotation> l = JCasUtil.selectCovered(jcas, Annotation.class,
+							 List<Token> l = JCasUtil.selectCovered(jcas, Token.class,
 									quantity.getBegin(), quantity.getEnd());
-							 Annotation quantityUnit = l.get(l.size());
+							 Annotation quantityUnit = l.get(l.size()-1); //skip the point
 							// if the current unit quantity is in the unitDatabase
 							if (getUnitDatabase().contains(quantityUnit.getCoveredText())) {
 								// then : ?? for now, take the last token of the sentence
-								ingredient = tokens.get(tokens.size()-1);
+								ingredient = tokens.get(tokens.size()-2); // skip the pint 
 							} else {
 								// else roll back :
 								// remove it from text covered by the UnitAnnotation
+								// and set it as ingredient
 								System.out.println("quantity unit removed : "
 										+ quantityUnit.getCoveredText());
 								quantity.setUnit(null);
+								ingredient = quantityUnit;
 								quantity.setEnd(ingredient.getBegin() - 1);
-								// set it as ingredient
-								ingredient = quantity;
+								
 							}
 						}
 						
 					}// PARTIE SENSIBLE . FIN
 					
 					setIngredientAnnotation(jcas, ingredient, quantity);
-				} catch (IndexOutOfBoundsException e) {
+				/*} catch (IndexOutOfBoundsException e) {
 					System.out.println("IndexOutOfBoundsException");
 					// empty select() calls arrive here
 
 				} // catch
-
+				 */
 				System.out.println("---------");
 			} // for all noun chunks in the sentence
 
@@ -227,13 +228,19 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase{
 		 */
 		IngredientAnnotation a = new IngredientAnnotation(jcas);
 		// get the lemmata
+		try {
+			
 		Lemma lemma = JCasUtil.selectCovered(jcas, Lemma.class,
 				ingredient.getBegin(), ingredient.getEnd()).get(0);
+		
 		a.setBegin(ingredient.getBegin());
 		a.setEnd(ingredient.getEnd());
 		a.setAmount(quantity.getCoveredText());
 		a.setNormalizedName(lemma.getValue());
 		a.addToIndexes();
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println("IndexOutOfBoundsException : "+ingredient);
+		}
 
 	} // setIngredientAnnotation()
 		
