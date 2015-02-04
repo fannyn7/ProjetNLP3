@@ -17,6 +17,7 @@ import org.apache.uima.fit.pipeline.SimplePipeline;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.AmountAnnotator;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.DirectivesAnnotator;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.IngredientsAnnotator;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.PRNAnnotator;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.UnitAnnotator;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.reader.WebPageReader;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.AnalyzeResults;
@@ -31,7 +32,8 @@ public class ExtractionPipeline {
 	
 	 public static void main(String[] args)
 		    	throws UIMAException, IOException{
-		 String webpage = "http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1";
+		//String webpage = "http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1";
+		 String webpage = "http://allrecipes.com/Recipe/Slow-Cooker-Pulled-Pork/Detail.aspx?evt19=1";
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		 String line = "";
 		 BufferedReader reader = new BufferedReader(new FileReader(recipesFile));
@@ -44,8 +46,8 @@ public class ExtractionPipeline {
 			 }
 		 }*/
 		 
-		 /*** POUR LANCER LE PIPELINE TOUT SEUL *******/
-		  executePipeline(webpage);
+		 // start the pipeline
+		 executePipeline(webpage);
 		
 		 
 		 
@@ -126,6 +128,9 @@ public class ExtractionPipeline {
 		        AnalysisEngine amountAnnotator = createEngine(
 		        		AmountAnnotator.class
 			        );
+		        AnalysisEngine prnAnnotator = createEngine(
+		        		PRNAnnotator.class
+			        );
 		        
 		        AnalysisEngine unitAnnotator = createEngine(
 	        		UnitAnnotator.class
@@ -164,6 +169,7 @@ public class ExtractionPipeline {
 		        		reader,
 		        		seg,
 		        		parse,
+		        		prnAnnotator,
 		        		amountAnnotator,
 		        		unitAnnotator,
 		        		unitWriter,

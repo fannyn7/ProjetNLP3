@@ -83,22 +83,26 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 						sentence)) {
 					if (number.getEnd() <= endLastUnit) { //JCasUtil.selectCovered(CARD.class, number).size() > 0) {
 						// this number is included in a quantity (unit) already annotated
-						System.out.println("Skipped : "+number.getCoveredText());
+						System.out.println("Skipped : "+number.getCoveredText()+" / end : "+number.getEnd());
 						continue;
 					}
 					try {
-
+						System.out.println("---");
+						System.out.println("number : "+number.getCoveredText());
 						PRN prn = null;
 						// check the next token
 						Token unit_ingredient = JCasUtil.selectFollowing(jcas,
 								Token.class, number, 1).get(0);
+						System.out.println("Following token : "+unit_ingredient.getCoveredText()+" / end : "+unit_ingredient.getEnd());
 						if (unit_ingredient.getCoveredText().startsWith("(")) {
 							// find the next token which is not part of a PRN :
 							// expression parenthesee
 							prn = JCasUtil.selectFollowing(jcas, PRN.class,
 									number, 1).get(0);
+							System.out.println("PRN found : "+prn.getCoveredText());
 							unit_ingredient = JCasUtil.selectFollowing(jcas,
 									Token.class, prn, 1).get(0);
+							System.out.println("Following token : "+unit_ingredient.getCoveredText()+" / end : "+unit_ingredient.getEnd());
 						}
 
 						// test that unit_ingredient is a noun
@@ -125,6 +129,7 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 								endLastUnit = setUnitAnnotation(jcas, number,
 										end, "splitByToken");
 							}
+							System.out.println("endLastUnit : "+endLastUnit);
 						}
 
 					} catch (IndexOutOfBoundsException e) {
@@ -133,7 +138,7 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 
 					} // catch
 
-				} // for all noun chunks in the sentence
+				} // for all CARD in the sentence
 
 			} // for all sentences
 		} // in the text giving the list of ingredients
