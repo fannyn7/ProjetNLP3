@@ -69,7 +69,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 					text)) {
 
 				// a.getType().getShortName());
-				System.out.println("annotation type : "+a.getType().getShortName()+" : " + a.getCoveredText());
+				//System.out.println("annotation type : "+a.getType().getShortName()+" : " + a.getCoveredText());
 				if (a.getType().getShortName().equals("VP")) {
 					List<Annotation> list = JCasUtil.selectCovered(jcas, Annotation.class, a.getBegin(), a.getEnd());
 					int nbVP = 0;
@@ -212,9 +212,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 																									.contains(l
 																											.getValue())))
 																											&& !alreadyAdded) {
-																				System.out
-																				.println(ingredient
-																						+ " ajouté");
+																				//System.out.println(ingredient+ " ajouté");
 																				ingredients
 																				.add(ingredient
 																						.getNormalizedName());
@@ -249,8 +247,8 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 
 						for (int i=0;i<ingredients.size();i++){
 							ing = ing + " " + ingredients.get(i);
-							System.out.println("AAAA " + ingredients.get(i));
-							System.out.println("BBBB " + ing);
+							//System.out.println("AAAA " + ingredients.get(i));
+							//System.out.println("BBBB " + ing);
 						}
 						
 						if (ing == ""){
