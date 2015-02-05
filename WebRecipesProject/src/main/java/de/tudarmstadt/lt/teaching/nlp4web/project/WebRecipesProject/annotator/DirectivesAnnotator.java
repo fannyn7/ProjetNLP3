@@ -23,6 +23,13 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.StringList;
 import org.apache.uima.jcas.tcas.Annotation;
 
+import simplenlg.features.Feature;
+import simplenlg.features.Tense;
+import simplenlg.framework.NLGElement;
+import simplenlg.framework.NLGFactory;
+import simplenlg.lexicon.Lexicon;
+import simplenlg.phrasespec.SPhraseSpec;
+import simplenlg.realiser.english.Realiser;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VP;
 import de.tudarmstadt.ukp.teaching.general.type.DirectivesAnnotation;
@@ -107,13 +114,24 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 
 							if (textIngredient.getType().getShortName().equals("V")) {
 								vEnd = textIngredient.getEnd();
+						        Lexicon lexicon = Lexicon.getDefaultLexicon();
+						        NLGFactory nlgFactory = new NLGFactory(lexicon);
+								Realiser realiser = new Realiser(lexicon);
+						        NLGElement s1 = nlgFactory.createSentence(textIngredientLemma + "");
+						        SPhraseSpec p = nlgFactory.createClause();
+						        p.setVerb(textIngredientLemma);
+						        p.setFeature(Feature.TENSE,  Tense.PAST);
+								String output = realiser.realiseSentence(p);
+								System.out.println("verbe = " + textIngredientLemma +"    OUTPUT = " + output);
+								output = output.substring(0, output.length()-1).toLowerCase();
 								if (negationFound) {
 									d.setInstruction("[not]"+textIngredientLemma);
-									resultingEntity = "not "+textIngredientLemma+"ed[" + previous;
+									resultingEntity = "not "+ output+"[" + previous;
+
 								}
 								else {
 									d.setInstruction(textIngredientLemma);
-									resultingEntity = textIngredientLemma+"ed[" + previous;
+									resultingEntity = output + "[" + previous;
 								}
 							}
 							int ppBegin = textIngredient.getBegin();
@@ -129,8 +147,10 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 									// //// ingredients / recipes match
 									if (textIngredientLemma.equals(ingredient
 											.getNormalizedName())){
-										ingredients.add(textIngredientLemma);
-										resultingEntity += " " +  textIngredientLemma;
+										if (!ingredients.contains(textIngredientLemma)){
+											ingredients.add(textIngredientLemma);											
+											resultingEntity += " " +  textIngredientLemma;
+										}
 									}
 									else {
 										Boolean hypernymFound = false;
@@ -167,10 +187,12 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 																		// " = "+
 																		// ingredient.getNormalizedName()+
 																		// " ajouté");
-																		ingredients
-																		.add(textIngredientLemma);
+
+																		if (!ingredients.contains(textIngredientLemma)){
+																			ingredients.add(textIngredientLemma);											
+																			resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
+																		}
 																		hypernymFound = true;
-																		resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
 																	}
 																}
 															}
@@ -228,11 +250,11 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 																											.getValue())))
 																											&& !alreadyAdded) {
 																				//System.out.println(ingredient+ " ajouté");
-																				ingredients
-																				.add(ingredient
-																						.getNormalizedName());
+																				if (!ingredients.contains(textIngredientLemma)){
+																					ingredients.add(ingredient.getNormalizedName());											
+																					resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
+																				}
 																				alreadyAdded = true;
-																				resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
 																			}
 																		}
 																	}
