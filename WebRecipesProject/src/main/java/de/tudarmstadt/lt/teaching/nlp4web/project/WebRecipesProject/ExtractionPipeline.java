@@ -35,24 +35,24 @@ public class ExtractionPipeline {
 	
 	 public static void main(String[] args)
 		    	throws UIMAException, IOException{
+
 		//String webpage = "http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1";
-		 String webpage = "http://allrecipes.com/Recipe/Slow-Cooker-Pulled-Pork/Detail.aspx?evt19=1";
+		 String webpage = "http://allrecipes.com/Recipe/Best-Brownies/Detail.aspx?evt19=1";
+
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		 String line = "";
 		 BufferedReader reader = new BufferedReader(new FileReader(recipesFile));
-		 /*
 		 Pattern p = Pattern.compile("http://allrecipes.com/Recipe*");
 		 while(!(line = reader.readLine()).equals("$$$$$$$")){
 			 Matcher matcher = p.matcher(line);
 			 if(matcher.find(0)){			 
-				 executePipeline(webpage = line, recipesFile);
+				 executePipeline(line, recipesFile);
 			 }
-		 }*/
+		 }
+		 reader.close();
 		 
 		 // start the pipeline
-		 executePipeline(webpage);
-		
-		 
+		 //executePipeline(webpage);
 		 
 	 }
 	
