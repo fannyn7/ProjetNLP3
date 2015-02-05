@@ -1,0 +1,38 @@
+<Recipe>
+  <webLink>http://allrecipes.com/Recipe/Vegan-Pancakes/Detail.aspx?evt19=1</webLink>
+  <name>Vegan Pancakes Recipe - Allrecipes.com</name>
+  <textIngredients>
+1 1/4 cups all-purpose flour.
+2 tablespoons white sugar.
+2 teaspoons baking powder.
+1/2 teaspoon salt.
+1 1/4 cups water.
+1 tablespoon oil.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>flour</name>
+      <quantity>1 1/4 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>2 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>powder</name>
+      <quantity>2 teaspoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>salt</name>
+      <quantity>1/2 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>water</name>
+      <quantity>1 1/4 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>oil</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+  </ingredients>
+</Recipe>
+
