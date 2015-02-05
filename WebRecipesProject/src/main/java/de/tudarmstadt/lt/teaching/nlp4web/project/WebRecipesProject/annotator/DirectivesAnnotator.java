@@ -129,6 +129,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 										// //// ingredients / recipes match
 										if (textIngredientLemma.equals(ingredient
 												.getNormalizedName())){
+											if (!ingredients.contains(textIngredientLemma))
 											ingredients.add(textIngredientLemma);
 											resultingEntity += " " +  textIngredientLemma;
 										}
@@ -167,6 +168,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 																			// " = "+
 																			// ingredient.getNormalizedName()+
 																			// " ajouté");
+																			if (!ingredients.contains(textIngredientLemma))
 																			ingredients
 																			.add(textIngredientLemma);
 																			hypernymFound = true;
@@ -228,6 +230,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 																												.getValue())))
 																												&& !alreadyAdded) {
 																					//System.out.println(ingredient+ " ajouté");
+																					if (!ingredients.contains(textIngredientLemma))
 																					ingredients
 																					.add(ingredient
 																							.getNormalizedName());
