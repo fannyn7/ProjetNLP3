@@ -37,9 +37,30 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
 public class UnitAnnotator extends JCasAnnotator_ImplBase {
 
 	private List<String> unitDatabase;
+	private List<String> ingredientDatabase;
 
 	public List<String> getUnitDatabase(){
 		return unitDatabase;	
+	}
+
+	public List<String> getIngredientDatabase(){
+		return ingredientDatabase;	
+	}
+
+	private void initializeIngredientDatabase() {
+		ingredientDatabase = new ArrayList<String>();
+		try {
+			String f = FileUtils.readFileToString(new File("src/main/resources/databases/ingredient.txt"));
+			String[] lines = f.split("(\r\n|\n)");
+			for (String line : lines){
+				if (!line.startsWith("<!--")) {
+					// quantity unit word  
+					ingredientDatabase.add(line.toLowerCase());
+				} // else source acknowledgement
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void initializeUnitDatabase() {
@@ -48,7 +69,7 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 			String f = FileUtils.readFileToString(new File("src/main/resources/databases/quantityUnit.txt"));
 			String[] lines = f.split("(\r\n|\n)");
 			for (String line : lines){
-				if (!line.startsWith("<--!")) {
+				if (!line.startsWith("<!--")) {
 					// quantity unit word  
 					unitDatabase.add(line.toLowerCase());
 				} // else source acknowledgement
@@ -61,7 +82,11 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 
+		// Initialize databases
 		initializeUnitDatabase();
+		initializeIngredientDatabase();
+		
+		// process text
 		splitByToken(jcas);
 		// splitByCoveredNP(jcas);
 
@@ -115,10 +140,18 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 						} else {
 							if (posValue.equals("NN") || posValue.equals("NNS") || getUnitDatabase().contains(unit_ingredient.getCoveredText()) ) {
 
-								// pattern : ( QUANTITY _ UNIT )
-								// pattern : ( QUANTITY ) _ INGREDIENT
-								endLastUnit = setUnitAnnotation(jcas, number,
+								
+								// check w.r.t database,  pattern : ( QUANTITY ) _ INGREDIENT
+								if (getIngredientDatabase().contains(unit_ingredient.getCoveredText().toLowerCase())) {
+									// pattern : ( QUANTITY ) _ INGREDIENT
+									endLastUnit = setUnitAnnotation(jcas, number,
+											number.getEnd(), "splitByToken");
+								} else { 
+									// high probability for pattern : ( QUANTITY _ UNIT )
+									endLastUnit = setUnitAnnotation(jcas, number,
 										unit_ingredient, "splitByToken");
+								}
+								
 							} else {
 								// pattern : ( QUANTITY ) _ QUALIFIERS
 
@@ -196,5 +229,6 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 		a.addToIndexes();
 		return endAnnotation;
 	} // setUnitAnnotation()
+	
 
 }

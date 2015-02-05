@@ -8,3 +8,5 @@ pounds
 tablespoons
 teaspoon
 tablespoon
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$25,000_Chili.xml -->
+ounces

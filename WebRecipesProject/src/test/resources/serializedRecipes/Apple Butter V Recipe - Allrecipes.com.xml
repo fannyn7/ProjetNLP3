@@ -1,0 +1,33 @@
+<Recipe>
+  <webLink>http://allrecipes.com/recipe/apple-butter-v/</webLink>
+  <name>Apple Butter V Recipe - Allrecipes.com</name>
+  <ingredients>
+    <Ingredient>
+      <name>apple</name>
+      <quantity>6 pounds</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cider</name>
+      <quantity>6 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>3 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cinnamon</name>
+      <quantity>2 teaspoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>ground</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+  </ingredients>
+  <textIngredients>
+6 pounds tart apples, cored and sliced.
+6 cups apple cider.
+3 cups white sugar.
+2 teaspoons ground cinnamon.
+1 teaspoon ground cloves.</textIngredients>
+</Recipe>
+

@@ -11,10 +11,67 @@ pork
 onion
 garlic
 beer
+tomato sauce
 water
+Chili powder
 cumin
+Oregano leaves
+Paprika
 sugar
 cocoa
 coriander
+Louisiana hot sauce
 flour
-
+Cornmeal
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$25,000_Chili.xml -->
+Onions
+peppers
+Green peppers
+celery
+garlic
+chilies
+tomatoes
+tomato paste
+Tabasco sauce
+Bay leaves
+Garlic salt
+Garlic
+Salt
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$100_Chocolate_Cake.xml -->
+Baking soda
+Vanilla
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$200_Salad_Dressing.xml -->
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$200_Cake.xml -->
+Shortening
+Eggs
+food coloring
+Buttermilk
+Cake flour
+Vinegar
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$250.00_Cookies_(Neiman_Marcus).xml -->
+Baking Powder
+Brown sugar
+Chocolate Chips
+nuts
+Oatmeal
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$500.00_Fudge.xml -->
+milk
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$800_Waldorf_Red_Cake.xml -->
+Crisco
+Soda
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-1-1_Cookies.xml -->
+Peanut butter
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3-4-5_Cake.xml -->
+Vanilla extract
+<!-- /Exercices/ProjetNLP3/WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3-4_Cake_By_James_Beard.xml -->
+Orange juice
+Lemon juice
+Orange rind
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3_Cookies.xml -->
+Mix-ins
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3_Lemon_Pie.xml -->
+lemonade
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3_Meurbeteig_Dough.xml -->
+Egg yolk
+lemon rind
+almonds

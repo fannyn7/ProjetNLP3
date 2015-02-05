@@ -1,0 +1,86 @@
+<Recipe>
+  <webLink>http://allrecipes.com/recipe/apple-butter-spice-cake/</webLink>
+  <name>Apple Butter Spice Cake Recipe - Allrecipes.com</name>
+  <textIngredients>
+Topping:.
+1 cup packed brown sugar.
+1 teaspoon ground cinnamon.
+1/2 teaspoon ground nutmeg.
+1/2 cup chopped pecans.
+ .
+Cake:.
+2 cups all-purpose flour.
+1 teaspoon baking powder.
+1 teaspoon baking soda.
+1/2 teaspoon salt.
+1/2 cup butter, room temperature.
+1 cup white sugar.
+3/4 cup apple butter.
+1 teaspoon vanilla extract.
+1/2 cup whole bran cereal or wheat germ.
+1 cup sour cream.
+2 eggs, room temperature.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cinnamon</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>nutmeg</name>
+      <quantity>1/2 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>pecan</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>flour</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>powder</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>soda</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>salt</name>
+      <quantity>1/2 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>temperature</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>butter</name>
+      <quantity>3/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>vanilla</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>bran</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cream</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>temperature</name>
+      <quantity>2</quantity>
+    </Ingredient>
+  </ingredients>
+</Recipe>
+

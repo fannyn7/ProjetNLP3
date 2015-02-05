@@ -1,0 +1,49 @@
+<Recipe>
+  <webLink>http://allrecipes.com/recipe/absolutely-awesome-bbq-sauce/</webLink>
+  <name>Absolutely Awesome BBQ Sauce Recipe - Allrecipes.com</name>
+  <ingredients>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sauce</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>rum</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sauce</name>
+      <quantity>1/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>ketchup</name>
+      <quantity>1/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sauce</name>
+      <quantity>1/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>garlic</name>
+      <quantity>2 cloves</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>mustard</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+  </ingredients>
+  <textIngredients>
+1 cup brown sugar.
+1/2 cup chile sauce.
+1/2 cup rum.
+1/4 cup soy sauce.
+1/4 cup ketchup.
+1/4 cup Worcestershire sauce.
+2 cloves garlic, crushed.
+1 teaspoon ground dry mustard.
+ground black pepper to taste.</textIngredients>
+</Recipe>
+

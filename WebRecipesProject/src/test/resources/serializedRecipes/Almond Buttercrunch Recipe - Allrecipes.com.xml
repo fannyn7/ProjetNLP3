@@ -1,0 +1,33 @@
+<Recipe>
+  <webLink>http://allrecipes.com/recipe/almond-buttercrunch/</webLink>
+  <name>Almond Buttercrunch Recipe - Allrecipes.com</name>
+  <ingredients>
+    <Ingredient>
+      <name>butter</name>
+      <quantity>3/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>almond</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>chip</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>almond</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+  </ingredients>
+  <textIngredients>
+3/4 cup butter.
+2 cups white sugar.
+1 cup chopped almonds.
+2 cups milk chocolate chips.
+1/2 cup finely chopped almonds.</textIngredients>
+</Recipe>
+

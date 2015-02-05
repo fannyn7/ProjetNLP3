@@ -3,9 +3,11 @@ package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject;
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngine;
 import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,6 +24,7 @@ import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.Un
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.reader.WebPageReader;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.AnalyzeResults;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.IngredientWriter;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.RecipeSerializer;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitWriter;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.WebPageConsumer;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
@@ -117,7 +120,13 @@ public class ExtractionPipeline {
 		        		);
 		    }
 
-	   private static void executePipeline(String webpage)
+	   /** 
+	    * Analyze a web recipe and serialize in a xml file
+	    * @param webpage
+	    * @throws UIMAException
+	    * @throws IOException
+	    */
+	   public static void executePipeline(String webpage)
 		    	throws UIMAException, IOException
 		    {
 		   		//String webpage ="http://allrecipes.com/Recipe/Alisons-Slow-Cooker-Vegetable-Beef-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=alison%20slow%20cooker&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1";	
@@ -144,15 +153,13 @@ public class ExtractionPipeline {
 	        		DirectivesAnnotator.class
 		        );
 		        
+		        AnalysisEngine serializer = createEngine(
+		        		RecipeSerializer.class,  WebPageReader.PARAM_URL, webpage 
+			        );
+		        
 		        AnalysisEngine seg =  createEngine(StanfordSegmenter.class);
 		    	AnalysisEngine parse =  createEngine(StanfordParser.class);
 
-		/*        AnalysisEngine jazzy =
-		        		createEngine
-		        		(SpellChecker.class,
-		        		SpellChecker.PARAM_MODEL_LOCATION,
-		        		"/Users/Fanny/Documents/2014_2015_Darmstadt/NLP_and_the_Web/dict/words");*/
-		        	
 		        AnalysisEngine ingredientWriter = createEngine(
 		                IngredientWriter.class
 		        );
@@ -165,6 +172,18 @@ public class ExtractionPipeline {
 		                WebPageConsumer.class
 		        );
 
+		        /*
+		        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+		        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+		            try {
+		                desktop.browse(URI.create(webpage));
+		            } catch (Exception e) {
+		                e.printStackTrace();
+		            }
+		        } else {
+		        	System.out.println("desktop is null");
+		        }
+		        */
 		        SimplePipeline.runPipeline(
 		        		reader,
 		        		seg,
@@ -176,7 +195,8 @@ public class ExtractionPipeline {
 		        		ingredientAnnotator,
 		        		directivesAnnotator,
 		        		unitWriter,
-		        		ingredientWriter
+		        		ingredientWriter,
+		        		serializer
 		        		);
 		    }
 }

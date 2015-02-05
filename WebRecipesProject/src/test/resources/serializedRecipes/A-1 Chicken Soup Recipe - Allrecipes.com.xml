@@ -1,0 +1,54 @@
+<Recipe>
+  <webLink>http://allrecipes.com/recipe/a-1-chicken-soup/</webLink>
+  <name>A-1 Chicken Soup Recipe - Allrecipes.com</name>
+  <ingredients>
+    <Ingredient>
+      <name>oil</name>
+      <quantity>2 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>quarter</name>
+      <quantity>2</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>onion</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>water</name>
+      <quantity>2 quarts</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>bouillon</name>
+      <quantity>3 cubes</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>celery</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>carrot</name>
+      <quantity>3</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>garlic</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>noodle</name>
+      <quantity>1 (12 ounce)</quantity>
+    </Ingredient>
+  </ingredients>
+  <textIngredients>
+2 tablespoons vegetable oil.
+2 skinless chicken leg quarters.
+1/2 cup chopped onion.
+2 quarts water.
+3 cubes chicken bouillon, crumbled.
+1 stalk celery, chopped.
+3 carrots, chopped.
+1 clove roasted garlic, minced.
+salt and pepper to taste.
+1 (12 ounce) package thin egg noodles.</textIngredients>
+</Recipe>
+
