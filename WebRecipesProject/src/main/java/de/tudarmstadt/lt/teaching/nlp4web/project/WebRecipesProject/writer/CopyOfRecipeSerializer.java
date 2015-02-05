@@ -29,7 +29,7 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
  * @author Solene
  *
  */
-public class RecipeSerializer extends JCasConsumer_ImplBase {
+public class CopyOfRecipeSerializer extends JCasConsumer_ImplBase {
 
     public static final String LF = System.getProperty("line.separator");
 

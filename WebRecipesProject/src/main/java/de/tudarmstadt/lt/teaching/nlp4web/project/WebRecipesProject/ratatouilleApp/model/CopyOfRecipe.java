@@ -6,7 +6,7 @@ import java.util.List;
 import de.tudarmstadt.ukp.teaching.general.type.DirectivesAnnotation;
 import de.tudarmstadt.ukp.teaching.general.type.IngredientAnnotation;
 
-public class Recipe {
+public class CopyOfRecipe {
 	
 	private String webLink;
 	private String name;

@@ -39,7 +39,7 @@ public class ExtractionPipeline {
 		//String webpage = "http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1";
 		 String webpage = "http://allrecipes.com/Recipe/Best-Brownies/Detail.aspx?evt19=1";
 
-		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
+/*		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		 String line = "";
 		 BufferedReader reader = new BufferedReader(new FileReader(recipesFile));
 		 Pattern p = Pattern.compile("http://allrecipes.com/Recipe*");
@@ -50,9 +50,9 @@ public class ExtractionPipeline {
 			 }
 		 }
 		 reader.close();
-		 
+		 */
 		 // start the pipeline
-		 //executePipeline(webpage);
+		 executePipeline(webpage);
 		 
 	 }
 	
