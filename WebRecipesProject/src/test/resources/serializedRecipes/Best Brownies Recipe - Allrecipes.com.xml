@@ -1,0 +1,139 @@
+<Recipe>
+  <webLink>http://allrecipes.com/Recipe/Best-Brownies/Detail.aspx?evt19=1</webLink>
+  <name>Best Brownies Recipe - Allrecipes.com</name>
+  <textIngredients>
+1/2 cup butter.
+1 cup white sugar.
+2 eggs.
+1 teaspoon vanilla extract.
+1/3 cup unsweetened cocoa powder.
+1/2 cup all-purpose flour.
+1/4 teaspoon salt.
+1/4 teaspoon baking powder.
+Frosting:.
+3 tablespoons butter, softened.
+3 tablespoons unsweetened cocoa powder.
+1 tablespoon honey.
+1 teaspoon vanilla extract.
+1 cup confectioners&apos; sugar.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>butter</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>egg</name>
+      <quantity>2</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>vanilla</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>powder</name>
+      <quantity>1/3 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>flour</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>salt</name>
+      <quantity>1/4 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>butter</name>
+      <quantity>3 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>powder</name>
+      <quantity>3 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>honey</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>vanilla</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan. In a large saucepan, melt 1/2 cup butter. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, 1/2 cup flour, salt, and baking powder. Spread batter into prepared pan. Bake in preheated oven for 25 to 30 minutes. Do not overcook. To Make Frosting: Combine 3 tablespoons softened butter, 3 tablespoons cocoa, honey, 1 teaspoon vanilla extract, and 1 cup confectioners&apos; sugar. Stir until smooth. Frost brownies while they are still warm</textInstructions>
+  <instructions>
+    <Instruction>
+      <instruction>oven</instruction>
+      <ingredient> butter egg vanilla flour salt butter vanilla</ingredient>
+      <resultingEntity>ovened[ butter egg vanilla flour salt butter vanilla ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>pan</instruction>
+      <ingredient> ovened[ butter egg vanilla flour salt butter vanilla ]</ingredient>
+      <resultingEntity>paned[ovened[ butter egg vanilla flour salt butter vanilla ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>melt</instruction>
+      <ingredient> butter</ingredient>
+      <resultingEntity>melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>remove</instruction>
+      <ingredient> melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ]</ingredient>
+      <resultingEntity>removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>stir</instruction>
+      <ingredient> removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla</ingredient>
+      <resultingEntity>stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>pan</instruction>
+      <ingredient> stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ]</ingredient>
+      <resultingEntity>paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>bake</instruction>
+      <ingredient> paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ]</ingredient>
+      <resultingEntity>baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>[not]overcook</instruction>
+      <ingredient> baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ]</ingredient>
+      <resultingEntity>not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>make</instruction>
+      <ingredient> not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ]</ingredient>
+      <resultingEntity>made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>combine</instruction>
+      <ingredient> butter</ingredient>
+      <resultingEntity>combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>extract</instruction>
+      <ingredient> combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ]</ingredient>
+      <resultingEntity>extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>stir</instruction>
+      <ingredient> extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ]</ingredient>
+      <resultingEntity>stirred[extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ] ]</resultingEntity>
+    </Instruction>
+    <Instruction>
+      <instruction>be</instruction>
+      <ingredient> stirred[extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ] ]</ingredient>
+      <resultingEntity>was[stirred[extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ] ] ]</resultingEntity>
+    </Instruction>
+  </instructions>
+</Recipe>
+

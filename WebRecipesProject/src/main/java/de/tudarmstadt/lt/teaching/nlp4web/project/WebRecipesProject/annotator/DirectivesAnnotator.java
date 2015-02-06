@@ -23,6 +23,13 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.StringList;
 import org.apache.uima.jcas.tcas.Annotation;
 
+import simplenlg.features.Feature;
+import simplenlg.features.Tense;
+import simplenlg.framework.NLGElement;
+import simplenlg.framework.NLGFactory;
+import simplenlg.lexicon.Lexicon;
+import simplenlg.phrasespec.SPhraseSpec;
+import simplenlg.realiser.english.Realiser;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VP;
 import de.tudarmstadt.ukp.teaching.general.type.DirectivesAnnotation;
@@ -86,91 +93,169 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 							}
 						}
 						//if (!negationFound){
-							//System.out.println("annotation type : "+a.getType().getShortName()+" : " + a.getCoveredText());
-							String previous = resultingEntity;
-							boolean addPrevious = false;
+						//System.out.println("annotation type : "+a.getType().getShortName()+" : " + a.getCoveredText());
+						String previous = resultingEntity;
+						boolean addPrevious = false;
 
-							//System.out.println("VP type : "+a.getType().getShortName()+" : " + a.getCoveredText());
-							//addPrevious = false;
-							DirectivesAnnotation d = new DirectivesAnnotation(jcas);
-							d.setBegin(a.getBegin());
-							d.setEnd(a.getEnd());
-							ArrayList<String> ingredients = new ArrayList<String>();
-							String textIngredientLemma = "";
-							for (Annotation textIngredient : JCasUtil.selectCovered(
-									jcas, Annotation.class, a.getBegin(), a.getEnd())) {
-								for (Lemma l : JCasUtil.selectCovered(jcas,
-										Lemma.class, textIngredient)) {
-									textIngredientLemma = l.getValue();
-								}
-								// //// check verb to find instructions
+						//System.out.println("VP type : "+a.getType().getShortName()+" : " + a.getCoveredText());
+						//addPrevious = false;
+						DirectivesAnnotation d = new DirectivesAnnotation(jcas);
+						d.setBegin(a.getBegin());
+						d.setEnd(a.getEnd());
+						ArrayList<String> ingredients = new ArrayList<String>();
+						String textIngredientLemma = "";
+						for (Annotation textIngredient : JCasUtil.selectCovered(
+								jcas, Annotation.class, a.getBegin(), a.getEnd())) {
+							for (Lemma l : JCasUtil.selectCovered(jcas,
+									Lemma.class, textIngredient)) {
+								textIngredientLemma = l.getValue();
+							}
+							// //// check verb to find instructions
 
-								if (textIngredient.getType().getShortName().equals("V")) {
-									vEnd = textIngredient.getEnd();
-									if (negationFound) {
-										d.setInstruction("[not]"+textIngredientLemma);
-										resultingEntity = "not "+textIngredientLemma+"ed[" + previous;
-									}
-									else {
-										d.setInstruction(textIngredientLemma);
-										resultingEntity = textIngredientLemma+"ed[" + previous;
-									}
-								}
-								int ppBegin = textIngredient.getBegin();
-								if ((ppBegin == (vEnd+1)) && (textIngredient.getType().getShortName().equals("PP"))) {
-									vEnd = textIngredient.getBegin();
-									addPrevious = true;
-								}
-								// ///// check noun to find ingredients
-								if (textIngredient.getType().getShortName().equals("NN")) {
-									for (IngredientAnnotation ingredient : JCasUtil
-											.select(jcas, IngredientAnnotation.class)) {
+							if (textIngredient.getType().getShortName().equals("V")) {
+								vEnd = textIngredient.getEnd();
+						        Lexicon lexicon = Lexicon.getDefaultLexicon();
+						        NLGFactory nlgFactory = new NLGFactory(lexicon);
+								Realiser realiser = new Realiser(lexicon);
+						        NLGElement s1 = nlgFactory.createSentence(textIngredientLemma + "");
+						        SPhraseSpec p = nlgFactory.createClause();
+						        p.setVerb(textIngredientLemma);
+						        p.setFeature(Feature.TENSE,  Tense.PAST);
+								String output = realiser.realiseSentence(p);
+								System.out.println("verbe = " + textIngredientLemma +"    OUTPUT = " + output);
+								output = output.substring(0, output.length()-1).toLowerCase();
+								if (negationFound) {
+									d.setInstruction("[not]"+textIngredientLemma);
+									resultingEntity = "not "+ output+"[" + previous;
 
-										// //// ingredients / recipes match
-										if (textIngredientLemma.equals(ingredient
-												.getNormalizedName())){
-											ingredients.add(textIngredientLemma);
+								}
+								else {
+									d.setInstruction(textIngredientLemma);
+									resultingEntity = output + "[" + previous;
+								}
+							}
+							int ppBegin = textIngredient.getBegin();
+							if ((ppBegin == (vEnd+1)) && (textIngredient.getType().getShortName().equals("PP"))) {
+								vEnd = textIngredient.getBegin();
+								addPrevious = true;
+							}
+							// ///// check noun to find ingredients
+							if (textIngredient.getType().getShortName().equals("NN")) {
+								for (IngredientAnnotation ingredient : JCasUtil
+										.select(jcas, IngredientAnnotation.class)) {
+
+									// //// ingredients / recipes match
+									if (textIngredientLemma.equals(ingredient
+											.getNormalizedName())){
+										if (!ingredients.contains(textIngredientLemma)){
+											ingredients.add(textIngredientLemma);											
 											resultingEntity += " " +  textIngredientLemma;
 										}
-										else {
-											Boolean hypernymFound = false;
-											// //// ingredient's hypernym / recipes
-											// match
+									}
+									else {
+										Boolean hypernymFound = false;
+										// //// ingredient's hypernym / recipes
+										// match
+										try {
+											IndexWord indexWord = null;
+											indexWord = dictionary.lookupIndexWord(
+													POS.NOUN, textIngredientLemma);
+											// System.out.println("indexword : " +
+											// indexWord);
+											if (indexWord != null) {
+												Synset[] set = indexWord
+														.getSenses();
+												if (set != null) {
+													for (Synset s : set) {
+														Pointer[] pointerArr = s
+																.getPointers(PointerType.HYPERNYM);
+														if (pointerArr != null)
+															for (Pointer x : pointerArr) {
+																for (Word hypernym : x
+																		.getTargetSynset()
+																		.getWords()) {
+																	// System.out.println(hypernym.getLemma()+
+																	// " = "+
+																	// ingredient.getCoveredText()
+																	// +
+																	// "?????????");
+																	if (ingredient
+																			.getCoveredText()
+																			.equals(hypernym
+																					.getLemma())) {
+																		// System.out.println(hypernym.getLemma()+
+																		// " = "+
+																		// ingredient.getNormalizedName()+
+																		// " ajouté");
+
+																		if (!ingredients.contains(textIngredientLemma)){
+																			ingredients.add(textIngredientLemma);											
+																			resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
+																		}
+																		hypernymFound = true;
+																	}
+																}
+															}
+													}
+												}
+											}
+										} catch (JWNLException e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
+										// /////// ingredient / recipes's hypernym
+										// match
+										if (!hypernymFound) {
+											//System.out.println("!hypernymFound" + textIngredientLemma);
+
 											try {
 												IndexWord indexWord = null;
-												indexWord = dictionary.lookupIndexWord(
-														POS.NOUN, textIngredientLemma);
-												// System.out.println("indexword : " +
-												// indexWord);
+												indexWord = dictionary
+														.lookupIndexWord(
+																POS.NOUN,
+																ingredient
+																.getNormalizedName());
+												// System.out.println("indexword : "
+												// + indexWord);
 												if (indexWord != null) {
 													Synset[] set = indexWord
 															.getSenses();
+													Boolean alreadyAdded = false;
 													if (set != null) {
 														for (Synset s : set) {
 															Pointer[] pointerArr = s
 																	.getPointers(PointerType.HYPERNYM);
 															if (pointerArr != null)
 																for (Pointer x : pointerArr) {
-																	for (Word hypernym : x
+																	for (Word w : x
 																			.getTargetSynset()
 																			.getWords()) {
-																		// System.out.println(hypernym.getLemma()+
-																		// " = "+
-																		// ingredient.getCoveredText()
-																		// +
-																		// "?????????");
-																		if (ingredient
-																				.getCoveredText()
-																				.equals(hypernym
-																						.getLemma())) {
-																			// System.out.println(hypernym.getLemma()+
+																		for (Lemma l : JCasUtil
+																				.selectCovered(
+																						jcas,
+																						Lemma.class,
+																						textIngredient)) {
+																			// System.out.println(ingredient.getNormalizedName()
+																			// +
+																			// " = "
+																			// +
+																			// w.getLemma()+
 																			// " = "+
-																			// ingredient.getNormalizedName()+
-																			// " ajouté");
-																			ingredients
-																			.add(textIngredientLemma);
-																			hypernymFound = true;
-																			resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
+																			// l.getValue());
+																			if (((l.getValue()
+																					.equals(w
+																							.getLemma())) || (w
+																									.getLemma()
+																									.contains(l
+																											.getValue())))
+																											&& !alreadyAdded) {
+																				//System.out.println(ingredient+ " ajouté");
+																				if (!ingredients.contains(textIngredientLemma)){
+																					ingredients.add(ingredient.getNormalizedName());											
+																					resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
+																				}
+																				alreadyAdded = true;
+																			}
 																		}
 																	}
 																}
@@ -181,101 +266,38 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 												// TODO Auto-generated catch block
 												e.printStackTrace();
 											}
-											// /////// ingredient / recipes's hypernym
-											// match
-											if (!hypernymFound) {
-												//System.out.println("!hypernymFound" + textIngredientLemma);
-
-												try {
-													IndexWord indexWord = null;
-													indexWord = dictionary
-															.lookupIndexWord(
-																	POS.NOUN,
-																	ingredient
-																	.getNormalizedName());
-													// System.out.println("indexword : "
-													// + indexWord);
-													if (indexWord != null) {
-														Synset[] set = indexWord
-																.getSenses();
-														Boolean alreadyAdded = false;
-														if (set != null) {
-															for (Synset s : set) {
-																Pointer[] pointerArr = s
-																		.getPointers(PointerType.HYPERNYM);
-																if (pointerArr != null)
-																	for (Pointer x : pointerArr) {
-																		for (Word w : x
-																				.getTargetSynset()
-																				.getWords()) {
-																			for (Lemma l : JCasUtil
-																					.selectCovered(
-																							jcas,
-																							Lemma.class,
-																							textIngredient)) {
-																				// System.out.println(ingredient.getNormalizedName()
-																				// +
-																				// " = "
-																				// +
-																				// w.getLemma()+
-																				// " = "+
-																				// l.getValue());
-																				if (((l.getValue()
-																						.equals(w
-																								.getLemma())) || (w
-																										.getLemma()
-																										.contains(l
-																												.getValue())))
-																												&& !alreadyAdded) {
-																					//System.out.println(ingredient+ " ajouté");
-																					ingredients
-																					.add(ingredient
-																							.getNormalizedName());
-																					alreadyAdded = true;
-																					resultingEntity = resultingEntity + " " + ingredient.getNormalizedName();
-																				}
-																			}
-																		}
-																	}
-															}
-														}
-													}
-												} catch (JWNLException e) {
-													// TODO Auto-generated catch block
-													e.printStackTrace();
-												}
-											}
 										}
 									}
 								}
-
-							}
-							String ing = "";
-							resultingEntity = resultingEntity + " ]";
-							if (addPrevious){
-								if (!previous.equals("")){
-									ing = " "+previous;								
-								} else {
-									ing = previous;
-								}						
 							}
 
-							for (int i=0;i<ingredients.size();i++){
-								ing = ing + " " + ingredients.get(i);
-								//System.out.println("AAAA " + ingredients.get(i));
-								//System.out.println("BBBB " + ing);
-							}
+						}
+						String ing = "";
+						resultingEntity = resultingEntity + " ]";
+						if (addPrevious){
+							if (!previous.equals("")){
+								ing = " "+previous;								
+							} else {
+								ing = previous;
+							}						
+						}
 
-							if (ing == ""){
-								ing = " " +resultingEntity;
-							}
+						for (int i=0;i<ingredients.size();i++){
+							ing = ing + " " + ingredients.get(i);
+							//System.out.println("AAAA " + ingredients.get(i));
+							//System.out.println("BBBB " + ing);
+						}
+
+						if (ing == ""){
+							ing = " " +previous;
+						}
 
 
-							d.setIngredient(ing);
+						d.setIngredient(ing);
 
-							d.setResultingEntity(resultingEntity);
-							d.addToIndexes();
-							previous = resultingEntity;
+						d.setResultingEntity(resultingEntity);
+						d.addToIndexes();
+						previous = resultingEntity;
 						//}
 					}
 				}
