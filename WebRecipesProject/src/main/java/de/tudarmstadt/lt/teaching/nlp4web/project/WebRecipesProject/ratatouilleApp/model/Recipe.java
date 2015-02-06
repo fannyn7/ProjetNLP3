@@ -15,10 +15,14 @@ public class Recipe {
 	
 	private List<Ingredient> ingredients;
 	
+	public static final String DEFAULT_NAME = "No name";
+
+	// TODO Uncomment following lines to take the instructions in account
+	/*
 	private String textInstructions;
 	
 	private List<Directive> instructions;
-	
+	*/
 	
 	public String getName() {
 		return name;
@@ -61,7 +65,32 @@ public class Recipe {
 	public void setTextIngredients(String textIngredients) {
 		this.textIngredients = textIngredients;
 	}
+	
+	public Ingredient containsIngredient(String ingredient_lemma) {
+		Ingredient ingFound = null;
+		// TODO : improve the performance using WordNet
+		for(Ingredient i : getIngredients() ) {
+			if (i.getName().equalsIgnoreCase(ingredient_lemma)) {
+				ingFound = new Ingredient();
+				ingFound.setName(i.getName());
+				ingFound.setQuantity(i.getQuantity());
+			}
+		}
+			
+		return ingFound;
+	}
+	
+	@Override
+	public String toString() {
+		if (getName()==null || getName().isEmpty()) {
+			return DEFAULT_NAME;
+		} else {
+			return getName();
+		}
+	}
 
+	// TODO Uncomment following lines to take the instructions in account
+	/*
 	public String getTextInstructions() {
 		return textInstructions;
 	}
@@ -88,5 +117,19 @@ public class Recipe {
 		d.setResultingEntity(a.getResultingEntity());
 		return d;
 	}
+	*/
 
+	
+	public String toHTML() {
+		String s = "<h3>Link : "+getWebLink()+"</h3>\n";
+		s += "<h3>Name : "+getName()+"</h3>\n";
+		s += "<h3>Ingredients : "+"</h3>\n";
+		for (Ingredient i : getIngredients()) {
+			s += "\t"+i+"<br/>";
+		}
+		s += "<h3>Original list of ingredients (from the website) : </h3>\n"
+				+ getTextIngredients();
+		return s;
+		
+	}
 }

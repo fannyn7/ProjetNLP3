@@ -26,5 +26,10 @@ public class Ingredient {
 		return i;
 	}
 	
+	@Override
+	public String toString() {
+		return getName()+" ("+getQuantity()+")";
+	}
+	
 	
 }

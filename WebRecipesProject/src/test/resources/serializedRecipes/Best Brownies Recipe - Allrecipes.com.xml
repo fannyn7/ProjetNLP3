@@ -76,63 +76,63 @@ Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square
     </Instruction>
     <Instruction>
       <instruction>pan</instruction>
-      <ingredient> paned[ovened[ butter egg vanilla flour salt butter vanilla ] ]</ingredient>
+      <ingredient> ovened[ butter egg vanilla flour salt butter vanilla ]</ingredient>
       <resultingEntity>paned[ovened[ butter egg vanilla flour salt butter vanilla ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>melt</instruction>
-      <ingredient> butter butter</ingredient>
-      <resultingEntity>melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ]</resultingEntity>
+      <ingredient> butter</ingredient>
+      <resultingEntity>melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>remove</instruction>
-      <ingredient> melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ]</ingredient>
-      <resultingEntity>removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ]</resultingEntity>
+      <ingredient> melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ]</ingredient>
+      <resultingEntity>removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>stir</instruction>
-      <ingredient> removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla</ingredient>
-      <resultingEntity>stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ]</resultingEntity>
+      <ingredient> removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla</ingredient>
+      <resultingEntity>stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>pan</instruction>
-      <ingredient> paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ]</ingredient>
-      <resultingEntity>paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ]</resultingEntity>
+      <ingredient> stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ]</ingredient>
+      <resultingEntity>paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>bake</instruction>
-      <ingredient> paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ]</ingredient>
-      <resultingEntity>bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ]</resultingEntity>
+      <ingredient> paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ]</ingredient>
+      <resultingEntity>baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>[not]overcook</instruction>
-      <ingredient> not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ]</ingredient>
-      <resultingEntity>not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ]</resultingEntity>
+      <ingredient> baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ]</ingredient>
+      <resultingEntity>not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>make</instruction>
-      <ingredient> makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ]</ingredient>
-      <resultingEntity>makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ]</resultingEntity>
+      <ingredient> not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ]</ingredient>
+      <resultingEntity>made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>combine</instruction>
-      <ingredient> butter butter</ingredient>
-      <resultingEntity>combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ]</resultingEntity>
+      <ingredient> butter</ingredient>
+      <resultingEntity>combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>extract</instruction>
-      <ingredient> extracted[combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ] ]</ingredient>
-      <resultingEntity>extracted[combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ] ]</resultingEntity>
+      <ingredient> combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ]</ingredient>
+      <resultingEntity>extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>stir</instruction>
-      <ingredient> extracted[combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ] ]</ingredient>
-      <resultingEntity>stired[extracted[combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ] ] ]</resultingEntity>
+      <ingredient> extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ]</ingredient>
+      <resultingEntity>stirred[extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ] ]</resultingEntity>
     </Instruction>
     <Instruction>
       <instruction>be</instruction>
-      <ingredient> beed[stired[extracted[combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ] ] ] ]</ingredient>
-      <resultingEntity>beed[stired[extracted[combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ] ] ] ]</resultingEntity>
+      <ingredient> stirred[extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ] ]</ingredient>
+      <resultingEntity>was[stirred[extracted[combined[made[not overcooked[baked[paned[stirred[removed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter ] ] sugar egg vanilla ] ] ] ] ] butter ] ] ] ]</resultingEntity>
     </Instruction>
   </instructions>
 </Recipe>

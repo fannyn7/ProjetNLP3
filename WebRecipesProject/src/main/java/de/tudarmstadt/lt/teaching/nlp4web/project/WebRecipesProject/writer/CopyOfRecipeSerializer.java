@@ -63,6 +63,8 @@ public class CopyOfRecipeSerializer extends JCasConsumer_ImplBase {
 			r.getIngredients().add(Ingredient.parseAnnotation(i));
 		}
 		
+		// TODO Uncomment following lines to take the instructions in account
+		/*
 		for(TextInstructions lt : JCasUtil.select(jcas, TextInstructions.class)) {
 			//should have 0 or 1 element
 			r.setTextInstructions(lt.getCoveredText());
@@ -71,6 +73,7 @@ public class CopyOfRecipeSerializer extends JCasConsumer_ImplBase {
 		for (DirectivesAnnotation d : JCasUtil.select(jcas, DirectivesAnnotation.class)) { 
 			r.getInstructions().add(Directive.parseAnnotation(d));
 		}
+		*/
 		
 		sb.append("Recipe object created"); sb.append(LF);
 		sb.append("Recipe name : "+r.getName()); sb.append(LF);

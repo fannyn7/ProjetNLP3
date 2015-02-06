@@ -1,6 +1,7 @@
 package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -16,6 +17,10 @@ public class XStreamFactory {
 		xstream.alias("Recipe", Recipe.class);
 		xstream.alias("Ingredient", Ingredient.class);
 		xstream.alias("Instruction", Directive.class);
+		
+		xstream.alias("ArrayList", ArrayList.class);
+		xstream.alias("List", List.class);
+		
 
 		return xstream;
 	}
