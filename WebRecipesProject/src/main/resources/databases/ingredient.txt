@@ -1,77 +1,883 @@
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/'9os_Style_Chicken_Salad.xml -->
-chicken
-oranges
-dates
-pepper
-mayonnaise
-coconut
-lettuce
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$20,000_Prize-Winning_Chili.xml -->
-pork
-onion
-garlic
-beer
-tomato sauce
-water
-Chili powder
-cumin
-Oregano leaves
-Paprika
-sugar
-cocoa
-coriander
-Louisiana hot sauce
-flour
-Cornmeal
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$25,000_Chili.xml -->
-Onions
-peppers
-Green peppers
-celery
-garlic
-chilies
-tomatoes
-tomato paste
-Tabasco sauce
-Bay leaves
-Garlic salt
-Garlic
+<!-- TODO : delete duplicates eg use a data structure that does allow duplicates to save it and then rewrite it in the file-->
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/*.xml -->
+Pears
+Raspberries
+Passion fruit
+sherry
+Butter
+Sugar
+Flour
+Eggs
+Eggs
 Salt
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$100_Chocolate_Cake.xml -->
+Nutmeg
+cream
+almonds
+Flour
+Sugar
+Baking powder
+Salt
+Margarine
+Flour
+Cereal
+Brown Sugar
+Dates
+Baking Soda
+Cinnamon
+Buttermilk
+sour Milk
+Vegetable Oil
+Oil
+Cocoa
+water
+Vanilla
+Salt
+Honey
+Molasses
+Gluten
+Olive oil
+Seeds
+Yeast
+Water
+Whole-Wheat Flour
+Salt
+Gluten
+Applesauce
+Salt
+Honey
+Bread flour
+Honey
+Molasses
+Gluten
+Olive oil
+Sunflower
+Chicken breasts
+Chicken
+Parmesan cheese
+cheese
+bread crumbs
+bread
+Oregano
+Parsley
+Paprika
+Salt
+Black pepper
+pepper
+chicken breast
+Halves
+Margarine
+oregano leaves
+parsley flakes
+paprika
+Pepper
+Active dry yeast
+Dark brown sugar
+Whole-wheat flour
+milk powder
+Vegetable oil
+Egg whites
+Salt
+Granulated sugar
+Cinnamon
+Ginger
+Nutmeg
+Allspice
+Pumpkin
+skim milk
+Egg whites
+Vanilla
+Water
+Salt
+Canola oil
+Honey
+Whey
+Honey
+Whole wheat flour
+Flour
+Vital wheat gluten
+Canola Oil
+Honey
+Flour
+Gluten Flour
+Wheat Germ
+Whey
+Salt
+Molasses
+Packed brown sugar
+Whole wheat flour
+Vital wheat gluten
+Active dry yeast
+Water; (up to 10)
+Salt
+Honey
+Molasses
+Whole wheat flour
+Vital gluten
+Active dry yeast
+Water
+Vegetable oil
+Honey
+Salt
+Whole wheat bread flour
+Yeast
+Water
+Whole wheat flour
+Sugar
+Salt
+Active dry yeast
+Water
+Yeast
+Sugar
+Scalded Milk
+Shortening
+Sugar
+Molasses
+Salt
+Whole Wheat Flour
+Water
+Whole Wheat Flour
+Sugar
+Salt
+Active Dry Yeast
+Water
+Wheat bread flour
+Dry milk
+Salt
+Butter
+Honey
+Gluten
+Molasses
+Active-Dry yeast
+Wheat bread flour
+Dry milk
+Salt
+Butter
+Honey
+Gluten
+Molasses
+Active-Dry yeast
+Wheat bread flour
+Dry milk
+Salt
+Butter
+Honey
+Gluten
+Molasses
+Water
+Yeast
+Sugar
+Scalded Milk
+Shortening
+Sugar
+Molasses
+Salt
+Whole Wheat Flour
+Whole wheat flour
+Gluten
+Rapid rising yeast
+Sugar
+Hot water
+Whole wheat flour
+Gluten flour
+Sugar
+Salt
+Water
+Olive oil
+Active dry yeast
+Cornmeal
+Whole wheat flour
+Gluten flour
+Sugar
+Salt
+Water
+Olive oil
+Active dry yeast
+Cornmeal
+Water
+Whole-wheat flour
+Gluten
+Molasses
+Salt
+Butter
+Yeast
+Fast rising yeast
+Whole Wheat Flour
+Salt
+Molasses
+Water
+Dry yeast
+Raisins
+Ground round
+Bulk Italian sausage
+beef broth
+Saffron threads
+Saffron
+Olive oil
+Shallots
+Garlic
+green chiles
+chiles
+Oregano
+Whole cumin seeds
+Cayenne pepper
+Chili powder
+Salt
+Fresh ground black pepper to taste
+tomato paste
+red kidney beans drained
+crushed pineapple with juice
+White sugar
+Eggs
+Flour
 Baking soda
 Vanilla
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$200_Salad_Dressing.xml -->
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$200_Cake.xml -->
-Shortening
-Eggs
-food coloring
-Buttermilk
-Cake flour
-Vinegar
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$250.00_Cookies_(Neiman_Marcus).xml -->
-Baking Powder
-Brown sugar
-Chocolate Chips
-nuts
-Oatmeal
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$500.00_Fudge.xml -->
-milk
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/$800_Waldorf_Red_Cake.xml -->
-Crisco
-Soda
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-1-1_Cookies.xml -->
+Chopped walnuts
+Butter
+cream cheese
+Icing sugar
+Vanilla
+Beef flank
+Salt
+Fresh ground black pepper
+Hot chili oil
+Garlic
+Frozen broccoli
+Frozen carrot slices
+Water
+Creamy peanut butter
+Package German sweet
+Chocolate
+Milk
+Sugar
+Package cream cheese
+Softened
+graham cracker pie
+Crust
+lasagna noodles
+tomato sauce
+Cottage cheese
+American cheese
+Water
 Peanut butter
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3-4-5_Cake.xml -->
+Sugar
+Egg
+Butter
+Sugar
+Flour
+Eggs
+Baking powder
+Milk
 Vanilla extract
-<!-- /Exercices/ProjetNLP3/WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3-4_Cake_By_James_Beard.xml -->
+Butter
+Sugar
+Flour
+Eggs
+Milk
+Baking powder
+Vanilla
+Butter
+Flour
+Cake Flour
+Baking powder
+Acting
+Salt
+Milk
+Vanilla extract
 Orange juice
 Lemon juice
+Sugar
 Orange rind
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3_Cookies.xml -->
+Orange juice
+Lemon juice
+Sugar
+Orange rind
+Orange juice
+Lemon juice
+Sugar
+All-purpose flour
+Baking powder
+unsalted butter
+Granulated sugar
+Eggs
+Milk
+Vanilla
+unsalted butter
+Packed dark-brown sugar
+Milk
+Butter
+Milk
+Vanilla
+Sugar
+Salt
+Flour
+Baking powder
+Eggs
+Unsweetened chocolate
+Confectioners sugar
+Vanilla
+Sticks butter
+Sugar
+Eggs; separated
+Flour
+Baking powder
+Lemon extract
+Vanilla
+Flour
+Baking soda
+Salt
+Softened butter
+Sugar
+Brown sugar
+Vanilla
+Eggs
 Mix-ins
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3_Lemon_Pie.xml -->
-lemonade
-<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/1-2-3_Meurbeteig_Dough.xml -->
+Borden Eagle Brand Sweetened condensed milk
+frozen lemonade
+Sugar
+Butter
+Flour
 Egg yolk
-lemon rind
-almonds
+Vanilla
+Grated lemon rind
+Baking powder for kuchens
+Ground almonds
+Egg yolk
+Vanilla
+Cold water
+wine
+brandy
+Grated lemon rind
+Optional:
+Baking powder for kuchens
+Cocoa or melted choclate
+Ground almonds
+Rye
+Bottles sherry
+Bottles ginger ale
+Whole oranges
+Rice cakes
+Hershey's candy bar
+candy bar
+marshmallows
+Tomatoes
+Salsa
+Black beans
+beans
+Frozen corn
+corn
+Chili powder
+Powdered sugar
+Granulated sugar
+Flour
+Lemon juice
+Parmesan
+Salt
+Pepper
+Dried basil
+Egg whites
+Turkey scaloppine
+Olive oil
+Butter
+Asiago cheese
+Eggplant
+Olive oil
+Onion, chopped
+Garlic cloves
+Canned stewed tomatoes
+Dried basil
+Granulated sugar
+Dried oregano
+Pepper
+Dry bread crumbs
+Salt
+Pepper
+Dried basil
+Egg whites
+Turkey scaloppine
+Olive oil
+Butter
+Asiago cheese
+Eggplant
+Olive oil
+Onion, chopped
+Garlic cloves, minced
+Canned stewed tomatoes
+Dried basil
+Granulated sugar
+Dried oregano
+Pepper
+Vegetable oil
+Onion, chopped
+Salt
+Pepper
+Chicken stock
+Cornstarch
+evaporated milk
+Broad egg noodles
+Frozen peas
+Chicken breasts
+Chicken stock
+Cornstarch
+Broad egg noodles
+Frozen peas
+Dijon mustard
+mustard
+Vegetable oil
+Celery stalks
+Dried thyme
+Pepper
+Cloves
+Canned tomatoes
+Chicken stock
+Bay leaf
+pea beans
+Butter
+Fresh bread crumbs
+Vegetable oil
+Kielbasa sausage
+sausage
+Onions
+Carrots
+Celery stalks
+Pepper
+Cloves
+Canned tomatoes
+Chicken stock
+Bay leaf
+Butter
+Fresh bread crumbs
+Fresh parsley
+Stewing veal
+All-purpose flour
+Salt
+Pepper
+Vegetable oil
+Onion
+Garlic clove
+Carrots
+Mushrooms
+Dried sage
+Beef stock
+Dry vermouth
+vermouth
+Tomato paste
+Worcestershire sauce
+Frozen peas
+Fresh parsley
+Baking powder
+Baking soda
+Salt
+Pepper
+low-fat yogurt
+Stewing veal
+All-purpose flour
+Salt
+Pepper
+Vegetable oil
+Onion, chopped
+Carrots
+Dried sage
+Beef stock
+vermouth
+Tomato paste
+Frozen peas
+All-purpose flour
+low-fat yogurt
+Vegetable oil
+Garlic cloves
+Onion
+Zucchini
+Lean ground beef
+Dried basil
+Dried oregano
+Cinnamon
+Salt
+Pepper
+thyme
+Tomato paste
+Canned tomatoes
+parsley
+Butter
+All-purpose flour
+Milk
+Egg
+Mozzarella
+Salt
+Pepper
+Nutmeg
+Vegetable oil
+Carrots
+Zucchini
+Lean ground beef
+basil
+oregano
+Cinnamon
+Salt
+Pepper
+thyme
+Tomato paste
+Canned tomatoes
+Butter
+All-purpose flour
+Milk
+Egg
+Mozzarella
+Shredded
+Salt
+Pepper
+Nutmeg
+Pasta shells
+Parmesan
+Egg white
+Fresh parsley
+Butter
+Fresh mushrooms
+Celery
+Green onion
+Dried dillweed
+Salt
+Pepper
+Raw unpeeled shrimp
+All-purpose flour
+Milk
+Lemon rind
+Fresh bread crumbs
+Long-grain rice
+rice
+Egg white
+mushrooms
+Celery
+Green onion
+dillweed
+Salt
+Pepper
+Raw unpeeled shrimp
+All-purpose flour
+Milk
+Fresh bread crumbs
+Butter
+Broccoli
+Romano cheese
+Butter
+Garlic cloves
+Onions
+Carrots
+Red wine vinegar
+rosemary
+pepper flakes
+Spaghetti sauce
+kidney beans
+Rotini pasta
+Broccoli, chopped
+Romano cheese
+chuck
+pork
+Garlic cloves
+Budweiser beer
+Water
+Chili powder
+Ground cumin
+beef-flavor instant bouillon
+instant bouillon
+Oregano leaves
+Paprika
+Sugar
+Unsweetened cocoa
+Ground coriander
+Louisiana hot sauce
+Louisiana sauce
+Flour
+Cornmeal
+Warm water
+Shortening
+Sugar
+Eggs
+Red food coloring
+Cocoa
+Buttermilk
+Cake flour
+Salt
+Vanilla
+Vinegar
+Baking soda
+Onions
+Green peppers
+celery
+Jalapeno peppers;
+green chilies
+stewed tomatoes
+Chili powder
+Tabasco sauce
+Beer
+Mineral water
+Bay leaves
+Butter
+Salt
+Sugar
+Baking Powder
+Brown sugar
+Baking Soda
+Eggs
+Chocolate Chips
+Vanilla
+Flour
+Chopped nuts
+Blended Oatmeal
+Butter
+Salt
+Sugar
+Baking Powder
+Brown sugar
+Baking Soda
+Eggs
+Chocolate Chips
+Vanilla
+Flour
+Chopped nuts
+Blended Oatmeal
+Sugar
+Butter
+Chocolate chips
+Vanilla
+salt
+Crisco
+Sugar
+Eggs
+Red food coloring
+Vanilla
+Salt
+Cake flour
+Buttermilk
+Soda
+Vinegar
+Flour
+Milk
+Sugar
+Crisco
+Vanilla
+chicken breasts
+chicken thighs
+Chicken broth
+curry powder
+oranges
+dates
+Mandarin
+orange
+yogurt
+Reduced-calorie mayonnaise
+Flaked coconut
+coconut
+Italian bread
+Extra-virgin olive oil
+Calamata olives
+mozzarella cheese
+Slices
+black pepper
+Corn kernels
+Corn
+Black beans
+Red bell peppers
+green bell peppers
+SALAD DRESSING
+Extra virgin olive oil
+Salt
+Pepper
+Granulated sugar
+Onion powder
+Balsamic vinegar
+Ground cumin
+cilantro leaves
+Garnish
+Tofu
+Green onions
+Fresh parsley
+Curry powder
+Mayo
+almondaise
+Dry yeast
+Coarse salt
+Dry yeast
+Powdered sugar
+Vanilla
+Butter
+Raisins
+Brown sugar
+Nuts
+Cinnamon
+Yeast
+Bread mix
+Brown sugar
+Wheat germ
+Eggs
+Vegetable oil
+Bread mix
+Pie Crust
+Canned Pumpkin
+Granulated Sugar
+Egg
+Sour Cream
+Ground Ginger
+Ground Cinnamon
+Ground Cloves
+Ground Nutmeg
+Salt
+Dark Corn Syrup
+Vanilla
+Pecans
+Whipping Cream
+Sour Cream
+Brown Sugar
+Bourbon
+Ground turkey
+Cayenne
+Hot paprika
+Sweet paprika
+Ground cinnamon
+Ground cloves
+Ground cumin
+Salt
+black pepper
+Greek oregano
+Water
+Cider vinegar
+flour tortillas
+lettuce
+tomato
+cheddar cheese
+black olives
+scallions
+Sour cream
+Salsa sauce
+taco sauce
+Self-rising flour
+Teff flour
+masa harina
+brown potatoes
+Cream of chicken soup
+Sour cream
+Beef
+chicken
+vegetable stock
+Bulgar wheat
+Non-fat dry milk powder
+Salt
+Yeast
+Hot water 
+meat juice
+Margarine
+Powdered milk
+Salt
+Egg
+Whole wheat flour
+Ground beef
+Onion
+Active dry yeast
+Bread flour
+Salt
+cumin
+Ground cumin
+cardamon
+Ground cardamon
+nutmeg
+Grated nutmeg
+cinnamon
+Ground cinnamon
+Ground black pepper
+Water
+fava beans
+Celery ribs
+Onion
+Salt
+Fruity olive oil
+Broccoli 
+rabe
+Water
+Salt
+Garlic cloves
+pasta
+Roma
+Red onion
+Pitted olives
+dried tomates
+Cauliflower
+Broccoli
+red peppers
+Capers
+Feta cheese
+Cloves garlic
+Red wine vinegar
+Capers
+Lemon juice
+ground pepper
+Salt
+Beef tenderloin
+Cubes
+Butter
+Oil
+Salt
+pepper
+red wine
+Thyme
+Bay leaf
+Carrots
+Tiny white onions
+Handful fresh parsley finely chopped
+Beef tenderloin
+Cubes
+Butter
+Oil
+Dry red wine
+beef bouillon
+Water
+Baking potatoes
+Onion
+Thyme
+Bay leaf
+Red potatoes
+Carrots
+Stalks celery
+white onions
+tomato juice
+peach pulp
+pineapple
+Unflavored gelatin powder
+Unsweetened apple juice
+Bottled lemon juice
+Food coloring
+Cucumber
+Onion
+White vinegar
+Sugar
+Mustard seed
+Celery seed
+Ginger
+Tumeric
+Black pepper
+Flour
+Baking powder
+Salt
+Butter
+Currents
+Milk
+Granulated sugar
+Flour
+Salt
+Egg yolks
+Vanilla
+Cake
+Confectioner's sugar
+syrup
+Orange juice
+Cornstarch
+Brown sugar
+Vinegar
+Soy sauce
+Ground ginger
+Bagel
+Eggs
+Milk
+Cinnamon sugar
+Raisons
+Chocolate chips
+Sugar with
+Cinnamon

@@ -1,6 +1,9 @@
 package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
@@ -67,6 +70,14 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 			Recipe2Xml.generateRecipes(r, filename);
 			sb.append("Recipe serialized"); sb.append(LF);
 			sb.append("Xml file created : "+filename); sb.append(LF);
+			// Save in favourites ?
+			try {
+				appendToFavorites(r, filename);
+				sb.append("Recipe added to the file of favorite recipes"); sb.append(LF);
+			} catch (IOException e) {
+				e.printStackTrace();
+				sb.append("Recipe serialization could'nt be added to the file of favorite recipes"); sb.append(LF);
+			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			sb.append("Recipe serialization failed"); sb.append(LF);
@@ -76,5 +87,24 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 		}
 		
         getContext().getLogger().log(Level.INFO, sb.toString());
+	}
+
+	// TODO This method does not work
+	public void appendToFavorites(Recipe r, String rFile) throws IOException{
+		/*
+		 FileReader fr = new FileReader(rFile);
+		 
+		// delete the last
+		FileWriter fw = new FileWriter(
+				"src/test/resources/ratatouille/myFavoriteRecipes.xml", true);
+		char[] buf = new char[1024];
+		int charRead;
+
+		while ((charRead = fr.read(buf)) > 0) {
+			fw.write(buf, 0, charRead);
+		}
+		fw.close();
+		*/
+		System.out.println("[RecipeSerializer] appendToFavorites does not work!!");
 	}
 }

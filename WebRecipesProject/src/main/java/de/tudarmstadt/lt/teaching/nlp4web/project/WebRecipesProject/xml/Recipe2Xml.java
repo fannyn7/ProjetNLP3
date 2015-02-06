@@ -29,6 +29,21 @@ public class Recipe2Xml {
 		ps.println(x);
 		ps.close();
 	}
+	
+	public static void generateRecipes(List<Recipe> recipes, String filename) throws IOException{
+
+
+		XStream xstream = XStreamFactory.createXStream();
+		String x = xstream.toXML(recipes);
+		x = removeLogger(x);
+		File yourFile = new File(filename);
+		if(!yourFile.exists()) {
+		    yourFile.createNewFile();
+		} 
+		PrintStream ps = new PrintStream(filename);
+		ps.println(x);
+		ps.close();
+	}
 
 	/**
 	 * To make the xml file more readable remove the logger elements
