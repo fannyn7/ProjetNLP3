@@ -81,7 +81,7 @@ Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square
     </Instruction>
     <Instruction>
       <instruction>melt</instruction>
-      <ingredient> butter</ingredient>
+      <ingredient> butter butter</ingredient>
       <resultingEntity>melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ]</resultingEntity>
     </Instruction>
     <Instruction>
@@ -91,7 +91,7 @@ Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square
     </Instruction>
     <Instruction>
       <instruction>stir</instruction>
-      <ingredient> removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar egg vanilla</ingredient>
+      <ingredient> removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla</ingredient>
       <resultingEntity>stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ]</resultingEntity>
     </Instruction>
     <Instruction>
@@ -116,7 +116,7 @@ Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square
     </Instruction>
     <Instruction>
       <instruction>combine</instruction>
-      <ingredient> butter</ingredient>
+      <ingredient> butter butter</ingredient>
       <resultingEntity>combineed[makeed[not overcooked[bakeed[paned[stired[removeed[melted[paned[ovened[ butter egg vanilla flour salt butter vanilla ] ] butter butter ] ] sugar sugar egg vanilla vanilla ] ] ] ] ] butter butter ]</resultingEntity>
     </Instruction>
     <Instruction>
