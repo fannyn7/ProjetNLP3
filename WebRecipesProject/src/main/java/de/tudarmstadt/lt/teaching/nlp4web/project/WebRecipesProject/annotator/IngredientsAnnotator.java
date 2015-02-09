@@ -111,6 +111,32 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					Sentence.class, text)) {
 				List<UnitAnnotation> lquantities = JCasUtil.selectCovered(jcas,
 						UnitAnnotation.class, sentence);
+				
+				if ( (lquantities == null) || lquantities.isEmpty() ) {
+					// pattern : QUANTITY -> ^
+					// use rote learning technique
+					List<Token> tokens = JCasUtil.selectCovered(jcas,
+							Token.class, sentence);
+					boolean found = false;
+					int j = 0;
+					while (j < tokens.size()) {
+						if (debug) {
+							System.out.println("[MODIF] POS : "+tokens.get(j).getPos().getPosValue()+" "+tokens.get(j).getCoveredText());
+						}
+						found = getIngredientDatabase().contains(
+								tokens.get(j).getCoveredText());
+						if (found) {
+							Annotation ingredient = tokens.get(j);
+							setIngredientAnnotation(jcas, ingredient, null);
+							if (debug) {
+								System.out.println("[MODIF] Found : POS : "+((Token)ingredient).getPos().getPosValue()+" "+((Token)ingredient).getCoveredText());
+							}
+							found = false;
+						}
+						j++;
+						
+					}
+				}
 				// for all UnitAnnotation in this sentence
 				for (UnitAnnotation quantity : lquantities) {
 					// if (JCasUtil.selectCovered(UnitAnnotation.class,
@@ -295,7 +321,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 
 			a.setBegin(ingredient.getBegin());
 			a.setEnd(ingredient.getEnd());
-			a.setAmount(quantity.getCoveredText());
+			a.setAmount( (quantity == null)? null : quantity.getCoveredText());
 			a.setNormalizedName(lemma.getValue());
 			a.addToIndexes();
 		} catch (IndexOutOfBoundsException e) {
