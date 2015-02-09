@@ -77,7 +77,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			HashSet<String> realActionsSet = new HashSet<String>();
 			HashSet<Ingredient> realIngredientsSet = new HashSet<Ingredient>();
 			while(!(line = reader.readLine()).equals(recipeLink)) ;
-			System.out.println("LINK : " + line );
+			//System.out.println("LINK : " + line );
 			reader.readLine(); // empty line
 			line = reader.readLine(); // actions
 			String[] actions = line.split("\\s");
@@ -85,7 +85,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				actionsList.add(actions[i]);
 				realActionsSet.add(actions[i].toLowerCase());
 			}
-			System.out.println("ACTIONS : " + actionsList.toString());
+			//System.out.println("ACTIONS : " + actionsList.toString());
 			//HashSet<String> actionsSet = new HashSet<String>();
 
 
@@ -94,7 +94,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 					correct++;
 				} 
 			}
-			System.out.println("Correctly found actions : " + correct + " out of " + realActionsSet.size());
+			//System.out.println("Correctly found actions : " + correct + " out of " + realActionsSet.size());
 			
 
 			try
@@ -132,7 +132,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			reader.readLine(); // empty line
 			int nbIngredients = 0;
 			while ((!(line = reader.readLine()).isEmpty()) && line != null && !line.matches("\\s") && !line.matches("\\n")){
-				System.out.println("ligne : " + line);
+				//System.out.println("ligne : " + line);
 				String[] ingredient = line.split("\\s\\|\\s");
 				if (ingredient[0].equals("null") && ingredient[1].equals("null")){
 					realIngredientsSet.add(new Ingredient("","",ingredient[2]));					
@@ -145,14 +145,16 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				}
 			}
 			//System.out.println("INGREDIENTS : " + realIngredientsSet.get(0).toString() + " " + realIngredientsSet.get(1).toString() + " " + realIngredientsSet.get(2).toString() + " " + realIngredientsSet.get(3).toString() + " " );
-			correct = 0;
+			int correctI = 0;
 			for (IngredientAnnotation a : JCasUtil.select(jcas, IngredientAnnotation.class)){
+				Boolean alreadyAdded = false;
 				for ( Ingredient ing : realIngredientsSet){
 					//System.out.println("ing : " + ing.toString());
 					//System.out.println("set : " + new Ingredient(a.getAmount(), a.getNormalizedName()).toString());
-					if((ing.ingredient.contains(a.getNormalizedName())) && (a.getAmount().contains(ing.amount))&& a.getAmount().contains(ing.unit)){
-						correct++;
-						System.out.println("CORRREEEEEEEEEEEEEEEEEEEEEEEEECCCCCCT");
+					if(!alreadyAdded && (ing.ingredient.contains(a.getNormalizedName())) && (a.getAmount().contains(ing.amount))&& a.getAmount().contains(ing.unit)){
+						correctI++;
+						alreadyAdded = true;
+						//System.out.println("CORRREEEEEEEEEEEEEEEEEEEEEEEEECCCCCCT");
 					}
 				}
 			}
@@ -163,7 +165,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				FileWriter fw = new FileWriter(fileToWriteIngredients, true);
 				BufferedWriter output = new BufferedWriter(fw);
 				
-				output.write(correct + " " + realIngredientsSet.size() + "\n");
+				output.write(correctI + " " + realIngredientsSet.size() + "\n");
 				
 				output.flush();				
 				output.close();
