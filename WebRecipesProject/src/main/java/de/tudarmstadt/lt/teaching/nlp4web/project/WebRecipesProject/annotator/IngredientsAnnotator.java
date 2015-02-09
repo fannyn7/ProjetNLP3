@@ -117,7 +117,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					// quantity).size() > 0) {
 					// continue;
 					// }
-					/* try { */
+					try { 
 					// check the covered NP (noun chunk) but don't consider the
 					// expressions
 					// in brackets
@@ -179,9 +179,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 							if (getUnitDatabase().contains(
 									quantityUnit.getCoveredText())) {
 
-								// Look for words of sentence than also occur in the instructions 
-								
-							
+								// TODO Look for words of sentence than also occur in the instructions 
 									
 								if (ingredient==null) {
 									// pick the last word
@@ -207,16 +205,14 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					}// PARTIE SENSIBLE . FIN
 
 					setIngredientAnnotation(jcas, ingredient, quantity);
-					/*
-					 * } catch (IndexOutOfBoundsException e) {
-					 * System.out.println("IndexOutOfBoundsException"); // empty
-					 * select() calls arrive here
-					 * 
-					 * } // catch
-					 */
+					} catch (IndexOutOfBoundsException e) {
+					  System.out.println("IndexOutOfBoundsException"); // empty  select() calls arrive here
+					 } // catch
+					
 					if (debug) {
 						System.out.println("---------");
 					}
+					
 				} // for all noun chunks in the sentence
 
 			} // for all sentences
