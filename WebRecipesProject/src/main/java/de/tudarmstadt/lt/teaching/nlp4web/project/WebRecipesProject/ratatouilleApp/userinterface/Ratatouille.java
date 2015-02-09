@@ -34,10 +34,6 @@ import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml.XStreamF
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import fr.enseeiht.libSwing.ListeDynamique;
 
-// TODO
-// 1. Save the session
-// 2. Add analyzed recipes to the list (communication per files using a buffer file + lock to have access to it)
-// 3. Check if all files are correctly used
 public class Ratatouille {
 	
 	public final static int port = 2048;
@@ -56,8 +52,7 @@ public class Ratatouille {
 	
 
 	public static void main(String[] args) throws UIMAException, IOException {
-//		new Ratatouille();
-		ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?evt19=1");
+		new Ratatouille();
 	}
 
 	public Ratatouille()	{
