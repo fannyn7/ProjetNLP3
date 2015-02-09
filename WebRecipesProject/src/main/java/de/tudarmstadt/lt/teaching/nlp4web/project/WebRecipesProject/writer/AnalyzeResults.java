@@ -74,6 +74,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			}
 			System.out.println("Correctly found actions : " + correct + " out of " + realActionsSet.size());
 			
+
 			try
 			{
 				

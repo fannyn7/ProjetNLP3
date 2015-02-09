@@ -34,8 +34,7 @@ import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.UnitW
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.WebPageConsumer;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
-import evaluation.AnalyzeEvaluationFile;
-import evaluation.EraseEvaluationFile;
+
 
 public class ExtractionPipeline {
 
@@ -50,7 +49,7 @@ public class ExtractionPipeline {
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		 String fileToWrite = "src/main/resources/globalEvaluation.txt";
 		 
-		/* FileWriter fw = new FileWriter(fileToWrite, false);
+		 FileWriter fw = new FileWriter(fileToWrite, false);
 			BufferedWriter output = new BufferedWriter(fw);
 			
 			PrintWriter pw = new PrintWriter(output);; 
@@ -70,11 +69,9 @@ public class ExtractionPipeline {
 				 executePipeline(line, recipesFile, fileToWrite);
 			 }
 		 }
-<<<<<<< Updated upstream
-		 reader.close();
-=======
+
 		 readerRecipesFile.close();
-		 */
+		 
 			BufferedReader reader;
 			try {
 				reader = new BufferedReader(new FileReader(fileToWrite));
@@ -85,24 +82,25 @@ public class ExtractionPipeline {
 			 */
 			int corrects = 0;
 			int nbRecipes = 0;
-			int totalActions = 0;
-String line ;
+			int nbTotalActions = 0;
+//String line ;
 			while ((line = reader.readLine()) != null){
 				System.out.println("ligne : " + line);
 				nbRecipes++;
 				String[] numbers = line.split("\\s");
 				corrects += Integer.parseInt(numbers[0]);
-				totalActions += Integer.parseInt(numbers[1]);
+				nbTotalActions += Integer.parseInt(numbers[1]);
 			}
-			System.out.println(nbRecipes + " recipes");
+			System.out.println("Correctly found actions : " + corrects + " out of " + nbTotalActions);
+			System.out.println("precision = " + 100*corrects/nbTotalActions);
+			System.out.println("Test Set : " +nbRecipes + " recipes");
 
 				reader.close();
 
 			} catch (FileNotFoundException e) {
 			} catch (IOException e) {
 			}
-		 
->>>>>>> Stashed changes
+
 
 	 }
 	
@@ -159,10 +157,6 @@ String line ;
 		        AnalysisEngine analyzeResults = createEngine(
 		                AnalyzeResults.class, AnalyzeResults.PARAM_INPUT_FILE, recipesFile, AnalyzeResults.PARAM_URL, webpage
 		        );
-		        
-		        AnalysisEngine analyzeEvaluationFile = createEngine(
-		        		AnalyzeEvaluationFile.class, AnalyzeEvaluationFile.PARAM_INPUT_FILE, fileToWrite
-		        );
 
 		        SimplePipeline.runPipeline(
 		        		reader,
@@ -171,13 +165,12 @@ String line ;
 		        		prnAnnotator,
 		        		amountAnnotator,
 		        		unitAnnotator,
-		        		unitWriter,
+		        		//unitWriter,
 		        		ingredientAnnotator,
 		        		directivesAnnotator,
-		        		unitWriter,
+		        		//unitWriter,
 		        		ingredientWriter,
-		        		analyzeResults,
-		        		analyzeEvaluationFile
+		        		analyzeResults
 		        		);
 		    }
 
