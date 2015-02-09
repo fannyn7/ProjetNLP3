@@ -56,8 +56,8 @@ public class Ratatouille {
 	
 
 	public static void main(String[] args) throws UIMAException, IOException {
-		new Ratatouille();
-		//ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?evt19=1");
+//		new Ratatouille();
+		ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?evt19=1");
 	}
 
 	public Ratatouille()	{

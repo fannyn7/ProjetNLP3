@@ -30,6 +30,7 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
 
 public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 
+	private static final boolean debug = false;
 	
 	private List<String> ingredientDatabase;
 
@@ -108,9 +109,10 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 				.select(jcas, TextIngredients.class))
 			for (Sentence sentence : JCasUtil.selectCovered(jcas,
 					Sentence.class, text)) {
+				List<UnitAnnotation> lquantities = JCasUtil.selectCovered(jcas,
+						UnitAnnotation.class, sentence);
 				// for all UnitAnnotation in this sentence
-				for (UnitAnnotation quantity : JCasUtil.selectCovered(jcas,
-						UnitAnnotation.class, sentence)) {
+				for (UnitAnnotation quantity : lquantities) {
 					// if (JCasUtil.selectCovered(UnitAnnotation.class,
 					// quantity).size() > 0) {
 					// continue;
@@ -147,7 +149,9 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 						boolean found = false;
 						int j = 0;
 						while (!found && (j < tokens.size())) {
-							System.out.println("[MODIF] POS : "+tokens.get(j).getPos().getPosValue()+" "+tokens.get(j).getCoveredText());
+							if (debug) {
+								System.out.println("[MODIF] POS : "+tokens.get(j).getPos().getPosValue()+" "+tokens.get(j).getCoveredText());
+							}
 							found = getIngredientDatabase().contains(
 									tokens.get(j).getCoveredText()) || 
 									tokens.get(j).getPos().getPosValue().matches("NN*");
@@ -156,7 +160,9 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 
 						if (found) {
 							ingredient = tokens.get(j - 1);
-							System.out.println("[MODIF] Found : POS : "+((Token)ingredient).getPos().getPosValue()+" "+((Token)ingredient).getCoveredText());
+							if (debug) {
+								System.out.println("[MODIF] Found : POS : "+((Token)ingredient).getPos().getPosValue()+" "+((Token)ingredient).getCoveredText());
+							}
 						} else {
 							// get the unit from the UnitAnnotation
 							// TODO : quantity unit should have type annotation
@@ -205,8 +211,10 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 								// remove it from text covered by the
 								// UnitAnnotation
 								// and set it as ingredient
-								System.out.println("quantity unit removed : "
+								if (debug) {
+									System.out.println("quantity unit removed : "
 										+ quantityUnit.getCoveredText());
+								}
 								quantity.setUnit(null);
 								ingredient = quantityUnit;
 								quantity.setEnd(ingredient.getBegin() - 1);
@@ -224,7 +232,9 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					 * 
 					 * } // catch
 					 */
-					System.out.println("---------");
+					if (debug) {
+						System.out.println("---------");
+					}
 				} // for all noun chunks in the sentence
 
 			} // for all sentences
