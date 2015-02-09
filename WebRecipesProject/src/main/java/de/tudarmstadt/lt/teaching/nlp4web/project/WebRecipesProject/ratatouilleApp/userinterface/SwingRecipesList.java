@@ -15,7 +15,7 @@ import javax.swing.JTextArea;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ratatouilleApp.model.Recipe;
 import fr.enseeiht.libSwing.ListeDynamique;
  
-public class SwingRecipesList extends ListeDynamique<Recipe> implements Observer {
+public class SwingRecipesList extends ListeDynamique<Recipe> {
 
 	private static final JButton bSee = new JButton("See");
 	private JEditorPane pVisualization;
@@ -43,19 +43,4 @@ public class SwingRecipesList extends ListeDynamique<Recipe> implements Observer
 		 jListe.addMouseListener(mouseListener);
 	}
 
-	@Override
-	public void update(Observable o, Object arg) {
-		if (arg instanceof Recipe) {
-			Recipe r = (Recipe) arg;
-			// Add the recipe to list of favorites ...
-			laListe.add(r);
-			// ... and to the displayed list
-			addElement(r);
-		}
-		
-	}
-
-	
-
-		
 }

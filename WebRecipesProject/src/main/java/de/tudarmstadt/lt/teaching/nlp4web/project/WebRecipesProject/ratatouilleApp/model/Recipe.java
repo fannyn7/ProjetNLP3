@@ -21,8 +21,6 @@ public class Recipe {
 
 	// TODO Uncomment following lines to take the instructions in account
 	/*
-	private String textInstructions;
-	
 	private List<Directive> instructions;
 	*/
 	
@@ -101,8 +99,6 @@ public class Recipe {
 	
 	// TODO Uncomment following lines to take the instructions in account
 	/*
-	
-
 	public List<Directive> getInstructions() {
 		if (this.instructions == null) {
 			this.instructions = new ArrayList<Directive>();
@@ -133,6 +129,8 @@ public class Recipe {
 		}
 		s += "<h3>Original list of ingredients (from the website) : </h3>\n"
 				+ getTextIngredients();
+		s += "<h3>Original instructions (from the website) : </h3>\n"
+				+ getTextInstructions();
 		return s;
 		
 	}

@@ -5,8 +5,12 @@ import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 
 import java.awt.Desktop;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URI;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,6 +19,7 @@ import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.pipeline.SimplePipeline;
+import org.apache.uima.util.Level;
 
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.AmountAnnotator;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator.DirectivesAnnotator;
@@ -30,6 +35,7 @@ import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.WebPa
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
 
+
 public class ExtractionPipeline {
 
 	
@@ -41,21 +47,64 @@ public class ExtractionPipeline {
 
 
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
-
+		 String fileToWrite = "src/main/resources/globalEvaluation.txt";
+		 
+		 FileWriter fw = new FileWriter(fileToWrite, false);
+			BufferedWriter output = new BufferedWriter(fw);
+			
+			PrintWriter pw = new PrintWriter(output);; 
+			pw.print("");
+			pw.flush();	
+			output.flush();				
+			pw.close();
+			
+			output.close();
+		 
 		 String line = "";
-		 BufferedReader reader = new BufferedReader(new FileReader(recipesFile));
+		 BufferedReader readerRecipesFile = new BufferedReader(new FileReader(recipesFile));
 		 Pattern p = Pattern.compile("http://allrecipes.com/Recipe*");
-		 while(!(line = reader.readLine()).equals("$$$$$$$")){
+		 while(!(line = readerRecipesFile.readLine()).equals("$$$$$$$")){
 			 Matcher matcher = p.matcher(line);
 			 if(matcher.find(0)){			 
-				 executePipeline(line, recipesFile);
+				 executePipeline(line, recipesFile, fileToWrite);
 			 }
 		 }
-		 reader.close();
+
+		 readerRecipesFile.close();
+		 
+			BufferedReader reader;
+			try {
+				reader = new BufferedReader(new FileReader(fileToWrite));
+
+			/*Pattern p = Pattern.compile("[0-9][0-9] [0-9][0-9]*");
+			Matcher matcher;
+				while(!(matcher = p.matcher(line = reader.readLine())).find(0));
+			 */
+			int corrects = 0;
+			int nbRecipes = 0;
+			int nbTotalActions = 0;
+//String line ;
+			while ((line = reader.readLine()) != null){
+				System.out.println("ligne : " + line);
+				nbRecipes++;
+				String[] numbers = line.split("\\s");
+				corrects += Integer.parseInt(numbers[0]);
+				nbTotalActions += Integer.parseInt(numbers[1]);
+			}
+			System.out.println("Correctly found actions : " + corrects + " out of " + nbTotalActions);
+			System.out.println("precision = " + 100*corrects/nbTotalActions);
+			System.out.println("Test Set : " +nbRecipes + " recipes");
+
+				reader.close();
+
+			} catch (FileNotFoundException e) {
+			} catch (IOException e) {
+			}
+
 
 	 }
 	
-	   private static void executePipeline(String webpage, String recipesFile)
+	   private static void executePipeline(String webpage, String recipesFile, String fileToWrite)
 		    	throws UIMAException, IOException
 		    {
 		   		//String webpage ="http://allrecipes.com/Recipe/Alisons-Slow-Cooker-Vegetable-Beef-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=alison%20slow%20cooker&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1";	
@@ -116,10 +165,10 @@ public class ExtractionPipeline {
 		        		prnAnnotator,
 		        		amountAnnotator,
 		        		unitAnnotator,
-		        		unitWriter,
+		        		//unitWriter,
 		        		ingredientAnnotator,
 		        		directivesAnnotator,
-		        		unitWriter,
+		        		//unitWriter,
 		        		ingredientWriter,
 		        		analyzeResults
 		        		);

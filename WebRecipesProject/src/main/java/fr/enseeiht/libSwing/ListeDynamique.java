@@ -12,12 +12,13 @@ import java.awt.event.*;
 import java.util.*;
 import java.util.List;
 
-/** Modélise un composant de fenêtre graphique contenant une liste
- * d'éléments que l'on peut supprimer un à un ou en groupe en cliquant
+/** 
+ * Modelise un composant de fenetre graphique contenant une liste
+ * d'elements que l'on peut supprimer un a un ou en groupe en cliquant
  * sur le bouton Supprimer.
  * Il faut ajouter la ListeDynamique à la liste d'éléments que l'on 
- * représente pour que l'on puisse tenir compte des ajouts éventuels 
- * d'éléments
+ * represente pour que l'on puisse tenir compte des ajouts eventuels 
+ * d'elements
  * @author EHOLIE Solene
  */
 public class ListeDynamique<E> extends JPanel {

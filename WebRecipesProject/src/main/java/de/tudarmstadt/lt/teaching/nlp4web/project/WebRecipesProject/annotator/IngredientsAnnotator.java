@@ -25,6 +25,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRN;
 import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VP;
 import de.tudarmstadt.ukp.teaching.general.type.IngredientAnnotation;
 import de.tudarmstadt.ukp.teaching.general.type.TextIngredients;
+import de.tudarmstadt.ukp.teaching.general.type.TextInstructions;
 import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
 
 public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
@@ -94,6 +95,13 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 		initializeIngredientDatabase();
 		initializeUnitDatabase();
 
+		TextInstructions instructions = new TextInstructions(jcas);
+		for (TextInstructions text : JCasUtil
+				.select(jcas, TextInstructions.class)) {
+			// Should be 0 or 1
+			instructions = text;
+		}
+		
 		// we are processing the Ingredient patterns sentence by sentence
 		for (TextIngredients text : JCasUtil
 				.select(jcas, TextIngredients.class))
@@ -156,11 +164,37 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 							// unitDatabase
 							if (getUnitDatabase().contains(
 									quantityUnit.getCoveredText())) {
-								// then : ?? for now, take the last token of the
+								// TODO  then : ?? for now, take the last token of the
 								// sentence
-								ingredient = tokens.get(tokens.size() - 2); // skip
-																			// the
-																			// pint
+								
+								List<Token> tokens_ing = JCasUtil.selectCovered(jcas,
+										Token.class, quantity.getBegin(),sentence.getEnd() );
+								
+								List<Token> tokens_ins = JCasUtil.selectCovered(jcas,
+										Token.class, instructions.getBegin(),instructions.getEnd() );
+								 
+							if (!(tokens_ing == null) && !(tokens_ins == null)){
+								
+								for (Token a : tokens_ing) {
+									for (Token b : tokens_ins) {
+										if (a.getCoveredText().equals(b.getCoveredText()) && a.getCoveredText().length()>2){
+											
+											ingredient = tokens.get(a.getBegin() );
+											
+										}
+									}
+								}
+							
+							}
+								
+								
+							if (ingredient==null) {
+								
+							
+							 ingredient = tokens.get(tokens.size() - 2); // skip
+																		// the
+																			// point
+							}
 							} else {
 								// else roll back :
 								// remove it from text covered by the
