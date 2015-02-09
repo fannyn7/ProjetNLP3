@@ -135,22 +135,22 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				System.out.println("ligne : " + line);
 				String[] ingredient = line.split("\\s\\|\\s");
 				if (ingredient[0].equals("null") && ingredient[1].equals("null")){
-					realIngredientsSet.add(new Ingredient("",ingredient[2]));					
+					realIngredientsSet.add(new Ingredient("","",ingredient[2]));					
 				} else if (ingredient[0].equals("null")){
-					realIngredientsSet.add(new Ingredient(ingredient[1],ingredient[2]));					
+					realIngredientsSet.add(new Ingredient("",ingredient[1],ingredient[2]));					
 				} else if (ingredient[1].equals("null")){
-					realIngredientsSet.add(new Ingredient(ingredient[0],ingredient[2]));					
+					realIngredientsSet.add(new Ingredient(ingredient[0],"",ingredient[2]));					
 				} else {
-					realIngredientsSet.add(new Ingredient(ingredient[0]+" " +ingredient[1],ingredient[2]));					
+					realIngredientsSet.add(new Ingredient(ingredient[0],ingredient[1],ingredient[2]));					
 				}
 			}
 			//System.out.println("INGREDIENTS : " + realIngredientsSet.get(0).toString() + " " + realIngredientsSet.get(1).toString() + " " + realIngredientsSet.get(2).toString() + " " + realIngredientsSet.get(3).toString() + " " );
 			correct = 0;
 			for (IngredientAnnotation a : JCasUtil.select(jcas, IngredientAnnotation.class)){
 				for ( Ingredient ing : realIngredientsSet){
-					System.out.println("ing : " + ing.toString());
-					System.out.println("set : " + new Ingredient(a.getAmount(), a.getNormalizedName()).toString());
-					if((ing.ingredient.contains(a.getNormalizedName())) && (ing.amount.equals(a.getAmount()))){
+					//System.out.println("ing : " + ing.toString());
+					//System.out.println("set : " + new Ingredient(a.getAmount(), a.getNormalizedName()).toString());
+					if((ing.ingredient.contains(a.getNormalizedName())) && (a.getAmount().contains(ing.amount))&& a.getAmount().contains(ing.unit)){
 						correct++;
 						System.out.println("CORRREEEEEEEEEEEEEEEEEEEEEEEEECCCCCCT");
 					}
