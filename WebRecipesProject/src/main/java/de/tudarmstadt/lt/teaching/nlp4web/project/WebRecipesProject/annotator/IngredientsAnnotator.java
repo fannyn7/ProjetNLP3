@@ -175,25 +175,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 
 								// Look for words of sentence than also occur in the instructions 
 								
-								List<Token> tokens_ing = JCasUtil.selectCovered(jcas,
-										Token.class, quantity.getBegin(),sentence.getEnd() );
-								
-								List<Token> tokens_ins = JCasUtil.selectCovered(jcas,
-										Token.class, instructions.getBegin(),instructions.getEnd() );
-								 
-								if (!(tokens_ing == null) && !(tokens_ins == null)){
-									
-									for (Token a : tokens_ing) {
-										for (Token b : tokens_ins) {
-											if (a.getCoveredText().equals(b.getCoveredText()) && a.getCoveredText().length()>2){
-												
-												ingredient = tokens.get(a.getBegin());
-												
-											}
-										}
-									}
-								
-								}
+							
 									
 								if (ingredient==null) {
 									// pick the last word
