@@ -15,6 +15,8 @@ public class Recipe {
 	
 	private List<Ingredient> ingredients;
 	
+	private String textInstructions;
+	
 	public static final String DEFAULT_NAME = "No name";
 
 	// TODO Uncomment following lines to take the instructions in account
@@ -89,8 +91,6 @@ public class Recipe {
 		}
 	}
 
-	// TODO Uncomment following lines to take the instructions in account
-	/*
 	public String getTextInstructions() {
 		return textInstructions;
 	}
@@ -98,6 +98,10 @@ public class Recipe {
 	public void setTextInstructions(String textInstructions) {
 		this.textInstructions = textInstructions;
 	}
+	
+	// TODO Uncomment following lines to take the instructions in account
+	/*
+	
 
 	public List<Directive> getInstructions() {
 		if (this.instructions == null) {

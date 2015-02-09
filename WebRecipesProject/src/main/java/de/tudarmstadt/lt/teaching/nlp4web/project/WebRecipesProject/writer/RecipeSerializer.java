@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Collection;
 import java.util.List;
 
@@ -43,6 +44,9 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 	mandatory = true)
 	private String url;
 	
+	public static final String BUFFER_FILE_NAME = "src/test/resources/ratatouille/buffer_file.xml";
+	
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 		StringBuilder sb = new StringBuilder();
@@ -66,13 +70,14 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 			r.getIngredients().add(Ingredient.parseAnnotation(i));
 		}
 		
-		// TODO Uncomment following lines to take the instructions in account
-		/*
+
 		for(TextInstructions lt : JCasUtil.select(jcas, TextInstructions.class)) {
 			//should have 0 or 1 element
 			r.setTextInstructions(lt.getCoveredText());
 		}
 		
+		// TODO Uncomment following lines to take the instructions in account
+		/*
 		for (DirectivesAnnotation d : JCasUtil.select(jcas, DirectivesAnnotation.class)) { 
 			r.getInstructions().add(Directive.parseAnnotation(d));
 		}
@@ -83,16 +88,15 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 		
 		String filename =  "src/test/resources/"+"serializedRecipes/"+r.getName().replace("\\s", "_").replace("\\", "-")+".xml";
 		try {
-			Recipe2Xml.generateRecipes(r, filename);
+			String x = Recipe2Xml.generateRecipes(r, filename);
 			sb.append("Recipe serialized"); sb.append(LF);
 			sb.append("Xml file created : "+filename); sb.append(LF);
 			// Save in favourites ?
 			try {
-				appendToFavorites(r, filename);
-				sb.append("Recipe added to the file of favorite recipes"); sb.append(LF);
+				copyInBuffer(x);
 			} catch (IOException e) {
 				e.printStackTrace();
-				sb.append("Recipe serialization could'nt be added to the file of favorite recipes"); sb.append(LF);
+				sb.append("Copy in buffer_file.xml failed"); sb.append(LF);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -105,22 +109,10 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
         getContext().getLogger().log(Level.INFO, sb.toString());
 	}
 
-	// TODO This method does not work
-	public void appendToFavorites(Recipe r, String rFile) throws IOException{
-		/*
-		 FileReader fr = new FileReader(rFile);
-		 
-		// delete the last
-		FileWriter fw = new FileWriter(
-				"src/test/resources/ratatouille/myFavoriteRecipes.xml", true);
-		char[] buf = new char[1024];
-		int charRead;
-
-		while ((charRead = fr.read(buf)) > 0) {
-			fw.write(buf, 0, charRead);
-		}
-		fw.close();
-		*/
-		System.out.println("[RecipeSerializer] appendToFavorites does not work!!");
+	public void copyInBuffer(String recipeSerializationText) throws IOException{
+		PrintStream ps = new PrintStream(BUFFER_FILE_NAME);
+		ps.println(recipeSerializationText);
+		ps.close();
+		System.out.println("[RecipeSerializer] copy in buffer_file.xml");
 	}
 }

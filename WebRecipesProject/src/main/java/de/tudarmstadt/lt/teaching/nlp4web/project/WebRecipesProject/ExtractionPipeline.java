@@ -52,11 +52,7 @@ public class ExtractionPipeline {
 			 }
 		 }
 		 reader.close();
-		 
 
-		 // start the pipeline
-		 //executePipeline(webpage);
-		 
 	 }
 	
 	   private static void executePipeline(String webpage, String recipesFile)
@@ -67,9 +63,14 @@ public class ExtractionPipeline {
 		                WebPageReader.class,  WebPageReader.PARAM_URL, webpage 
 		        );
 		        
+		        AnalysisEngine prnAnnotator = createEngine(
+		        		PRNAnnotator.class
+			        );
+		        
 		        AnalysisEngine amountAnnotator = createEngine(
 		        		AmountAnnotator.class
 			        );
+		        
 		        
 		        AnalysisEngine unitAnnotator = createEngine(
 	        		UnitAnnotator.class
@@ -112,6 +113,7 @@ public class ExtractionPipeline {
 		        		reader,
 		        		seg,
 		        		parse,
+		        		prnAnnotator,
 		        		amountAnnotator,
 		        		unitAnnotator,
 		        		unitWriter,

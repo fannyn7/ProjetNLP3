@@ -78,8 +78,14 @@ public class WebPageReader extends JCasCollectionReader_ImplBase {
 		jcas.setDocumentLanguage(language);
 		
 		String titleRecipe = docTitle.select("title").text();
-		String textRecipe = docRecipe.select("span.plaincharacterwrap").text();
-		
+		// old version : String textRecipe = docRecipe.select("span.plaincharacterwrap").text();
+		// Fetch the instructions one by one
+		String textRecipe = "";
+		Elements eltsInst = docIngredients.select("span.plaincharacterwrap");
+		for (Element e : eltsInst) {
+			textRecipe += e.text() + "\n";
+		}
+				
 		// old version : String textIngredients = docIngredients.select("ul.ingredient-wrap").text();
 		// Fetch the ingredients one by one
 		String textIngredients = "";

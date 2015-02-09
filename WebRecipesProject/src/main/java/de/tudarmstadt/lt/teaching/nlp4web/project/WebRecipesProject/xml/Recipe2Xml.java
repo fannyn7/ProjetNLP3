@@ -14,7 +14,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 public class Recipe2Xml {
 
-	public static void generateRecipes(Recipe recipe, String filename) throws IOException{
+	public static String generateRecipes(Recipe recipe, String filename) throws IOException{
 
 		List<Recipe> recipes = new ArrayList<Recipe>();
 
@@ -28,6 +28,7 @@ public class Recipe2Xml {
 		PrintStream ps = new PrintStream(filename);
 		ps.println(x);
 		ps.close();
+		return x;
 	}
 	
 	public static void generateRecipes(List<Recipe> recipes, String filename) throws IOException{
