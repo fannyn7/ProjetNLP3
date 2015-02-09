@@ -43,7 +43,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					"src/main/resources/databases/ingredient.txt"));
 			String[] lines = f.split("(\r\n|\n)");
 			for (String line : lines) {
-				if (!line.startsWith("<--!")) {
+				if (!line.startsWith("<!--")) {
 					// quantity unit word
 					ingredientDatabase.add(line.toLowerCase());
 				} // else source acknowledgement
@@ -66,7 +66,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					"src/main/resources/databases/quantityUnit.txt"));
 			String[] lines = f.split("(\r\n|\n)");
 			for (String line : lines) {
-				if (!line.startsWith("<--!")) {
+				if (!line.startsWith("<!--")) {
 					// quantity unit word
 					unitDatabase.add(line.toLowerCase());
 				} // else source acknowledgement
