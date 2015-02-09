@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JButton;
@@ -28,6 +29,7 @@ import com.thoughtworks.xstream.XStream;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ExtractionPipeline;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ratatouilleApp.model.Recipe;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.RecipeSerializer;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml.Recipe2Xml;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml.XStreamFactory;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import fr.enseeiht.libSwing.ListeDynamique;
@@ -44,8 +46,11 @@ public class Ratatouille {
 	JButton bAnalyze = new JButton("Add");
 	JEditorPane jEditorPane = new JEditorPane();
 
+	public final static String BOOK_FILE_NAME = "src/test/resources/ratatouille/myFavoriteRecipes.xml";
 	List<Recipe> myRecipes;
 	ListeDynamique<Recipe> lRecipes;
+	
+	JButton bSave = new JButton("Save book");
 	
 	public boolean debug = true;
 	
@@ -65,8 +70,11 @@ public class Ratatouille {
 				/** DATABASE **/
 				uploadMyRecipes();
 				lRecipes = new SwingRecipesList(myRecipes, jEditorPane);
+				JPanel p = new JPanel(new BorderLayout());
 				JScrollPane recipesPane = new JScrollPane(lRecipes, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-				j.getContentPane().add(recipesPane,
+				p.add(recipesPane, BorderLayout.CENTER);
+				p.add(bSave, BorderLayout.SOUTH);
+				j.getContentPane().add(p,
 						BorderLayout.SOUTH);
 				/** ANALYZER **/
 				initializeAnalyser(j.getContentPane());
@@ -103,6 +111,26 @@ public class Ratatouille {
 				}
 			}
 		});
+		bSave.addActionListener(new ActionListener() {					
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (bSave.isEnabled()) {
+					bSave.setEnabled(false);
+					// Save book
+					try {
+						Recipe2Xml.generateRecipes(myRecipes, BOOK_FILE_NAME);
+						bSave.setEnabled(true);
+						if (debug) {
+							System.out.println("Book saved.");
+						}
+					} catch (Exception ex) {
+						ex.printStackTrace();
+						bSave.setEnabled(true);
+					}
+					
+				}
+			}
+		});
 						
 		jEditorPane.setEditable(false);
 		JScrollPane scrollPane = new JScrollPane(jEditorPane);
@@ -128,13 +156,22 @@ public class Ratatouille {
 	}
 	
 	private void uploadMyRecipes() {
+		try {
 		XStream xstream = XStreamFactory.createXStream();
-		myRecipes = (List<Recipe>) xstream.fromXML(new File("src/test/resources/ratatouille/myFavoriteRecipes.xml"));
+		myRecipes = (List<Recipe>) xstream.fromXML(new File(BOOK_FILE_NAME));
 		if (debug) {
 			System.out.println("Number of favorite recipe : "+myRecipes.size());
 			for(Recipe r : myRecipes) {
 				System.out.println("Recipe\nname: "+r.getName()+"\nweb link: "+r.getWebLink()+"\nnumber of ingredients: "+r.getIngredients().size());
 			}
+		}
+		} catch (Exception e) {
+			e.printStackTrace();
+			myRecipes = new ArrayList<Recipe>();
+			if (debug) {
+				System.out.println("Couldn't load book. Start with empty book");
+			}
+			
 		}
 	}
 	
