@@ -145,13 +145,15 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				}
 			}
 			//System.out.println("INGREDIENTS : " + realIngredientsSet.get(0).toString() + " " + realIngredientsSet.get(1).toString() + " " + realIngredientsSet.get(2).toString() + " " + realIngredientsSet.get(3).toString() + " " );
-			correct = 0;
+			int correctI = 0;
 			for (IngredientAnnotation a : JCasUtil.select(jcas, IngredientAnnotation.class)){
+				Boolean alreadyAdded = false;
 				for ( Ingredient ing : realIngredientsSet){
 					//System.out.println("ing : " + ing.toString());
 					//System.out.println("set : " + new Ingredient(a.getAmount(), a.getNormalizedName()).toString());
-					if((ing.ingredient.contains(a.getNormalizedName())) && (a.getAmount().contains(ing.amount))&& a.getAmount().contains(ing.unit)){
-						correct++;
+					if(!alreadyAdded && (ing.ingredient.contains(a.getNormalizedName())) && (a.getAmount().contains(ing.amount))&& a.getAmount().contains(ing.unit)){
+						correctI++;
+						alreadyAdded = true;
 						System.out.println("CORRREEEEEEEEEEEEEEEEEEEEEEEEECCCCCCT");
 					}
 				}
@@ -163,7 +165,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				FileWriter fw = new FileWriter(fileToWriteIngredients, true);
 				BufferedWriter output = new BufferedWriter(fw);
 				
-				output.write(correct + " " + realIngredientsSet.size() + "\n");
+				output.write(correctI + " " + realIngredientsSet.size() + "\n");
 				
 				output.flush();				
 				output.close();
