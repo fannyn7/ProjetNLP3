@@ -38,13 +38,24 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 	public static final String LF = System.getProperty("line.separator");
 
 	private class Ingredient{
+		@Override
+		public String toString() {
+			return "Ingredient [amount=" + amount + ", ingredient="
+					+ ingredient + "]";
+		}
+
 		public String amount;
+		public String unit;
 		public String ingredient;
 		
-		public Ingredient(String amount, String ingredient) {
+		public Ingredient(String amount,String unit, String ingredient) {
 			this.amount = amount;
+			this.unit = unit;
 			this.ingredient = ingredient;
 		}
+		
+		
+		
 	
 	}
 	
@@ -122,12 +133,12 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			int nbIngredients = 0;
 			while ((!(line = reader.readLine()).isEmpty()) && line != null && !line.matches("\\s") && !line.matches("\\n")){
 				System.out.println("ligne : " + line);
-				String[] ingredient = line.split("\\s|\\s");
-				if (ingredient[0].equals("$") && ingredient[1].equals("$")){
+				String[] ingredient = line.split("\\s\\|\\s");
+				if (ingredient[0].equals("null") && ingredient[1].equals("null")){
 					realIngredientsSet.add(new Ingredient("",ingredient[2]));					
-				} else if (ingredient[0].equals("$")){
+				} else if (ingredient[0].equals("null")){
 					realIngredientsSet.add(new Ingredient(ingredient[1],ingredient[2]));					
-				} else if (ingredient[1].equals("$")){
+				} else if (ingredient[1].equals("null")){
 					realIngredientsSet.add(new Ingredient(ingredient[0],ingredient[2]));					
 				} else {
 					realIngredientsSet.add(new Ingredient(ingredient[0]+" " +ingredient[1],ingredient[2]));					
@@ -137,6 +148,8 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			correct = 0;
 			for (IngredientAnnotation a : JCasUtil.select(jcas, IngredientAnnotation.class)){
 				for ( Ingredient ing : realIngredientsSet){
+					System.out.println("ing : " + ing.toString());
+					System.out.println("set : " + new Ingredient(a.getAmount(), a.getNormalizedName()).toString());
 					if((ing.ingredient.contains(a.getNormalizedName())) && (ing.amount.equals(a.getAmount()))){
 						correct++;
 						System.out.println("CORRREEEEEEEEEEEEEEEEEEEEEEEEECCCCCCT");

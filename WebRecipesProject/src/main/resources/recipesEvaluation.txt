@@ -4,7 +4,7 @@ preheat grease flour melt remove stir [not]overcook beat spread bake combine sti
 
 1/2 | cup | butter
 1 | cup | sugar
-2 | $ | egg
+2 | null | egg
 1 | teaspoon | vanilla extract
 1/3 | cup | cocoa powder
 1/2 | cup | flour
@@ -38,17 +38,17 @@ combine simmer stir preheat place brush turn brush bake turn bake run brush
 1 | clove | garlic
 1/2 | teaspoon | ginger
 1/4 | teaspoon | pepper
-12 | $ | chicken 
+12 | null | chicken 
 
 http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?evt19=1
 
 preheat heat sprinkle place drizzle pour bake remove return stove stir boil stir serve
 
 3 | tablespoons | oil
-4 | $ | pork 
-$ | $ | salt
-$ | $ | pepper
-$ | $ | garlic powder
+4 | null | pork 
+null | null | salt
+null | null | pepper
+null | null | garlic powder
 1/2 | teaspoon | poultry
 3 | tablespoons | Worcestershire sauce
 1 | container | cider
@@ -66,7 +66,7 @@ preheat grease melt saute add stir mix reserve set add stir fill roll place comb
 1/2 | cup | sour cream
 1 1/2 | cups | chicken 
 1 | cup | cheese
-6 | $ | tortilla
+6 | null | tortilla
 1/4 | cup | milk
 
 http://allrecipes.com/Recipe/Meatball-Nirvana/Detail.aspx?evt19=1
@@ -75,7 +75,7 @@ preheat place season mix add mix form place bake
 
 1 | pound | beef
 1/2 | teaspoon | salt
-1 | $ | onion
+1 | null | onion
 1/2 | teaspoon | salt
 1 1/2 | teaspoons | seasoning
 3/4 | teaspoon | oregano
@@ -90,16 +90,16 @@ http://allrecipes.com/Recipe/Slow-Cooker-Pulled-Pork/Detail.aspx?evt19=1
 
 place pour cover cook drain stir serve
 
-1 | $ | pork
+1 | null | pork
 1 | can | beer 
 1 | bottle | barbecue sauce 
-8 | $ | bun
+8 | null | bun
 
 http://allrecipes.com/Recipe/Valentine-Night-Strawberries/Detail.aspx?evt19=1
 
 dice set cut forme start cut slice beat stir spoon pipe
 
-20 | $ | strawberry
+20 | null | strawberry
 1 | package | cream cheese
 2 | tablespoons | walnut
 1 1/2 | tablespoons | sugar 
@@ -112,18 +112,18 @@ preheat grease melt saute add stir mix reserve set add stir fill roll place comb
 1/2 | cup | onion
 1/2 | teaspoon | garlic powder
 1 | can | chile
-1 | $ | cream of mushroom
+1 | null | cream of mushroom
 1/2 | cup | sour cream
 1 1/2 | cups | chicken 
 1 | cup | Cheddar cheese
-6 | $ | tortilla
+6 | null | tortilla
 1/4 | cup | milk
 
 http://allrecipes.com/Recipe/Ainaas-BBQ-Chicken/Detail.aspx?evt19=1
 
 Combine Mix Marinate Mix Grill
 
-1 | $ | chicken
+1 | null | chicken
 1/2 | can | tomato soup
 1 | tablespoon | garlic powder
 3 | tablespoons | ginger juice
@@ -146,20 +146,20 @@ Preheat Grease Heat Stir Cook Stir Remove Mix Arrange Spoon Top Bake
 2 | tablespoon | basil
 1/4 | teaspoon | salt
 1/4 | teaspoon | pepper
-4 | $ | halibut steak
+4 | null | halibut steak
 1/3 | cup | feta cheese
 
 http://allrecipes.com/Recipe/Fabulous-Fajitas/Detail.aspx?evt19=1
 
 Cut Saute Add Cook Stir Blend Warm Roll Top
 
-2 | $ | green pepper
-1 | $ | red pepper
-1 | $ | onion
+2 | null | green pepper
+1 | null | red pepper
+1 | null | onion
 1 | cup | mushroom
 2 | cups | chicken meat
 1 | package | salad dressing mix
-10 | $ | tortilla
+10 | null | tortilla
 
 http://allrecipes.com/Recipe/Ginger-Glazed-Mahi-Mahi/Detail.aspx?evt19=1
 
@@ -171,9 +171,9 @@ Stir Season Place Place Cover Refrigerate Heat Remove Reserve Fry Remove Keep Po
 1 | teaspoon | ginger root
 1 | cloves | garlic
 2 | teaspoons | olive oil
-4 | $ | mahi mahi fillets
-$ | $ | salt 
-$ | $ | pepper
+4 | null | mahi mahi fillets
+null | null | salt 
+null | null | pepper
 1 | tablespoon | vegetable oil
 
 http://allrecipes.com/Recipe/Linguine-with-White-Clam-Sauce-I/Detail.aspx?evt19=1
@@ -186,8 +186,8 @@ Cook Cook Add Add Bring Lower Simmer Toss Serve
 2 | cans | clam
 1/4 | cup | clam juice
 1 | tablespoon | parsley
-$ | $ | salt
-$ | $ | black pepper
+null | null | salt
+null | null | black pepper
 
 http://allrecipes.com/Recipe/Greek-Chicken-Pasta/Detail.aspx?evt19=1
 
@@ -199,14 +199,14 @@ Boil Cook Drain Heat Add Saute Stir Cook Reduce Add Cook Stir Remove Season Garn
 2 | cloves | garlic
 1 | pound | chicken meat
 1 | can | artichoke heart
-1 | $ | tomato
+1 | null | tomato
 1/2 | cup | feta cheese
 3 | tablespoons | parsley
 2 | tablespoons | lemon juice
 2 | teaspoons | oregano
-$ | $ | salt 
-$ | $ | pepper
-2 | $ | lemon
+null | null | salt 
+null | null | pepper
+2 | null | lemon
 
 http://allrecipes.com/Recipe/Szechwan-Shrimp/Detail.aspx?evt19=1
 
@@ -249,11 +249,11 @@ http://allrecipes.com/Recipe/Braised-Balsamic-Chicken/Detail.aspx?evt19=1
 
 Season Heat Cook Add Cook Stir Pour Season Simmer
 
-6 | $ | chicken breast halve
+6 | null | chicken breast halve
 1 | teaspoon | garlic salt
-$ | $ | black pepper
+null | null | black pepper
 2 | tablespoons | olive oil
-1 | $ | onion
+1 | null | onion
 1 | can | tomato
 1/2 | cup | balsamic vinegar
 1 | teaspoon | basil
@@ -265,13 +265,13 @@ http://allrecipes.com/Recipe/Amazing-Pork-Tenderloin-in-the-Slow-Cooker/Detail.a
 
 Place Pour Spread Sprinkle Cover Cook Serve
 
-1 | $ | pork tenderloin
-1 | $ | onion soup mix
+1 | null | pork tenderloin
+1 | null | onion soup mix
 1 | cup | water
 3/4 | cup | red wine
 3 | tablespoons | garlic
 3 | tablespoons | soy sauce
-$ | $ | black pepper
+null | null | black pepper
 
 http://allrecipes.com/Recipe/Unbelievable-Chicken/Detail.aspx?evt19=1
 
@@ -280,13 +280,13 @@ Mix Whisk Place Cover Marinate Preheat Oil Place Cook Discard
 1/4 | cup | cider vinegar
 3 | tablespoons | mustard
 3 | cloves | garlic
-1 | $ | lime
-1/2 | $ | lemon
+1 | null | lime
+1/2 | null | lemon
 1/2 | cup | brown sugar
 1 1/2 | teaspoons | salt
-$ | $ | black pepper
+null | null | black pepper
 6 | tablespoons | olive oil
-6 | $ | chicken breast halve
+6 | null | chicken breast halve
 
 http://allrecipes.com/Recipe/Pesto-Chicken-Florentine/Detail.aspx?evt19=1
 
@@ -294,7 +294,7 @@ Heat Add Saute Add Cook Add Saute Prepare Stir Set Cook Rinse Drain Add Stir Mix
 
 2 | tablespoons | olive oil
 2 | cloves | garlic
-4 | $ | chicken breast halve 
+4 | null | chicken breast halve 
 2 | cups | spinach leaf
 1 | package | sauce mix
 2 | tablespoons | pesto
@@ -305,22 +305,22 @@ http://allrecipes.com/Recipe/100-Fruit-Cake/Detail.aspx?evt19=1
 
 cut trim place alternate follow repeat slice cut decorate refrigerate slice set
 
-1 | $ | watermelon
+1 | null | watermelon
 2 | cups | strawberry
-1 | $ | cantaloupe
-1 | $ | pineapple
+1 | null | cantaloupe
+1 | null | pineapple
 
 http://allrecipes.com/Recipe/4th-of-July-Blast-Smoothie/Detail.aspx?evt19=1
 
 place blend pour top
 
 1 | cup | blackberry
-5 | $ | strawberry
-1 | $ | banana
+5 | null | strawberry
+1 | null | banana
 1/3 | cup | orange juice 
 2 | cups | ice 
 1 | teaspoon | white sugar		
-12 | $ | blackberry
+12 | null | blackberry
 
 http://allrecipes.com/Recipe/A-Catering-Companys-Marinade/Detail.aspx?evt19=1
 
@@ -329,19 +329,19 @@ combine marinate cover refrigerate cook
 1 | can | beer 
 4 | tablespoons | parsley 
 1/3 | cup | soy sauce 
-3 | $ | garlic
+3 | null | garlic
 
 http://allrecipes.com/Recipe/A-Crock-of-Curried-Pork-Soup/Detail.aspx?evt19=1
 
 coat lay top season pour stir pour spread cook transfer shred return add stir cook
 
 1 | teaspoon | olive oil 		
-4 | $ | zucchini		
-1 | $ | garlic		
-1 | $ | pork roast 
+4 | null | zucchini		
+1 | null | garlic		
+1 | null | pork roast 
 3 | tablespoons | curry powder
-$ | $ | salt 
-$ | $ | black pepper		
+null | null | salt 
+null | null | black pepper		
 2 | cans | tomato		
 3 | cubes | vegetable bouillon 
 3/4 | cup | water 
@@ -361,10 +361,10 @@ combine process place pour squeeze marinate preheat remove discard broil heat po
 4 | tablespoons | red wine vinegar 
 2 | teaspoons | thyme 
 1 | teaspoon | sesame oil 
-3 | $ | garlic
+3 | null | garlic
 1/2 | teaspoon | allspice 
-1 | $ | habanero pepper
-4 | $ | chicken breast half
+1 | null | habanero pepper
+4 | null | chicken breast half
 
 
 http://allrecipes.com/Recipe/A-Little-Bit-of-Everything/Detail.aspx?evt19=1
@@ -377,7 +377,7 @@ combine mix place rub pour marinate cover refrigerate cook
 1 | teaspoon | garlic powder 
 4 | tablespoons | hot sauce 
 1 1/4 | cups | beer 
-3 | $ | garlic
+3 | null | garlic
 
 http://allrecipes.com/Recipe/A-Marinade-To-Die-For/Detail.aspx?evt19=1
 
@@ -400,12 +400,12 @@ bring cook drain transfer cook stir reduce continue preheat spread top arrange c
 1 1/2 | pounds | green bean
 4 | cups | onion 
 2 | tablespoons | balsamic vinegar 
-3 | $ | garlic
+3 | null | garlic
 2 | teaspoons | white sugar 
 1 | teaspoon | basil 
 1 | teaspoon | oregano 
 1/4 | cup | Parmesan cheese 
-$ | $ | grape tomato
+null | null | grape tomato
 
 http://allrecipes.com/Recipe/A-Very-Intense-Fruit-Smoothie/Detail.aspx?evt19=1
 
@@ -438,15 +438,15 @@ cook bring add cook drain stir set heat cook add continue stir
 2 | cups | water 
 2 | cups | water 
 1/2 | teaspoon | turmeric 
-$ | $ | salt
-1 | $ | bunch amaranth greens 
+null | null | salt
+1 | null | bunch amaranth greens 
 2 | teaspoons | oil 
 1 | teaspoon | black lentil 
 1 | teaspoon | mustard seed 
 1 | teaspoon | cumin seed 
-4 | $ | red chile pepper
+4 | null | red chile pepper
 1 | pinch | asafoetida powder 
-2 | $ | green chile pepper 
+2 | null | green chile pepper 
 1 | sprig | curry leaf
 
 http://allrecipes.com/Recipe/Salmon-with-Fruit-Salsa/Detail.aspx?evt19=1
@@ -454,17 +454,17 @@ http://allrecipes.com/Recipe/Salmon-with-Fruit-Salsa/Detail.aspx?evt19=1
 preheat arrange coat season top pour bake mix cover top serve
 
 1 | pound | salmon
-1 | $ | lemon
+1 | null | lemon
 1 | tablespoon | rosemary
-$ | $ | salt
-$ | $ | pepper
-1 | $ | lemon
+null | null | salt
+null | null | pepper
+1 | null | lemon
 1/3 | cup | water 
 1/4 | cup | pineapple
 1/4 | cup | onion
 3 | cloves | garlic
 2 | fresh | pepper
-1 | $ | tomato
+1 | null | tomato
 1/2 | cup | pineapple juice
 1/4 | cup | pepper 
 1/4 | cup | pepper 
@@ -477,28 +477,28 @@ preheat mix set(aside) dip coat oil grill turn baste watch
 1/4 | cup | honey
 2 | tablespoons | mayonnaise
 1 | teaspoon | steak sauce
-4 | $ | chicken breast
+4 | null | chicken breast
 
 http://allrecipes.com/Recipe/Lentils-And-Spinach/Detail.aspx?evt19=1
 
 heat saute add saute add bring(to a boil) cover lower simmer cook add cover simmer grind
 
 1 | tablespoon  | oil
-2 | $ | onion
+2 | null | onion
 3 | cloves | garlic
 1/2 | cup | lentil
 2 | cups | water
 1 | package | spinach
 1 | teaspoon | salt
 1 | teaspoon | cumin
-$ | $ | pepper
+null | null | pepper
 2 | cloves | garlic
 
 http://allrecipes.com/Recipe/Chicken-Cordon-Bleu-II/Detail.aspx?evt19=1
 
 pound place fold secure mix coat heat cook add reduce simmer remove transfer blend whisk cook pour(over)
 
-6 | $ | chicken breast
+6 | null | chicken breast
 6 | slices | cheese
 6 | slices | ham
 3 | tablespoons | flour
@@ -517,7 +517,7 @@ melt mix stir pour remove arrange whisk pour cover chill preheat remove bring ba
 1 | cup | sugar
 2 | tablespoons | syrup
 6 | slices | bread
-5 | $ | egg
+5 | null | egg
 1 1/2 | cups | cream
 1 | teaspoon | vanilla
 1 | teaspoon | liqueur
@@ -530,13 +530,13 @@ preheat place bring reduce cover cook cook remove discard arrange slice mix spoo
 1 | pound | beef
 1/2 | cup | rice
 1 | cup | water
-6 | $ | pepper
+6 | null | pepper
 2 | cans | tomato sauce
 1 | tablespoon | Worcestershire sauce
 1/4 | teaspoon | garlic powder
 1/4 | teaspoon | onion powder
-$ | $ | salt
-$ | $ | pepper
+null | null | salt
+null | null | pepper
 1 | teaspoon | seasoning
 
 http://allrecipes.com/Recipe/Pollo-Fajitas/Detail.aspx?evt19=1
@@ -551,9 +551,9 @@ combine place turn marinate cover refrigerate heat add saute add saute remove sp
 1 | dash | pepper sauce
 1 1/2 | pounds | chicken thigh
 1 | tablespoon | oil
-1 | $ | onion
-1 | $ | pepper
-1/2 | $ | lemon
+1 | null | onion
+1 | null | pepper
+1/2 | null | lemon
 
 http://allrecipes.com/Recipe/Ratatouille/Detail.aspx?evt19=1
 
@@ -562,14 +562,14 @@ preheat coat heat cook stir mix cook stir season spread sprinkle spread salt spr
 2 | tablespoons | oil
 3 | cloves | garlic
 2 | teaspoons | parsley
-1 | $ | eggplant
-$ | $ | salt
+1 | null | eggplant
+null | null | salt
 1 | cup | cheese
-2 | $ | zucchini
-1 | $ | onion
+2 | null | zucchini
+1 | null | onion
 2 | cups | mushroom
-1 | $ | pepper
-2 | $ | tomato
+1 | null | pepper
+2 | null | tomato
 
 http://allrecipes.com/Recipe/Marinated-Tuna-Steak/Detail.aspx?evt19=1
 
@@ -583,7 +583,7 @@ mix place turn cover refrigerate preheat oil cook turn baste cook discard
 1 | clove | garlic 
 1/2 | teaspoon | oregano
 1/2 | teaspoon | pepper
-4 | $ | tuna steak
+4 | null | tuna steak
 
 http://allrecipes.com/Recipe/Crab-Quiche-I/Detail.aspx?evt19=1
 
@@ -591,12 +591,12 @@ preheat beat stir spread bake
 
 1/2 | cup | mayonnaise
 2 | tablespoons | flour
-2 | $ | egg
+2 | null | egg
 1/2 | cup | milk 
 1 | cub | crab meat
 1 | cup | cheese
 1/2 | cup | onion
-1 | $ | pie crust 
+1 | null | pie crust 
 
 http://allrecipes.com/Recipe/Penne-and-Vodka-Sauce/Detail.aspx?evt19=1
 
@@ -616,7 +616,7 @@ preheat saute pour simmer place place top add layer cover bake remove bake sit
 
 1 | tablespoon | oil
 2 | packages | spinach
-1/2 | $ | onion 
+1/2 | null | onion 
 1/2 | teaspoon | oregano
 1/2 | teaspoon | basil
 2 | cloves | garlic
@@ -628,19 +628,19 @@ preheat saute pour simmer place place top add layer cover bake remove bake sit
 1/2 | cup | parsley
 1 | teaspoon | salt
 1/8 | teaspoon | salt
-1 | $ | egg
+1 | null | egg
 8 | ounces | noodles
 
 http://allrecipes.com/Recipe/Guacamole/Detail.aspx?evt19=1
 
 mash mix stir refrigerate serve
 
-3 | $ | avocado
-1 | $ | lime
+3 | null | avocado
+1 | null | lime
 1 | teaspoon | salt
 1/2 | cup | onion
 3 | tablespoons | cilantro
-2 | $ | roma tomato
+2 | null | roma tomato
 1 | teaspoon | garlic
 1 | pinch | cayenne pepper
 
@@ -648,15 +648,15 @@ http://allrecipes.com/Recipe/Annies-Fruit-Salsa-and-Cinnamon-Chips/Detail.aspx?e
 
 mix cover chill preheat coat cut arrange sprinkle spray bake repeat cool serve
 
-2 | $ | kiwi
-2 | $ | apple 
+2 | null | kiwi
+2 | null | apple 
 8 | ounces | raspberry
 1 | pound | strawberry
 2 | tablespoons | white sugar
 1 | tablespoon | brown sugar
 3 | tablespoons | fruit
-10 | $ | flour tortilla
-$ | $ | butter cooking spray
+10 | null | flour tortilla
+null | null | butter cooking spray
 2 | tablespoons | cinnamon sugar
 
 http://allrecipes.com/Recipe/Buffalo-Chicken-Dip/Detail.aspx?evt19=1
@@ -685,7 +685,7 @@ http://allrecipes.com/Recipe/Mouth-Watering-Stuffed-Mushrooms/Detail.aspx?evt19=
 
 preheat spray clean break chop heat add fry set stir fill arrange bake
 
-12 | $ | mushroom
+12 | null | mushroom
 1 | tablespoon | vegetable oil
 1 | tablespoon | garlic
 1 | package | cream cheese
@@ -702,8 +702,8 @@ mix place sprinkle cover refrigerate heat combine stir heat remove reserve fry r
 1/4 | teaspoon | paprika
 1/4 | teaspoon | cayenne pepper
 1/4 | teaspoon | salt
-10 | $ | chicken wing
-$ | $ | oil
+10 | null | chicken wing
+null | null | oil
 1/4 | cup | butter
 1/4 | cup | hot sauce
 1 | dash | black pepper
@@ -728,7 +728,7 @@ http://allrecipes.com/Recipe/Artichoke--Spinach-Dip-Restaurant-Style/Detail.aspx
 
 preheat place bake remove squeeze spread bake serve
 
-4 | $ | garlic
+4 | null | garlic
 1 | package | spinach
 1 | can | artichoke heart
 1 | container | pasta sauce
