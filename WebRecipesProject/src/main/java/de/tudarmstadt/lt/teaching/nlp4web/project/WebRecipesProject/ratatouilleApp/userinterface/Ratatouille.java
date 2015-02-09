@@ -27,6 +27,7 @@ import com.thoughtworks.xstream.XStream;
 
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ExtractionPipeline;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ratatouilleApp.model.Recipe;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.RecipeSerializer;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml.XStreamFactory;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import fr.enseeiht.libSwing.ListeDynamique;
@@ -84,18 +85,21 @@ public class Ratatouille {
 		pane.add(bAnalyze, BorderLayout.EAST);
 		bAnalyze.addActionListener(new ActionListener() {					
 			@Override
-			public void actionPerformed(ActionEvent e) {	
-				// Create a web client
-				// Get the user request
-				try {
-					// TODO Get the web link safely
-					String weblink = recipe_url
-							.getText();
-					// Analyze webpage
-					(new AnalysisSlave(weblink)).start();
+			public void actionPerformed(ActionEvent e) {
+				if (bAnalyze.isEnabled()) {
+					bAnalyze.setEnabled(false);
+					// Create a web client
+					// Get the user request
+					try {
+						// TODO Get the web link safely
+						String weblink = recipe_url.getText();
+						// Analyze webpage
+						(new AnalysisSlave(weblink)).start();
+					} catch (Exception ex) {
+						ex.printStackTrace();
+						bAnalyze.setEnabled(true);
+					}
 					
-				} catch (Exception ex) {
-				  ex.printStackTrace();
 				}
 			}
 		});
@@ -145,6 +149,20 @@ public class Ratatouille {
 		public void run() {
 			try {
 				ExtractionPipeline.executePipeline(url);
+				XStream xstream = XStreamFactory.createXStream();
+				Recipe r = (Recipe) xstream.fromXML(new File(RecipeSerializer.BUFFER_FILE_NAME));
+				if (debug) {
+					System.out.println("Recipe read in "+RecipeSerializer.BUFFER_FILE_NAME+"\nname: "+r.getName()+"\nweb link: "+r.getWebLink()+"\nnumber of ingredients: "+r.getIngredients().size());
+				}
+				myRecipes.add(r);
+				if (debug) {
+					System.out.println("Recipe added in favorites");
+				}
+				lRecipes.addElement(r);
+				if (debug) {
+					System.out.println("Recipe displayed in favorites");
+				}
+				bAnalyze.setEnabled(true);
 			} catch (Exception e) {
 				// TODO 
 				e.printStackTrace();
