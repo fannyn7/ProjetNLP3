@@ -145,7 +145,7 @@ public class Ratatouille {
 		public void run() {
 			try {
 				ExtractionPipeline.executePipeline(url);
-			} catch (UIMAException | IOException e) {
+			} catch (Exception e) {
 				// TODO 
 				e.printStackTrace();
 			}

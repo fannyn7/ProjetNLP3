@@ -54,7 +54,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			String[] actions = line.split("\\s");
 			for (int i = 0; i<actions.length;i++) {
 				actionsList.add(actions[i]);
-				realActionsSet.add(actions[i]);
+				realActionsSet.add(actions[i].toLowerCase());
 			}
 			System.out.println("ACTIONS : " + actionsList.toString());
 			//HashSet<String> actionsSet = new HashSet<String>();
@@ -70,11 +70,15 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 
 			int indiceList = 0;
 			for (DirectivesAnnotation a : JCasUtil.select(jcas, DirectivesAnnotation.class)) { 
-				int currentIndice = indiceList;
-				while(!(currentIndice == actionsList.size() || (a.getInstruction().equals(actionsList.get(currentIndice))))){
-					currentIndice++;
+				if (a.getInstruction()!=null){
+					int currentIndice = indiceList;
+					//System.out.println("annotation : " +a.getInstruction());
+					while(!(currentIndice == actionsList.size() || (a.getInstruction().equals(actionsList.get(currentIndice))))){
+						//System.out.println("currentIndice " + currentIndice + "  " + actionsList.get(currentIndice));
+						currentIndice++;
+					}
+					if (currentIndice == actionsList.size()) System.out.println("Action " + a.getInstruction() + " doesn't belong to actionsList" );					
 				}
-				if (currentIndice == actionsList.size()) System.out.println("Action " + a.getInstruction() + " doesn't belong to actionsList" );
 
 				//sb.append(LF);
 			}

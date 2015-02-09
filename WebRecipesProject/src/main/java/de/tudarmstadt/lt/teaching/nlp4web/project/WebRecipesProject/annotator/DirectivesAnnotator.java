@@ -122,7 +122,7 @@ public class DirectivesAnnotator extends JCasAnnotator_ImplBase {
 						        p.setVerb(textIngredientLemma);
 						        p.setFeature(Feature.TENSE,  Tense.PAST);
 								String output = realiser.realiseSentence(p);
-								System.out.println("verbe = " + textIngredientLemma +"    OUTPUT = " + output);
+								//System.out.println("verbe = " + textIngredientLemma +"    OUTPUT = " + output);
 								output = output.substring(0, output.length()-1).toLowerCase();
 								if (negationFound) {
 									d.setInstruction("[not]"+textIngredientLemma);
