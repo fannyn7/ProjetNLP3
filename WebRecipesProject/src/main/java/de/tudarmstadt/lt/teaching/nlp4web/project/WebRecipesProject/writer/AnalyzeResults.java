@@ -20,6 +20,7 @@ import org.apache.uima.util.Level;
 import org.apache.uima.util.Logger;
 
 import de.tudarmstadt.ukp.teaching.general.type.DirectivesAnnotation;
+import de.tudarmstadt.ukp.teaching.general.type.IngredientAnnotation;
 
 public class AnalyzeResults extends JCasAnnotator_ImplBase{
 
@@ -36,6 +37,17 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 
 	public static final String LF = System.getProperty("line.separator");
 
+	private class Ingredient{
+		public String amount;
+		public String ingredient;
+		
+		public Ingredient(String amount, String ingredient) {
+			this.amount = amount;
+			this.ingredient = ingredient;
+		}
+	
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 		try {
@@ -46,14 +58,13 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			String line;
 			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
 			
-			String fileToWrite = "src/main/resources/globalEvaluation.txt";
+			String fileToWriteActions = "src/main/resources/globalEvaluationActions.txt";
+			String fileToWriteIngredients = "src/main/resources/globalEvaluationIngredients.txt";
 		
-			
-			
 			int correct = 0;
 			ArrayList<String> actionsList = new ArrayList<String>(); 
 			HashSet<String> realActionsSet = new HashSet<String>();
-
+			HashSet<Ingredient> realIngredientsSet = new HashSet<Ingredient>();
 			while(!(line = reader.readLine()).equals(recipeLink)) ;
 			System.out.println("LINK : " + line );
 			reader.readLine(); // empty line
@@ -78,7 +89,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			try
 			{
 				
-				FileWriter fw = new FileWriter(fileToWrite, true);
+				FileWriter fw = new FileWriter(fileToWriteActions, true);
 				BufferedWriter output = new BufferedWriter(fw);
 				
 				output.write(correct + " " + realActionsSet.size() + "\n");
@@ -106,6 +117,48 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				//sb.append(LF);
 			}
 
+			
+			reader.readLine(); // empty line
+			int nbIngredients = 0;
+			while ((!(line = reader.readLine()).isEmpty()) && line != null && !line.matches("\\s") && !line.matches("\\n")){
+				System.out.println("ligne : " + line);
+				String[] ingredient = line.split("\\s|\\s");
+				if (ingredient[0].equals("$") && ingredient[1].equals("$")){
+					realIngredientsSet.add(new Ingredient("",ingredient[2]));					
+				} else if (ingredient[0].equals("$")){
+					realIngredientsSet.add(new Ingredient(ingredient[1],ingredient[2]));					
+				} else if (ingredient[1].equals("$")){
+					realIngredientsSet.add(new Ingredient(ingredient[0],ingredient[2]));					
+				} else {
+					realIngredientsSet.add(new Ingredient(ingredient[0]+" " +ingredient[1],ingredient[2]));					
+				}
+			}
+			//System.out.println("INGREDIENTS : " + realIngredientsSet.get(0).toString() + " " + realIngredientsSet.get(1).toString() + " " + realIngredientsSet.get(2).toString() + " " + realIngredientsSet.get(3).toString() + " " );
+			correct = 0;
+			for (IngredientAnnotation a : JCasUtil.select(jcas, IngredientAnnotation.class)){
+				for ( Ingredient ing : realIngredientsSet){
+					if((ing.ingredient.contains(a.getNormalizedName())) && (ing.amount.equals(a.getAmount()))){
+						correct++;
+						System.out.println("CORRREEEEEEEEEEEEEEEEEEEEEEEEECCCCCCT");
+					}
+				}
+			}
+			
+			try
+			{
+				
+				FileWriter fw = new FileWriter(fileToWriteIngredients, true);
+				BufferedWriter output = new BufferedWriter(fw);
+				
+				output.write(correct + " " + realIngredientsSet.size() + "\n");
+				
+				output.flush();				
+				output.close();
+			}
+			catch(IOException ioe){
+				System.out.print("Erreur : ");
+				ioe.printStackTrace();
+				}
 
 
 			reader.close();

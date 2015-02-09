@@ -47,9 +47,22 @@ public class ExtractionPipeline {
 
 
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
-		 String fileToWrite = "src/main/resources/globalEvaluation.txt";
+		 String fileToWriteActions = "src/main/resources/globalEvaluationActions.txt";
+		 String fileToWriteIngredients = "src/main/resources/globalEvaluationIngredients.txt";
 		 
-		 FileWriter fw = new FileWriter(fileToWrite, false);
+		 FileWriter fw1 = new FileWriter(fileToWriteActions, false);
+			BufferedWriter output1 = new BufferedWriter(fw1);
+			
+			PrintWriter pw1 = new PrintWriter(output1);; 
+			pw1.print("");
+			pw1.flush();	
+			output1.flush();				
+			pw1.close();
+			
+			output1.close();
+			
+			
+			FileWriter fw = new FileWriter(fileToWriteIngredients, false);
 			BufferedWriter output = new BufferedWriter(fw);
 			
 			PrintWriter pw = new PrintWriter(output);; 
@@ -59,6 +72,7 @@ public class ExtractionPipeline {
 			pw.close();
 			
 			output.close();
+			
 		 
 		 String line = "";
 		 BufferedReader readerRecipesFile = new BufferedReader(new FileReader(recipesFile));
@@ -66,36 +80,63 @@ public class ExtractionPipeline {
 		 while(!(line = readerRecipesFile.readLine()).equals("$$$$$$$")){
 			 Matcher matcher = p.matcher(line);
 			 if(matcher.find(0)){			 
-				 executePipeline(line, recipesFile, fileToWrite);
+				 executePipeline(line, recipesFile, fileToWriteActions);
 			 }
 		 }
 
 		 readerRecipesFile.close();
 		 
-			BufferedReader reader;
+			BufferedReader reader1;
 			try {
-				reader = new BufferedReader(new FileReader(fileToWrite));
+				reader1 = new BufferedReader(new FileReader(fileToWriteActions));
 
 			/*Pattern p = Pattern.compile("[0-9][0-9] [0-9][0-9]*");
 			Matcher matcher;
 				while(!(matcher = p.matcher(line = reader.readLine())).find(0));
 			 */
-			int corrects = 0;
-			int nbRecipes = 0;
+			int correctsA = 0;
+			int nbRecipesA = 0;
 			int nbTotalActions = 0;
 //String line ;
-			while ((line = reader.readLine()) != null){
+			while ((line = reader1.readLine()) != null){
 				System.out.println("ligne : " + line);
-				nbRecipes++;
-				String[] numbers = line.split("\\s");
-				corrects += Integer.parseInt(numbers[0]);
-				nbTotalActions += Integer.parseInt(numbers[1]);
+				nbRecipesA++;
+				String[] numbersA = line.split("\\s");
+				correctsA += Integer.parseInt(numbersA[0]);
+				nbTotalActions += Integer.parseInt(numbersA[1]);
 			}
-			System.out.println("Correctly found actions : " + corrects + " out of " + nbTotalActions);
-			System.out.println("precision = " + 100*corrects/nbTotalActions);
-			System.out.println("Test Set : " +nbRecipes + " recipes");
+			System.out.println("Correctly found actions : " + correctsA + " out of " + nbTotalActions);
+			System.out.println("precision = " + 100*correctsA/nbTotalActions);
+			System.out.println("Test Set : " +nbRecipesA + " recipes");
 
-				reader.close();
+				reader1.close();
+				
+				
+				
+
+				BufferedReader reader2;
+					reader2 = new BufferedReader(new FileReader(fileToWriteIngredients));
+
+				/*Pattern p = Pattern.compile("[0-9][0-9] [0-9][0-9]*");
+				Matcher matcher;
+					while(!(matcher = p.matcher(line = reader.readLine())).find(0));
+				 */
+				int correctsI = 0;
+				int nbRecipesI = 0;
+				int nbTotalIngredients = 0;
+	//String line ;
+				while ((line = reader2.readLine()) != null){
+					System.out.println("ligne : " + line);
+					nbRecipesI++;
+					String[] numbers = line.split("\\s");
+					correctsI += Integer.parseInt(numbers[0]);
+					nbTotalIngredients += Integer.parseInt(numbers[1]);
+				}
+				System.out.println("Correctly found actions : " + correctsI + " out of " + nbTotalIngredients);
+				System.out.println("precision = " + 100*correctsI/nbTotalIngredients);
+				System.out.println("Test Set : " +nbRecipesI + " recipes");
+
+					reader2.close();
 
 			} catch (FileNotFoundException e) {
 			} catch (IOException e) {
