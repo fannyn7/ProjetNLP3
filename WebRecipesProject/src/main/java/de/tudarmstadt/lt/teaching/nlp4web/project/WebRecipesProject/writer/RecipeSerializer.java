@@ -44,6 +44,14 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 	mandatory = true)
 	private String url;
 	
+	public static final String PARAM_SAVE_IN_BUFFER = "save_in_buffer";
+	@ConfigurationParameter(
+	name = PARAM_SAVE_IN_BUFFER,
+	description = "Tells if the serialized recipe should be saved in the buffer file",
+	mandatory = false,
+	defaultValue="true")
+	private boolean save_in_buffer;
+	
 	public static final String BUFFER_FILE_NAME = "src/test/resources/ratatouille/buffer_file.xml";
 	
 	
@@ -92,11 +100,14 @@ public class RecipeSerializer extends JCasConsumer_ImplBase {
 			sb.append("Recipe serialized"); sb.append(LF);
 			sb.append("Xml file created : "+filename); sb.append(LF);
 			// Save in favourites ?
-			try {
-				copyInBuffer(x);
-			} catch (IOException e) {
-				e.printStackTrace();
-				sb.append("Copy in buffer_file.xml failed"); sb.append(LF);
+			if (save_in_buffer) {
+				try {
+					copyInBuffer(x);
+				} catch (IOException e) {
+					e.printStackTrace();
+					sb.append("Copy in buffer_file.xml failed");
+					sb.append(LF);
+				}
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

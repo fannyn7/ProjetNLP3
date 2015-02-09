@@ -38,13 +38,10 @@ import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
 
 public class ExtractionPipeline {
 
+	public final static boolean doSerialization = true;
 	
 	 public static void main(String[] args)
 		    	throws UIMAException, IOException{
-
-		//String webpage = "http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1";
-		 String webpage = "http://allrecipes.com/Recipe/Best-Brownies/Detail.aspx?evt19=1";
-
 
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		 String fileToWriteActions = "src/main/resources/globalEvaluationActions.txt";
@@ -148,7 +145,6 @@ public class ExtractionPipeline {
 	   private static void executePipeline(String webpage, String recipesFile, String fileToWrite)
 		    	throws UIMAException, IOException
 		    {
-		   		//String webpage ="http://allrecipes.com/Recipe/Alisons-Slow-Cooker-Vegetable-Beef-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=alison%20slow%20cooker&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1";	
 		        CollectionReader reader = createReader(
 		                WebPageReader.class,  WebPageReader.PARAM_URL, webpage 
 		        );
@@ -199,20 +195,36 @@ public class ExtractionPipeline {
 		                AnalyzeResults.class, AnalyzeResults.PARAM_INPUT_FILE, recipesFile, AnalyzeResults.PARAM_URL, webpage
 		        );
 
-		        SimplePipeline.runPipeline(
+		        if (doSerialization) {
+		        	 AnalysisEngine serializer = createEngine(
+				        		RecipeSerializer.class,  RecipeSerializer.PARAM_URL, webpage, RecipeSerializer.PARAM_SAVE_IN_BUFFER, false 
+					        );
+		        	SimplePipeline.runPipeline(
 		        		reader,
 		        		seg,
 		        		parse,
 		        		prnAnnotator,
 		        		amountAnnotator,
 		        		unitAnnotator,
-		        		//unitWriter,
 		        		ingredientAnnotator,
 		        		directivesAnnotator,
-		        		//unitWriter,
-		        		ingredientWriter,
-		        		analyzeResults
+		        		analyzeResults,
+		        		serializer
 		        		);
+		        } else {
+		        	SimplePipeline.runPipeline(
+			        		reader,
+			        		seg,
+			        		parse,
+			        		prnAnnotator,
+			        		amountAnnotator,
+			        		unitAnnotator,
+			        		ingredientAnnotator,
+			        		directivesAnnotator,
+			        		analyzeResults
+			        		);
+		        	
+		        }
 		    }
 
 	   /** 
@@ -249,7 +261,7 @@ public class ExtractionPipeline {
 		        );
 		        
 		        AnalysisEngine serializer = createEngine(
-		        		RecipeSerializer.class,  WebPageReader.PARAM_URL, webpage 
+		        		RecipeSerializer.class,  RecipeSerializer.PARAM_URL, webpage 
 			        );
 		        
 		        AnalysisEngine seg =  createEngine(StanfordSegmenter.class);

@@ -48,7 +48,7 @@ public class Ratatouille {
 	
 	JButton bSave = new JButton("Save book");
 	
-	public boolean debug = true;
+	public boolean debug = false;
 	
 
 	public static void main(String[] args) throws UIMAException, IOException {
