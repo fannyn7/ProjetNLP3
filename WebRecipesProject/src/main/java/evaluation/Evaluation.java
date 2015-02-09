@@ -1,4 +1,4 @@
-package evaluationParser;
+package evaluation;
 
 public class Evaluation {
 

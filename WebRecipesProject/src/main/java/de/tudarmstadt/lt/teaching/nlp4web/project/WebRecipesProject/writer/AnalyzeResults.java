@@ -1,8 +1,10 @@
 package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,6 +45,11 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 
 			String line;
 			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+			
+			String fileToWrite = "src/main/resources/globalEvaluation.txt";
+		
+			
+			
 			int correct = 0;
 			ArrayList<String> actionsList = new ArrayList<String>(); 
 			HashSet<String> realActionsSet = new HashSet<String>();
@@ -66,7 +73,22 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 				} 
 			}
 			System.out.println("Correctly found actions : " + correct + " out of " + realActionsSet.size());
-
+			
+			try
+			{
+				
+				FileWriter fw = new FileWriter(fileToWrite, true);
+				BufferedWriter output = new BufferedWriter(fw);
+				
+				output.write(correct + " " + realActionsSet.size() + "\n");
+				
+				output.flush();				
+				output.close();
+			}
+			catch(IOException ioe){
+				System.out.print("Erreur : ");
+				ioe.printStackTrace();
+				}
 
 			int indiceList = 0;
 			for (DirectivesAnnotation a : JCasUtil.select(jcas, DirectivesAnnotation.class)) { 
