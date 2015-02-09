@@ -2,8 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-    <artifactId>de.tudarmstadt.ukp.dkpro.core-asl</artifactId>
-    <version>1.6.0</version>
+    <artifactId>dkpro-parent-pom</artifactId>
+    <version>6</version>
   </parent>
   <groupId>de.tudarmstadt.lt.teaching.nlp4web.project</groupId>
   <artifactId>WebRecipesProject</artifactId>
