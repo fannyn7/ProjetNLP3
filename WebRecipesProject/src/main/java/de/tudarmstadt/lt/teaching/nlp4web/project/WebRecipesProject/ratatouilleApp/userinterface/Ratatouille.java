@@ -55,8 +55,9 @@ public class Ratatouille {
 	public boolean debug = true;
 	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UIMAException, IOException {
 		new Ratatouille();
+		//ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?evt19=1");
 	}
 
 	public Ratatouille()	{

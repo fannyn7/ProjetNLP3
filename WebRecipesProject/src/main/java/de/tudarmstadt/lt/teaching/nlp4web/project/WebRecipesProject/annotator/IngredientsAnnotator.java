@@ -30,6 +30,7 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
 
 public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 
+	
 	private List<String> ingredientDatabase;
 
 	public List<String> getIngredientDatabase() {
@@ -107,7 +108,6 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 				.select(jcas, TextIngredients.class))
 			for (Sentence sentence : JCasUtil.selectCovered(jcas,
 					Sentence.class, text)) {
-
 				// for all UnitAnnotation in this sentence
 				for (UnitAnnotation quantity : JCasUtil.selectCovered(jcas,
 						UnitAnnotation.class, sentence)) {
@@ -125,16 +125,20 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					if (prns.size() > 0) {
 						beginSearch = prns.get(prns.size() - 1).getEnd();
 					} else {
-						beginSearch = quantity.getBegin();
+						beginSearch = quantity.getEnd();
 					}
-					List<NP> nps = JCasUtil.selectCovered(jcas, NP.class,
-							beginSearch, sentence.getEnd());
+					
 					Annotation ingredient = null;
+					/****************************************/
+					/*List<NP> nps = JCasUtil.selectCovered(jcas, NP.class,
+							beginSearch, sentence.getEnd());
 					if (!nps.isEmpty()) {
 						NP np = nps.get(0);
 						ingredient = checkNP(jcas, np, quantity.getEnd() + 1,
 								quantity, sentence);
 					}
+					*/
+					/***************************************/
 					// PARTIE SENSIBLE
 					if (ingredient == null) {
 						// use Joker : database!
@@ -143,13 +147,16 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 						boolean found = false;
 						int j = 0;
 						while (!found && (j < tokens.size())) {
+							System.out.println("[MODIF] POS : "+tokens.get(j).getPos().getPosValue()+" "+tokens.get(j).getCoveredText());
 							found = getIngredientDatabase().contains(
-									tokens.get(j).getCoveredText());
+									tokens.get(j).getCoveredText()) || 
+									tokens.get(j).getPos().getPosValue().matches("NN*");
 							j++;
 						}
 
 						if (found) {
 							ingredient = tokens.get(j - 1);
+							System.out.println("[MODIF] Found : POS : "+((Token)ingredient).getPos().getPosValue()+" "+((Token)ingredient).getCoveredText());
 						} else {
 							// get the unit from the UnitAnnotation
 							// TODO : quantity unit should have type annotation
@@ -160,12 +167,13 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 							Annotation quantityUnit = l.get(l.size() - 1); // skip
 																			// the
 																			// point
+							
 							// if the current unit quantity is in the
 							// unitDatabase
 							if (getUnitDatabase().contains(
 									quantityUnit.getCoveredText())) {
-								// TODO  then : ?? for now, take the last token of the
-								// sentence
+
+								// Look for words of sentence than also occur in the instructions 
 								
 								List<Token> tokens_ing = JCasUtil.selectCovered(jcas,
 										Token.class, quantity.getBegin(),sentence.getEnd() );
@@ -173,28 +181,25 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 								List<Token> tokens_ins = JCasUtil.selectCovered(jcas,
 										Token.class, instructions.getBegin(),instructions.getEnd() );
 								 
-							if (!(tokens_ing == null) && !(tokens_ins == null)){
-								
-								for (Token a : tokens_ing) {
-									for (Token b : tokens_ins) {
-										if (a.getCoveredText().equals(b.getCoveredText()) && a.getCoveredText().length()>2){
-											
-											ingredient = tokens.get(a.getBegin() );
-											
+								if (!(tokens_ing == null) && !(tokens_ins == null)){
+									
+									for (Token a : tokens_ing) {
+										for (Token b : tokens_ins) {
+											if (a.getCoveredText().equals(b.getCoveredText()) && a.getCoveredText().length()>2){
+												
+												ingredient = tokens.get(a.getBegin());
+												
+											}
 										}
 									}
+								
+								}
+									
+								if (ingredient==null) {
+									// pick the last word
+									ingredient = tokens.get(tokens.size() - 2); // skip the point
 								}
 							
-							}
-								
-								
-							if (ingredient==null) {
-								
-							
-							 ingredient = tokens.get(tokens.size() - 2); // skip
-																		// the
-																			// point
-							}
 							} else {
 								// else roll back :
 								// remove it from text covered by the
@@ -225,6 +230,8 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 			} // for all sentences
 
 	}
+	
+
 
 	/**
 	 * Look for the NN that correspond to the ingredient associate to a quantity
