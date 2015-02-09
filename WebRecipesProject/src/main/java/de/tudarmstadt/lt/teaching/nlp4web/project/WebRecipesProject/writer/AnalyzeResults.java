@@ -122,7 +122,7 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 						//System.out.println("currentIndice " + currentIndice + "  " + actionsList.get(currentIndice));
 						currentIndice++;
 					}
-					if (currentIndice == actionsList.size()) System.out.println("Action " + a.getInstruction() + " doesn't belong to actionsList" );					
+					//if (currentIndice == actionsList.size()) System.out.println("Action " + a.getInstruction() + " doesn't belong to actionsList" );					
 				}
 
 				//sb.append(LF);
@@ -134,6 +134,9 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			while ((!(line = reader.readLine()).isEmpty()) && line != null && !line.matches("\\s") && !line.matches("\\n")){
 				//System.out.println("ligne : " + line);
 				String[] ingredient = line.split("\\s\\|\\s");
+				for (int i = 0; i<ingredient.length; i++){
+					System.out.println(ingredient[i]);					
+				}
 				if (ingredient[0].equals("null") && ingredient[1].equals("null")){
 					realIngredientsSet.add(new Ingredient("","",ingredient[2]));					
 				} else if (ingredient[0].equals("null")){
