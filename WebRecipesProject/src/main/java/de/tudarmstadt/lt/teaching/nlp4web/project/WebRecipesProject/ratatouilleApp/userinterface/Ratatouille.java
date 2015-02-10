@@ -43,16 +43,19 @@ public class Ratatouille {
 	JEditorPane jEditorPane = new JEditorPane();
 
 	public final static String BOOK_FILE_NAME = "src/test/resources/ratatouille/myFavoriteRecipes.xml";
+	public final static String BOOK_INIT_FILE_NAME = "src/test/resources/ratatouille/init.xml";
+	
 	List<Recipe> myRecipes;
 	ListeDynamique<Recipe> lRecipes;
 	
 	JButton bSave = new JButton("Save book");
 	
-	public boolean debug = false;
+	public static final boolean debug = false;
 	
 
 	public static void main(String[] args) throws UIMAException, IOException {
-		new Ratatouille();
+		//new Ratatouille();
+		ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Valentine-Night-Strawberries/Detail.aspx?evt19=1");
 	}
 
 	public Ratatouille()	{
@@ -161,11 +164,24 @@ public class Ratatouille {
 				System.out.println("Recipe\nname: "+r.getName()+"\nweb link: "+r.getWebLink()+"\nnumber of ingredients: "+r.getIngredients().size());
 			}
 		}
-		} catch (Exception e) {
-			e.printStackTrace();
-			myRecipes = new ArrayList<Recipe>();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+			try {
+			XStream xstream = XStreamFactory.createXStream();
+			myRecipes = (List<Recipe>) xstream.fromXML(new File(BOOK_INIT_FILE_NAME));
 			if (debug) {
-				System.out.println("Couldn't load book. Start with empty book");
+				System.out.println("Couldn't load book. Start with training set");
+				System.out.println("Number of favorite recipe : "+myRecipes.size());
+				for(Recipe r : myRecipes) {
+					System.out.println("Recipe\nname: "+r.getName()+"\nweb link: "+r.getWebLink()+"\nnumber of ingredients: "+r.getIngredients().size());
+				}
+			}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+				myRecipes = new ArrayList<Recipe>();
+				if (debug) {
+					System.out.println("Couldn't load book. Start with empty book");
+				}
 			}
 			
 		}

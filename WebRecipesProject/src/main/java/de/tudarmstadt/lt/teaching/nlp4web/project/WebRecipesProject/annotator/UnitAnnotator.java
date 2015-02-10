@@ -11,6 +11,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.tcas.Annotation;
 
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CARD;
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N;
@@ -36,6 +37,7 @@ import de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation;
  */
 public class UnitAnnotator extends JCasAnnotator_ImplBase {
 
+	private static final boolean debug = false;
 	private List<String> unitDatabase;
 	private List<String> ingredientDatabase;
 
@@ -103,9 +105,34 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 			endLastUnit = text.getBegin();
 			for (Sentence sentence : JCasUtil.selectCovered(jcas,
 					Sentence.class, text)) {
+				List<CARD> lquantities = JCasUtil.selectCovered(jcas,
+						CARD.class, sentence);
+				if ( (lquantities == null) || lquantities.isEmpty() ) {
+					// pattern : QUANTITY -> ^ 
+					// use rote learning technique
+					List<Token> tokens = JCasUtil.selectCovered(jcas,
+							Token.class, sentence);
+					boolean found = false;
+					int j = 0;
+					while (j < tokens.size()) {
+						if (debug) {
+							System.out.println("[MODIF] POS : "+tokens.get(j).getPos().getPosValue()+" "+tokens.get(j).getCoveredText());
+						}
+						found = getIngredientDatabase().contains(
+								tokens.get(j).getCoveredText());
+						if (found) {
+							setUnitAnnotation(jcas, null, tokens.get(j), "roteLearning");
+							if (debug) {
+								System.out.println("[MODIF] Found : POS : "+tokens.get(j).getPos().getPosValue()+" "+tokens.get(j).getCoveredText());
+							}
+							found = false;
+						}
+						j++;
+						
+					}
+				}
 				// for all cardinal number in this sentence
-				for (CARD number : JCasUtil.selectCovered(jcas, CARD.class,
-						sentence)) {
+				for (CARD number : lquantities) {
 					if (number.getEnd() <= endLastUnit) { //JCasUtil.selectCovered(CARD.class, number).size() > 0) {
 						// this number is included in a quantity (unit) already annotated
 						System.out.println("Skipped : "+number.getCoveredText()+" / end : "+number.getEnd());
@@ -138,18 +165,18 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 							throw new RuntimeException(
 									"Fatal error : POS attribute of Token not initialized !! ");
 						} else {
-							if (posValue.equals("NN") || posValue.equals("NNS") || getUnitDatabase().contains(unit_ingredient.getCoveredText()) ) {
+							if (posValue.matches("NN*") || getUnitDatabase().contains(unit_ingredient.getCoveredText()) ) {
 
 								
 								// check w.r.t database,  pattern : ( QUANTITY ) _ INGREDIENT
 								if (getIngredientDatabase().contains(unit_ingredient.getCoveredText().toLowerCase())) {
 									// pattern : ( QUANTITY ) _ INGREDIENT
 									endLastUnit = setUnitAnnotation(jcas, number,
-											number.getEnd(), "splitByToken");
+											number.getEnd(), "feature");
 								} else { 
 									// high probability for pattern : ( QUANTITY _ UNIT )
 									endLastUnit = setUnitAnnotation(jcas, number,
-										unit_ingredient, "splitByToken");
+										unit_ingredient, "feature");
 								}
 								
 							} else {
@@ -190,19 +217,13 @@ public class UnitAnnotator extends JCasAnnotator_ImplBase {
 		
 		int endAnnotation = token.getEnd();
 		UnitAnnotation a = new UnitAnnotation(jcas);
-		a.setBegin(number.getBegin());
+		int begin = (number == null) ? token.getBegin() : number.getBegin();
+		a.setBegin(begin);
 		a.setEnd(endAnnotation);
 		a.setTypeOf(type);
-		a.setQuantity(number.getCoveredText());
+		a.setQuantity((number == null) ? "" : number.getCoveredText());
 		String unit_ingredient;
-		// test that unit_ingredient is a noun
-		if (JCasUtil.selectCovered(jcas, NN.class, token.getBegin(),
-				token.getEnd()).size() > 0) {
-			unit_ingredient = token.getLemma().getValue();
-		} else {
-			unit_ingredient = "";
-			// except if token.getCoveredText \in {can, ...}
-		}
+		unit_ingredient = token.getLemma().getValue();
 		a.setUnit(unit_ingredient);
 
 		a.addToIndexes();

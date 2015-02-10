@@ -206,7 +206,9 @@ public class ExtractionPipeline {
 		        		prnAnnotator,
 		        		amountAnnotator,
 		        		unitAnnotator,
+		        		unitWriter,
 		        		ingredientAnnotator,
+		        		unitWriter,
 		        		directivesAnnotator,
 		        		analyzeResults,
 		        		serializer

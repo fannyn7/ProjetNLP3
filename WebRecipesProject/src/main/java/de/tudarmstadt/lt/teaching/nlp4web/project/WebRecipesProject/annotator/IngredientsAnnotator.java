@@ -113,7 +113,8 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 						UnitAnnotation.class, sentence);
 				
 				if ( (lquantities == null) || lquantities.isEmpty() ) {
-					// pattern : QUANTITY -> ^
+					// pattern : QUANTITY -> ^ 
+					// 			 UNIT -> ^
 					// use rote learning technique
 					List<Token> tokens = JCasUtil.selectCovered(jcas,
 							Token.class, sentence);
@@ -167,7 +168,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 					}
 					*/
 					/***************************************/
-					// PARTIE SENSIBLE
+					
 					if (ingredient == null) {
 						// use Joker : database!
 						List<Token> tokens = JCasUtil.selectCovered(jcas,
@@ -196,9 +197,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 							List<Token> l = JCasUtil.selectCovered(jcas,
 									Token.class, quantity.getBegin(),
 									quantity.getEnd());
-							Annotation quantityUnit = l.get(l.size() - 1); // skip
-																			// the
-																			// point
+							Annotation quantityUnit = l.get(l.size() - 1); 
 							
 							// if the current unit quantity is in the
 							// unitDatabase
@@ -228,7 +227,7 @@ public class IngredientsAnnotator extends JCasAnnotator_ImplBase {
 							}
 						}
 
-					}// PARTIE SENSIBLE . FIN
+					}// 
 
 					setIngredientAnnotation(jcas, ingredient, quantity);
 					} catch (IndexOutOfBoundsException e) {

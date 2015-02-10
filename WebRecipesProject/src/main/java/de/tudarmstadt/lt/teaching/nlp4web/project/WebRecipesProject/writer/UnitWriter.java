@@ -7,6 +7,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.util.Level;
 
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ExtractionPipeline;
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.teaching.general.type.DirectivesAnnotation;
 import de.tudarmstadt.ukp.teaching.general.type.IngredientAnnotation;
@@ -24,7 +25,8 @@ public class UnitWriter extends JCasConsumer_ImplBase {
 		sb.append(jcas.getDocumentText()); sb.append(LF);
 		sb.append("-- UnitAnnotation --"); sb.append(LF);
 
-		for (UnitAnnotation a : JCasUtil.select(jcas, UnitAnnotation.class)) { 
+		try {
+		for (UnitAnnotation a : JCasUtil.select(jcas, UnitAnnotation.class)) {
 			sb.append("[" + a.getType().getShortName() + "] ");
 			sb.append("(" + a.getBegin() + ", " + a.getEnd() + ") ");
 			sb.append("[Quantity: "+a.getQuantity()+"]");
@@ -36,5 +38,10 @@ public class UnitWriter extends JCasConsumer_ImplBase {
 		sb.append(LF);
 		
         getContext().getLogger().log(Level.INFO, sb.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("[Error in UnitWriter] sb = "+sb);
+			throw new RuntimeException("Stop");
+		}
 	}
 }

@@ -19,7 +19,7 @@ public class SwingRecipesList extends ListeDynamique<Recipe> {
 
 	private static final JButton bSee = new JButton("See");
 	private JEditorPane pVisualization;
-	private static boolean debug = true; 
+	private static final boolean debug = Ratatouille.debug; 
 	
 	public SwingRecipesList(List<Recipe> liste, JEditorPane visualizationArea) {
 		super(liste);//, Collections.singletonList(bSee));
