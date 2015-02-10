@@ -1,61 +1,3 @@
-http://allrecipes.com/Recipe/100-Fruit-Cake/Detail.aspx?evt19=1
-
-cut trim place alternate follow repeat slice cut decorate refrigerate slice set
-
-1 | null | watermelon
-2 | cups | strawberry
-1 | null | cantaloupe
-1 | null | pineapple
-
-http://allrecipes.com/Recipe/Unbelievable-Chicken/Detail.aspx?evt19=1
-
-Mix Whisk Place Cover Marinate Preheat Oil Place Cook Discard
-
-1/4 | cup | cider vinegar
-3 | tablespoons | mustard
-3 | cloves | garlic
-1 | null | lime
-1/2 | null | lemon
-1/2 | cup | brown sugar
-1 1/2 | teaspoons | salt
-null | null | black pepper
-6 | tablespoons | olive oil
-6 | null | chicken breast halve
-
-http://allrecipes.com/Recipe/Pesto-Chicken-Florentine/Detail.aspx?evt19=1
-
-Heat Add Saute Add Cook Add Saute Prepare Stir Set Cook Rinse Drain Add Stir Mix Top Serve
-
-2 | tablespoons | olive oil
-2 | cloves | garlic
-4 | null | chicken breast halve 
-2 | cups | spinach leaf
-1 | package | sauce mix
-2 | tablespoons | pesto
-1 | package | penne pasta
-1 | tablespoon | Romano cheese
-
-http://allrecipes.com/Recipe/A-Catering-Companys-Marinade/Detail.aspx?evt19=1
-
-combine marinate cover refrigerate cook	
-
-1 | can | beer 
-4 | tablespoons | parsley 
-1/3 | cup | soy sauce 
-3 | null | garlic
-
-http://allrecipes.com/Recipe/4th-of-July-Blast-Smoothie/Detail.aspx?evt19=1
-
-place blend pour top
-
-1 | cup | blackberry
-5 | null | strawberry
-1 | null | banana
-1/3 | cup | orange juice 
-2 | cups | ice 
-1 | teaspoon | white sugar		
-12 | null | blackberry
-
 http://allrecipes.com/Recipe/Best-Brownies/Detail.aspx?evt19=1
 
 preheat grease flour melt remove stir [not]overcook beat spread bake combine stir frost
@@ -321,6 +263,15 @@ Place Pour Spread Sprinkle Cover Cook Serve
 3 | tablespoons | garlic
 3 | tablespoons | soy sauce
 null | null | black pepper
+
+http://allrecipes.com/Recipe/A-Catering-Companys-Marinade/Detail.aspx?evt19=1
+
+combine marinate cover refrigerate cook	
+
+1 | can | beer 
+4 | tablespoons | parsley 
+1/3 | cup | soy sauce 
+3 | null | garlic
 
 http://allrecipes.com/Recipe/A-Crock-of-Curried-Pork-Soup/Detail.aspx?evt19=1
 
