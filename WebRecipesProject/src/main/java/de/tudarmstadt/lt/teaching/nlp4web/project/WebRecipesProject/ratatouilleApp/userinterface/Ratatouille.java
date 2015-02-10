@@ -54,8 +54,8 @@ public class Ratatouille {
 	
 
 	public static void main(String[] args) throws UIMAException, IOException {
-		//new Ratatouille();
-		ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Valentine-Night-Strawberries/Detail.aspx?evt19=1");
+		new Ratatouille();
+		//ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Valentine-Night-Strawberries/Detail.aspx?evt19=1");
 	}
 
 	public Ratatouille()	{
@@ -74,7 +74,7 @@ public class Ratatouille {
 				p.add(recipesPane, BorderLayout.CENTER);
 				p.add(bSave, BorderLayout.SOUTH);
 				j.getContentPane().add(p,
-						BorderLayout.SOUTH);
+						BorderLayout.EAST);
 				/** ANALYZER **/
 				initializeAnalyser(j.getContentPane());
 				
