@@ -46,7 +46,7 @@ public class ExtractionPipeline {
 		 String recipesFile = "src/main/resources/recipesEvaluation.txt";
 		 String fileToWriteActions = "src/main/resources/globalEvaluationActions.txt";
 		 String fileToWriteIngredients = "src/main/resources/globalEvaluationIngredients.txt";
-		 
+		 /*
 		 FileWriter fw1 = new FileWriter(fileToWriteActions, false);
 			BufferedWriter output1 = new BufferedWriter(fw1);
 			
@@ -82,7 +82,7 @@ public class ExtractionPipeline {
 		 }
 
 		 readerRecipesFile.close();
-		 
+		 */
 			BufferedReader reader1;
 			try {
 				reader1 = new BufferedReader(new FileReader(fileToWriteActions));
@@ -94,16 +94,16 @@ public class ExtractionPipeline {
 			int correctsA = 0;
 			int nbRecipesA = 0;
 			int nbTotalActions = 0;
-//String line ;
+String line ;
 			while ((line = reader1.readLine()) != null){
-				System.out.println("ligne : " + line);
+				//System.out.println("ligne : " + line);
 				nbRecipesA++;
 				String[] numbersA = line.split("\\s");
 				correctsA += Integer.parseInt(numbersA[0]);
 				nbTotalActions += Integer.parseInt(numbersA[1]);
 			}
 			System.out.println("Correctly found actions : " + correctsA + " out of " + nbTotalActions);
-			System.out.println("precision = " + 100*correctsA/nbTotalActions);
+			System.out.println("precision = " + 100*correctsA/nbTotalActions+" %");
 			System.out.println("Test Set : " +nbRecipesA + " recipes");
 
 				reader1.close();
@@ -123,14 +123,14 @@ public class ExtractionPipeline {
 				int nbTotalIngredients = 0;
 	//String line ;
 				while ((line = reader2.readLine()) != null){
-					System.out.println("ligne : " + line);
+					//System.out.println("ligne : " + line);
 					nbRecipesI++;
 					String[] numbers = line.split("\\s");
 					correctsI += Integer.parseInt(numbers[0]);
 					nbTotalIngredients += Integer.parseInt(numbers[1]);
 				}
-				System.out.println("Correctly found actions : " + correctsI + " out of " + nbTotalIngredients);
-				System.out.println("precision = " + 100*correctsI/nbTotalIngredients);
+				System.out.println("Correctly found ingredients : " + correctsI + " out of " + nbTotalIngredients);
+				System.out.println("precision = " + 100*correctsI/nbTotalIngredients+" %");
 				System.out.println("Test Set : " +nbRecipesI + " recipes");
 
 					reader2.close();
