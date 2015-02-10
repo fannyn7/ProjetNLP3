@@ -1,15 +1,19 @@
 <!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00001/*.xml -->
+<!-- /WebRecipesProject/src/main/resources/resourcesXml/Archive00002/*.xml -->
 cup
 Slices
-can
+dashes
 Stalk
+can
 quart
 pounds
+slices
 C
 package
 teaspoons
 teaspoon
 T
+pint
 pinches
 tablespoons
 ounces
@@ -18,12 +22,17 @@ pinch
 packages
 cups
 inch
-Dashes
+ounce
 T.
 Tsp
+pints
 Dash
+cans
 quarts
 Stalks
+slice
 box
 tablespoon
 pound
+cubes
+cube
