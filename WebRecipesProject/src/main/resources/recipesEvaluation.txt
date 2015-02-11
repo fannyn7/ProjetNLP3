@@ -38,7 +38,7 @@ preheat place season mix add mix form place bake
 1/2 | teaspoon | salt
 1 1/2 | teaspoons | Italian seasoning
 3/4 | teaspoon | oregano
-3/4 | teaspoon | pepper
+3/4 | teaspoon | red pepper
 1 | dash | hot pepper sauce
 1 1/2 | tablespoons | Worcestershire sauce
 1/3 | cup | milk
@@ -95,7 +95,7 @@ preheat grease heat stir cook stir remove mix arrange spoon top bake
 2 | cups | tomato
 2 | tablespoon | basil
 1/4 | teaspoon | salt
-1/4 | teaspoon | pepper
+1/4 | teaspoon | black pepper
 4 | null | halibut steak
 1/3 | cup | feta cheese
 
@@ -283,9 +283,9 @@ bring add cook melt add saute add stir stir simmer stir stir heat serve
 2 | tablespoons | butter
 1/4 | pound | bacon
 1/3 | cup | vodka
-1/2 | cup | cream
+1/2 | cup | heavy whipping cream
 1 1/2 | cups | tomato sauce
-1/2 | cup | cheese
+1/2 | cup | Parmesan cheese
 
 http://allrecipes.com/Recipe/Buffalo-Chicken-Dip/Detail.aspx?evt19=1
 
@@ -297,7 +297,7 @@ heat stir cook stir mix transfer sprinkle cover cook serve
 3/4 | cup | pepper sauce
 1 1/2 | cups | cheddar cheese
 1 | bunch | celery
-1 | box | chicken-flavored crackers
+1 | box | cracker
 
 http://allrecipes.com/Recipe/Jalapeno-Popper-Spread/Detail.aspx?evt19=1
 
@@ -326,7 +326,7 @@ http://allrecipes.com/Recipe/Artichoke--Spinach-Dip-Restaurant-Style/Detail.aspx
 
 preheat place bake remove squeeze spread bake serve
 
-4 | null | garlic
+4 | cloves | garlic
 1 | package | spinach
 1 | can | artichoke heart
 1 | container | pasta sauce
@@ -354,7 +354,7 @@ combine simmer stir preheat place brush turn brush bake turn bake run brush
 1/4 | cup | cider vinegar
 1 | clove | garlic
 1/2 | teaspoon | ginger
-1/4 | teaspoon | pepper
+1/4 | teaspoon | black pepper
 12 | null | chicken thigh
 
 http://allrecipes.com/Recipe/Pesto-Chicken-Florentine/Detail.aspx?evt19=1
@@ -363,8 +363,8 @@ heat add saute add cook add saute prepare stir set cook rinse drain add stir mix
 
 2 | tablespoons | olive oil
 2 | cloves | garlic
-4 | null | chicken breast halve 
-2 | cups | spinach leaf
+4 | halves | chicken breast
+2 | cups | spinach
 1 | package | sauce mix
 2 | tablespoons | pesto
 1 | package | penne pasta
@@ -377,25 +377,25 @@ place blend pour top
 1 | cup | blackberry
 5 | null | strawberry
 1 | null | banana
-1/3 | cup | orange juice 
-2 | cups | ice 
+1/3 | cup | orange juice
+2 | cups | ice
 1 | teaspoon | sugar		
 12 | null | blackberry
 
 http://allrecipes.com/Recipe/Pollo-Fajitas/Detail.aspx?evt19=1
 
-combine place turn marinate cover refrigerate heat add saute add saute remove sprinkle 
+combine place turn marinate cover refrigerate heat add saute add saute remove sprinkle
 
 1 | tablespoon | Worcestershire sauce
-1 | tablespoon | vinegar
+1 | tablespoon | cider vinegar
 1 | tablespoon | soy sauce
 1 | teaspoon | chili powder
 1 | clove | garlic
-1 | dash | pepper sauce
+1 | dash | hot pepper sauce
 1 1/2 | pounds | chicken thigh
 1 | tablespoon | oil
 1 | null | onion
-1 | null | pepper
+1 | null | green bell pepper
 1/2 | null | lemon
 
 http://allrecipes.com/Recipe/Guacamole/Detail.aspx?evt19=1
@@ -407,7 +407,7 @@ mash mix stir refrigerate serve
 1 | teaspoon | salt
 1/2 | cup | onion
 3 | tablespoons | cilantro
-2 | null | roma tomato
+2 | null | tomato
 1 | teaspoon | garlic
 1 | pinch | cayenne pepper
 
@@ -415,7 +415,7 @@ http://allrecipes.com/Recipe/Double-Tomato-Bruschetta/Detail.aspx?evt19=1
 
 preheat combine cut arrange broil divide top broil
 
-6 | roma | tomato
+6 | null | tomato
 1/2 | cup | sun-dried tomato
 3 | cloves | garlic
 1/4 | cup | olive oil
@@ -430,20 +430,20 @@ http://allrecipes.com/Recipe/Simple-Spinach-Lasagna/Detail.aspx?evt19=1
 
 preheat saute pour simmer place place top add layer cover bake remove bake sit 
 
-1 | tablespoon | oil
+1 | tablespoon | olive oil
 2 | packages | spinach
-1/2 | null | onion 
+1/2 | null | onion
 1/2 | teaspoon | oregano
 1/2 | teaspoon | basil
 2 | cloves | garlic
 1 | jar | spaghetti sauce
 1 1/2 | cups | water
-2 | cups | cheese
-1 | package | cheese
-1/4 | cup | cheese
+2 | cups | cottage cheese
+1 | package | mozzarella cheese
+1/4 | cup | Parmesan cheese
 1/2 | cup | parsley
 1 | teaspoon | salt
-1/8 | teaspoon | salt
+1/8 | teaspoon | black pepper
 1 | null | egg
 8 | ounces | noodle
 
