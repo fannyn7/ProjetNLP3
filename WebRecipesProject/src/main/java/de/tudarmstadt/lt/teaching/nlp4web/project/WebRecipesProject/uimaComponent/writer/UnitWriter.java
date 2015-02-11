@@ -1,4 +1,4 @@
-package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer;
+package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.writer;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasConsumer_ImplBase;
@@ -7,7 +7,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.util.Level;
 
-import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ExtractionPipeline;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.ExtractionPipeline;
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.teaching.general.type.DirectivesAnnotation;
 import de.tudarmstadt.ukp.teaching.general.type.IngredientAnnotation;

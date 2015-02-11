@@ -1,0 +1,11 @@
+rind
+juice
+bean
+meat
+soup
+sauce
+cream
+bouillon
+seasoning
+liqueur
+syrup

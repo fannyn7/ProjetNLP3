@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Thu Jan 15 15:08:17 CET 2015
+ * Updated by JCasGen Tue Feb 10 13:52:39 CET 2015
  * @generated */
 public class UnitAnnotation_Type extends Annotation_Type {
   /** @generated 
@@ -67,6 +67,30 @@ public class UnitAnnotation_Type extends Annotation_Type {
         if (featOkTst && casFeat_Unit == null)
       jcas.throwFeatMissing("Unit", "de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation");
     ll_cas.ll_setStringValue(addr, casFeatCode_Unit, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_UnitToken;
+  /** @generated */
+  final int     casFeatCode_UnitToken;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public int getUnitToken(int addr) {
+        if (featOkTst && casFeat_UnitToken == null)
+      jcas.throwFeatMissing("UnitToken", "de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_UnitToken);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setUnitToken(int addr, int v) {
+        if (featOkTst && casFeat_UnitToken == null)
+      jcas.throwFeatMissing("UnitToken", "de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation");
+    ll_cas.ll_setRefValue(addr, casFeatCode_UnitToken, v);}
     
   
  
@@ -132,6 +156,10 @@ public class UnitAnnotation_Type extends Annotation_Type {
  
     casFeat_Unit = jcas.getRequiredFeatureDE(casType, "Unit", "uima.cas.String", featOkTst);
     casFeatCode_Unit  = (null == casFeat_Unit) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Unit).getCode();
+
+ 
+    casFeat_UnitToken = jcas.getRequiredFeatureDE(casType, "UnitToken", "uima.tcas.Annotation", featOkTst);
+    casFeatCode_UnitToken  = (null == casFeat_UnitToken) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_UnitToken).getCode();
 
  
     casFeat_Quantity = jcas.getRequiredFeatureDE(casType, "Quantity", "uima.cas.String", featOkTst);

@@ -1,4 +1,4 @@
-package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer;
+package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.writer;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasConsumer_ImplBase;

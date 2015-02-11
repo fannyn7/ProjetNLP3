@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jan 15 15:08:17 CET 2015
- * XML source: /home/monordi/Cours/3A/TU/NLP/Exercices/ProjetNLP/WebRecipesProject/src/main/resources/desc/type/UnitAnnotation.xml
+ * Updated by JCasGen Tue Feb 10 13:52:39 CET 2015
+ * XML source: /home/monordi/Cours/3A/TU/NLP/Exercices/ProjetNLP3/WebRecipesProject/src/main/resources/desc/type/UnitAnnotation.xml
  * @generated */
 public class UnitAnnotation extends Annotation {
   /** @generated
@@ -96,6 +96,28 @@ public class UnitAnnotation extends Annotation {
     if (UnitAnnotation_Type.featOkTst && ((UnitAnnotation_Type)jcasType).casFeat_Unit == null)
       jcasType.jcas.throwFeatMissing("Unit", "de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation");
     jcasType.ll_cas.ll_setStringValue(addr, ((UnitAnnotation_Type)jcasType).casFeatCode_Unit, v);}    
+   
+    
+  //*--------------*
+  //* Feature: UnitToken
+
+  /** getter for UnitToken - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public Annotation getUnitToken() {
+    if (UnitAnnotation_Type.featOkTst && ((UnitAnnotation_Type)jcasType).casFeat_UnitToken == null)
+      jcasType.jcas.throwFeatMissing("UnitToken", "de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation");
+    return (Annotation)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((UnitAnnotation_Type)jcasType).casFeatCode_UnitToken)));}
+    
+  /** setter for UnitToken - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setUnitToken(Annotation v) {
+    if (UnitAnnotation_Type.featOkTst && ((UnitAnnotation_Type)jcasType).casFeat_UnitToken == null)
+      jcasType.jcas.throwFeatMissing("UnitToken", "de.tudarmstadt.ukp.teaching.general.type.UnitAnnotation");
+    jcasType.ll_cas.ll_setRefValue(addr, ((UnitAnnotation_Type)jcasType).casFeatCode_UnitToken, jcasType.ll_cas.ll_getFSRef(v));}    
    
     
   //*--------------*

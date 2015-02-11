@@ -1,4 +1,4 @@
-package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.reader;
+package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.reader;
 
 import java.io.IOException;
 

@@ -73,8 +73,4 @@ public class Recipe2Xml {
 		return buffer.toString();
 	}
 
-	public static void main(String[] args) throws FileNotFoundException {
-		// TODO serialize all the training set
-		throw new RuntimeException("Unimplemented method");
-	}
 }

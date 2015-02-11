@@ -114,7 +114,6 @@ gelatin powder
 Egg
 bread
 Sour Cream
-Thyme
 tomato juice
 Onion
 Soda
@@ -149,7 +148,6 @@ Reduced-calorie mayonnaise
 Ground turkey
 Unsweetened chocolate
 Hershey's candy bar
-Ground Ginger
 Margarine
 Frozen peas
 mustard
@@ -387,7 +385,7 @@ brown potatoes
 evaporated milk
 red peppers
 Butter
-Ground coriander
+coriander
 American cheese
 Dried basil
 Ground ginger

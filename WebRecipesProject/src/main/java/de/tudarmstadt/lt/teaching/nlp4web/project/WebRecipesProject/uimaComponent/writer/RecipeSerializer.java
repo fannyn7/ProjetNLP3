@@ -1,4 +1,4 @@
-package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer;
+package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.writer;
 
 import java.io.File;
 import java.io.FileNotFoundException;

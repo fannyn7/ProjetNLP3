@@ -26,9 +26,9 @@ import org.apache.uima.UIMAException;
 
 import com.thoughtworks.xstream.XStream;
 
-import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ExtractionPipeline;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.ratatouilleApp.model.Recipe;
-import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.writer.RecipeSerializer;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.ExtractionPipeline;
+import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.writer.RecipeSerializer;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml.Recipe2Xml;
 import de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.xml.XStreamFactory;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -38,7 +38,7 @@ public class Ratatouille {
 	
 	public final static int port = 2048;
 	
-	JTextField recipe_url =new JTextField();
+	JTextField recipe_url =new JTextField("http://");
 	JButton bAnalyze = new JButton("Add");
 	JEditorPane jEditorPane = new JEditorPane();
 
@@ -50,12 +50,12 @@ public class Ratatouille {
 	
 	JButton bSave = new JButton("Save book");
 	
-	public static final boolean debug = false;
+	public static final boolean debug = true;
 	
 
 	public static void main(String[] args) throws UIMAException, IOException {
 		new Ratatouille();
-		//ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Valentine-Night-Strawberries/Detail.aspx?evt19=1");
+		//ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Amazing-Pork-Tenderloin-in-the-Slow-Cooker/Detail.aspx?evt19=1");// brackets 1 (2pound) -> pound (1) 
 	}
 
 	public Ratatouille()	{
@@ -64,7 +64,7 @@ public class Ratatouille {
 		{
 			public void run() {
 				
-				JFrame j = new JFrame("Project Information extraction from online recipes");
+				JFrame j = new JFrame("Project NLP Information extraction from online recipes");
 				
 				/** DATABASE **/
 				uploadMyRecipes();
@@ -79,7 +79,8 @@ public class Ratatouille {
 				initializeAnalyser(j.getContentPane());
 				
 				j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				j.setSize(new Dimension(500,250));
+				//j.setSize(new Dimension(500,250));
+				j.pack();
 				j.setLocationRelativeTo(null);
 				j.setVisible(true);
 			}
@@ -95,7 +96,6 @@ public class Ratatouille {
 			public void actionPerformed(ActionEvent e) {
 				if (bAnalyze.isEnabled()) {
 					bAnalyze.setEnabled(false);
-					// Create a web client
 					// Get the user request
 					try {
 						// TODO Get the web link safely
@@ -103,6 +103,7 @@ public class Ratatouille {
 						// Analyze webpage
 						(new AnalysisSlave(weblink)).start();
 					} catch (Exception ex) {
+						// TODO
 						ex.printStackTrace();
 						bAnalyze.setEnabled(true);
 					}
@@ -123,6 +124,7 @@ public class Ratatouille {
 							System.out.println("Book saved.");
 						}
 					} catch (Exception ex) {
+						// TODO
 						ex.printStackTrace();
 						bSave.setEnabled(true);
 					}
@@ -211,10 +213,11 @@ public class Ratatouille {
 				if (debug) {
 					System.out.println("Recipe displayed in favorites");
 				}
-				bAnalyze.setEnabled(true);
 			} catch (Exception e) {
 				// TODO 
 				e.printStackTrace();
+			} finally {
+				bAnalyze.setEnabled(true);
 			}
 		}
 	}

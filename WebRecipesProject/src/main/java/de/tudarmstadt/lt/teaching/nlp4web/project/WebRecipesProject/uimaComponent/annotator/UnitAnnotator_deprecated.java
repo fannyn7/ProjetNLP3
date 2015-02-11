@@ -1,4 +1,4 @@
-package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.annotator;
+package de.tudarmstadt.lt.teaching.nlp4web.project.WebRecipesProject.uimaComponent.annotator;
 
 import java.util.List;
 
