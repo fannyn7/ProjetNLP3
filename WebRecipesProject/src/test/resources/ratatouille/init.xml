@@ -1,5 +1,82 @@
 <List>
 <Recipe>
+  <webLink>http://allrecipes.com/Recipe/100-Fruit-Cake/Detail.aspx?evt19=1</webLink>
+  <name>100% Fruit &quot;Cake&quot; Recipe - Allrecipes.com</name>
+  <textIngredients>
+1 seedless watermelon.
+2 cups strawberries, hulled and sliced.
+1 cantaloupe - seeded, peeled, and sliced (optional).
+1 fresh pineapple - peeled, cored, and sliced (optional).</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>watermelon</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>slice</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cantaloupe</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>pineapple</name>
+      <quantity>1</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+To create the base tier of the cake, cut 3 slices of watermelon, 1 to 2 inches thick, crossways through the center of the melon. Trim the rind from the watermelon slices, and place the largest slice onto a cake plate. Alternate layering sliced strawberries, slices of cantaloupe, and slices of fresh pineapple; follow with the second-largest watermelon slice. Repeat once more to make a layered fruit stack that looks like a cake.
+Thinly slice a few pieces of remaining melon and pineapple. With cookie cutters or a sharp knife, cut remaining fruit slices into decorative shapes. Decorate the cake tiers with the cut fruit shapes and remaining berries.
+Refrigerate until serving time. To serve, slice the cake with a sharp knife, one wedge at a time, and set the wedge onto a plate.</textInstructions>
+</Recipe>
+
+<Recipe>
+  <webLink>http://allrecipes.com/Recipe/4th-of-July-Blast-Smoothie/Detail.aspx?evt19=1</webLink>
+  <name>4th of July Blast Smoothie Recipe - Allrecipes.com</name>
+  <textIngredients>
+1 cup fresh blackberries, or more to taste.
+5 large strawberries, hulled and halved.
+1 large banana.
+1/3 cup orange juice.
+2 cups crushed ice.
+1 teaspoon white sugar, or to taste (optional).
+12 fresh blackberries.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>taste</name>
+      <quantity>1 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>halve</name>
+      <quantity>5</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>banana</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>orange</name>
+      <quantity>1/3 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>ice</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>blackberry</name>
+      <quantity>12</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+Place 1 cup blackberries, strawberries, banana, orange juice, and ice into a blender in that order, and blend on high speed until smooth, 30 seconds to 1 minute. Pour into 4 glasses and top each serving with 3 blackberries for garnish.</textInstructions>
+</Recipe>
+
+<Recipe>
   <webLink>http://allrecipes.com/Recipe/A-Catering-Companys-Marinade/Detail.aspx?evt19=1</webLink>
   <name>A Catering Company&apos;s Marinade Recipe - Allrecipes.com</name>
   <textIngredients>
@@ -28,93 +105,6 @@
   <textInstructions>
 In a mixing bowl, combine beer, garlic, parsley, and soy sauce.
 Marinate meat in the mixture for a few hours to overnight; cover and refrigerate meat while marinating. Cook as desired.</textInstructions>
-</Recipe>
-
-<Recipe>
-  <webLink>http://allrecipes.com/Recipe/A-Crock-of-Curried-Pork-Soup/Detail.aspx?evt19=1</webLink>
-  <name>A Crock of Curried Pork Soup Recipe - Allrecipes.com</name>
-  <textIngredients>
-1 teaspoon olive oil.
-4 zucchini, cut into 1/4-inch slices.
-1 head garlic, separated into cloves and sliced.
-1 (2 pound) pork roast.
-3 tablespoons curry powder, divided.
-salt and ground black pepper to taste.
-2 (10 ounce) cans diced tomatoes with green chile peppers.
-3 cubes vegetable bouillon.
-3/4 cup boiling water.
-2 tablespoons minced garlic.
-1 (15.5 ounce) can white beans, drained.
-1 (15 ounce) can garbanzo beans (chickpeas), drained.
-1/2 cup white rice.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>oil</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>zucchini</name>
-      <quantity>4</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garlic</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>pound</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>pork</name>
-      <quantity>2 pound</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>powder</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>ground</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>tomato</name>
-      <quantity>2 (10 ounce)</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>cube</name>
-      <quantity>3</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>water</name>
-      <quantity>3/4 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garlic</name>
-      <quantity>2 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>bean</name>
-      <quantity>1 (15.5 ounce) can</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>bean</name>
-      <quantity>1 (15 ounce) can</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>rice</name>
-      <quantity>1/2 cup</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-Coat the bottom inside of a slow cooker with olive oil. Lay zucchini slices and garlic slices onto olive oil layer; top with pork roast. Season roast with 1 tablespoon curry powder, salt, and pepper.
-Pour tomatoes with green chile peppers into a large measuring cup; stir in bouillon cubes and boiling water until dissolved. Pour tomato-broth mixture into slow cooker. Spread minced garlic over top of roast.
-Cook on Low until pork is tender, about 6 hours.
-Transfer pork roast to a plate and shred into bite-size pieces using a fork. Return shredded pork to slow cooker; add white beans, garbanzo beans, rice, and remaining 2 tablespoons curry powder and stir.
-Cook for 2 more hours.</textInstructions>
 </Recipe>
 
 <Recipe>
@@ -351,112 +341,6 @@ In a medium bowl, combine the steak sauce, brown sugar, lemon-lime soda, butter,
 </Recipe>
 
 <Recipe>
-  <webLink>http://allrecipes.com/Recipe/Amazing-Pork-Tenderloin-in-the-Slow-Cooker/Detail.aspx?evt19=1</webLink>
-  <name>Amazing Pork Tenderloin in the Slow Cooker Recipe - Allrecipes.com</name>
-  <textIngredients>
-1 (2 pound) pork tenderloin.
-1 (1 ounce) envelope dry onion soup mix.
-1 cup water.
-3/4 cup red wine.
-3 tablespoons minced garlic.
-3 tablespoons soy sauce.
-freshly ground black pepper to taste.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>pound</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>pork</name>
-      <quantity>2 pound</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>envelope</name>
-      <quantity>1 (1 ounce) envelope</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>water</name>
-      <quantity>1 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>wine</name>
-      <quantity>3/4 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garlic</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>soy</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-Place pork tenderloin in a slow cooker with the contents of the soup packet. Pour water, wine, and soy sauce over the top, turning the pork to coat. Carefully spread garlic over the pork, leaving as much on top of the roast during cooking as possible. Sprinkle with pepper, cover, and cook on low setting for 4 hours. Serve with cooking liquid on the side as au jus.</textInstructions>
-</Recipe>
-
-<Recipe>
-  <webLink>http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?evt19=1</webLink>
-  <name>Apple Cider Sauce and Pork Loin Chops Recipe - Allrecipes.com</name>
-  <textIngredients>
-3 tablespoons olive oil.
-4 pork loin chops.
-seasoning salt to taste.
-black pepper to taste.
-garlic powder to taste.
-1/2 teaspoon poultry seasoning.
-3 tablespoons Worcestershire sauce.
-1 (8 ounce) container frozen apple cider concentrate, undiluted.
-1/4 cup dry sherry.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>oil</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>pork</name>
-      <quantity>4</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>powder</name>
-      <quantity>garlic</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>poultry</name>
-      <quantity>1/2 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>sauce</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>container</name>
-      <quantity>1 (8 ounce) container</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>sherry</name>
-      <quantity>1/4 cup</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-Preheat oven to 375 degrees F (190 degrees C).
-Heat olive oil in a large oven-safe frying pan over medium-high heat. Sprinkle chops with salt, pepper, garlic powder, and poultry seasoning. Place in hot oil, and brown on both sides. Drizzle Worcestershire sauce over chops, and pour in apple cider.
-Bake in preheated oven for 25 minutes. Remove chops to a plate, and return frying pan to stove over medium-high heat. Stir sherry into pan, and boil until sauce thickens, stirring frequently. Serve sauce over chops.</textInstructions>
-</Recipe>
-
-<Recipe>
   <webLink>http://allrecipes.com/Recipe/Artichoke--Spinach-Dip-Restaurant-Style/Detail.aspx?evt19=1</webLink>
   <name>Artichoke &amp; Spinach Dip Restaurant Style Recipe - Allrecipes.com</name>
   <textIngredients>
@@ -473,7 +357,7 @@ Bake in preheated oven for 25 minutes. Remove chops to a plate, and return fryin
       <quantity>4</quantity>
     </Ingredient>
     <Ingredient>
-      <name>package</name>
+      <name>spinach</name>
       <quantity>1 (10 ounce) package</quantity>
     </Ingredient>
     <Ingredient>
@@ -481,7 +365,7 @@ Bake in preheated oven for 25 minutes. Remove chops to a plate, and return fryin
       <quantity>1 (14 ounce) can</quantity>
     </Ingredient>
     <Ingredient>
-      <name>container</name>
+      <name>pasta</name>
       <quantity>1 (10 ounce) container</quantity>
     </Ingredient>
     <Ingredient>
@@ -590,37 +474,6 @@ In a blender, combine brown sugar, ketchup, vinegar, water and Worcestershire sa
 </Recipe>
 
 <Recipe>
-  <webLink>http://allrecipes.com/Recipe/Awesome-Slow-Cooker-Pot-Roast/Detail.aspx?evt19=1</webLink>
-  <name>Awesome Slow Cooker Pot Roast Recipe - Allrecipes.com</name>
-  <textIngredients>
-2 (10.75 ounce) cans condensed cream of mushroom soup.
-1 (1 ounce) package dry onion soup mix.
-1 1/4 cups water.
-5 1/2 pounds pot roast.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>cream</name>
-      <quantity>2 (10.75 ounce)</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>package</name>
-      <quantity>1 (1 ounce) package</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>water</name>
-      <quantity>1 1/4 cups</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>roast</name>
-      <quantity>5 1/2 pounds</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-In a slow cooker, mix cream of mushroom soup, dry onion soup mix and water. Place pot roast in slow cooker and coat with soup mixture.
-Cook on High setting for 3 to 4 hours, or on Low setting for 8 to 9 hours.</textInstructions>
-</Recipe>
-
-<Recipe>
   <webLink>http://allrecipes.com/Recipe/Baked-Halibut-Steaks/Detail.aspx?evt19=1</webLink>
   <name>Baked Halibut Steaks Recipe - Allrecipes.com</name>
   <textIngredients>
@@ -668,8 +521,8 @@ Cook on High setting for 3 to 4 hours, or on Low setting for 8 to 9 hours.</text
       <quantity>1/4 teaspoon</quantity>
     </Ingredient>
     <Ingredient>
-      <name>)</name>
-      <quantity>4 (6 ounc</quantity>
+      <name>steak</name>
+      <quantity>4 (6 ounce)</quantity>
     </Ingredient>
     <Ingredient>
       <name>feta</name>
@@ -789,6 +642,10 @@ Frosting:.
       <quantity>1/4 teaspoon</quantity>
     </Ingredient>
     <Ingredient>
+      <name>powder</name>
+      <quantity>teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
       <name>butter</name>
       <quantity>3 tablespoons</quantity>
     </Ingredient>
@@ -817,73 +674,6 @@ To Make Frosting: Combine 3 tablespoons softened butter, 3 tablespoons cocoa, ho
 </Recipe>
 
 <Recipe>
-  <webLink>http://allrecipes.com/Recipe/Braised-Balsamic-Chicken/Detail.aspx?evt19=1</webLink>
-  <name>Braised Balsamic Chicken Recipe - Allrecipes.com</name>
-  <textIngredients>
-6 skinless, boneless chicken breast halves.
-1 teaspoon garlic salt.
-ground black pepper to taste.
-2 tablespoons olive oil.
-1 onion, thinly sliced.
-1 (14.5 ounce) can diced tomatoes.
-1/2 cup balsamic vinegar.
-1 teaspoon dried basil.
-1 teaspoon dried oregano.
-1 teaspoon dried rosemary.
-1/2 teaspoon dried thyme.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>chicken</name>
-      <quantity>6</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garlic</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>oil</name>
-      <quantity>2 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>onion</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>tomato</name>
-      <quantity>1 (14.5 ounce) can</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>vinegar</name>
-      <quantity>1/2 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>basil</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>oregano</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>rosemary</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>thyme</name>
-      <quantity>1/2 teaspoon</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-Season both sides of chicken breasts with garlic salt and pepper.
-Heat olive oil in a skillet over medium heat; cook seasoned chicken breasts until chicken is browned, 3 to 4 minutes per side. Add onion; cook and stir until onion is browned, 3 to 4 minutes.
-Pour diced tomatoes and balsamic vinegar over chicken; season with basil, oregano, rosemary and thyme. Simmer until chicken is no longer pink and the juices run clear, about 15 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).</textInstructions>
-</Recipe>
-
-<Recipe>
   <webLink>http://allrecipes.com/Recipe/Buffalo-Chicken-Dip/Detail.aspx?evt19=1</webLink>
   <name>Buffalo Chicken Dip Recipe - Allrecipes.com</name>
   <textIngredients>
@@ -898,7 +688,7 @@ Pour diced tomatoes and balsamic vinegar over chicken; season with basil, oregan
   <ingredients>
     <Ingredient>
       <name>chunk</name>
-      <quantity>2 (10 ounce)</quantity>
+      <quantity>2 (10 ounce) cans</quantity>
     </Ingredient>
     <Ingredient>
       <name>cream</name>
@@ -925,7 +715,7 @@ Pour diced tomatoes and balsamic vinegar over chicken; season with basil, oregan
       <quantity>4 inch</quantity>
     </Ingredient>
     <Ingredient>
-      <name>box</name>
+      <name>cracker</name>
       <quantity>1 (8 ounce) box</quantity>
     </Ingredient>
   </ingredients>
@@ -1169,6 +959,70 @@ Bake uncovered 35 to 40 minutes in the preheated oven, until puffed and lightly 
 </Recipe>
 
 <Recipe>
+  <webLink>http://allrecipes.com/Recipe/Double-Tomato-Bruschetta/Detail.aspx?evt19=1</webLink>
+  <name>Double Tomato Bruschetta Recipe - Allrecipes.com</name>
+  <textIngredients>
+6 roma (plum) tomatoes, chopped.
+1/2 cup sun-dried tomatoes, packed in oil.
+3 cloves minced garlic.
+1/4 cup olive oil.
+2 tablespoons balsamic vinegar.
+1/4 cup fresh basil, stems removed.
+1/4 teaspoon salt.
+1/4 teaspoon ground black pepper.
+1 French baguette.
+2 cups shredded mozzarella cheese.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>tomato</name>
+      <quantity>6 roma</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>tomato</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>clove</name>
+      <quantity>3</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>oil</name>
+      <quantity>1/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>vinegar</name>
+      <quantity>2 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>basil</name>
+      <quantity>1/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>salt</name>
+      <quantity>1/4 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>pepper</name>
+      <quantity>1/4 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>baguette</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>mozzarella</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+Preheat the oven on broiler setting.
+In a large bowl, combine the roma tomatoes, sun-dried tomatoes, garlic, olive oil, vinegar, basil, salt, and pepper. Allow the mixture to sit for 10 minutes.
+Cut the baguette into 3/4-inch slices. On a baking sheet, arrange the baguette slices in a single layer. Broil for 1 to 2 minutes, until slightly brown.
+Divide the tomato mixture evenly over the baguette slices. Top the slices with mozzarella cheese.
+Broil for 5 minutes, or until the cheese is melted.</textInstructions>
+</Recipe>
+
+<Recipe>
   <webLink>http://allrecipes.com/Recipe/Fabulous-Fajitas/Detail.aspx?evt19=1</webLink>
   <name>Fabulous Fajitas Recipe - Allrecipes.com</name>
   <textIngredients>
@@ -1216,145 +1070,53 @@ Warm tortillas and roll mixture inside. If desired top with shredded cheddar che
 </Recipe>
 
 <Recipe>
-  <webLink>http://allrecipes.com/Recipe/Ginger-Glazed-Mahi-Mahi/Detail.aspx?evt19=1</webLink>
-  <name>Ginger Glazed Mahi Mahi Recipe - Allrecipes.com</name>
+  <webLink>http://allrecipes.com/Recipe/Guacamole/Detail.aspx?evt19=1</webLink>
+  <name>Guacamole Recipe - Allrecipes.com</name>
   <textIngredients>
-3 tablespoons honey.
-3 tablespoons soy sauce.
-3 tablespoons balsamic vinegar.
-1 teaspoon grated fresh ginger root.
-1 clove garlic, crushed or to taste.
-2 teaspoons olive oil.
-4 (6 ounce) mahi mahi fillets.
-salt and pepper to taste.
-1 tablespoon vegetable oil.</textIngredients>
+3 avocados - peeled, pitted, and mashed.
+1 lime, juiced.
+1 teaspoon salt.
+1/2 cup diced onion.
+3 tablespoons chopped fresh cilantro.
+2 roma (plum) tomatoes, diced.
+1 teaspoon minced garlic.
+1 pinch ground cayenne pepper (optional).</textIngredients>
   <ingredients>
     <Ingredient>
-      <name>honey</name>
-      <quantity>3 tablespoons</quantity>
+      <name>mash</name>
+      <quantity>3</quantity>
     </Ingredient>
     <Ingredient>
-      <name>soy</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>vinegar</name>
-      <quantity>3 tablespoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>ginger</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garlic</name>
+      <name>lime</name>
       <quantity>1</quantity>
     </Ingredient>
     <Ingredient>
-      <name>oil</name>
-      <quantity>2 teaspoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>)</name>
-      <quantity>4 (6 ounc</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>pepper</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>vegetable</name>
-      <quantity>1 tablespoon</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-In a shallow glass dish, stir together the honey, soy sauce, balsamic vinegar, ginger, garlic and olive oil. Season fish fillets with salt and pepper, and place them into the dish. If the fillets have skin on them, place them skin side down. Cover, and refrigerate for 20 minutes to marinate.
-Heat vegetable oil in a large skillet over medium-high heat. Remove fish from the dish, and reserve marinade. Fry fish for 4 to 6 minutes on each side, turning only once, until fish flakes easily with a fork. Remove fillets to a serving platter and keep warm.
-Pour reserved marinade into the skillet, and heat over medium heat until the mixture reduces to a glaze consistently. Spoon glaze over fish, and serve immediately.</textInstructions>
-</Recipe>
-
-<Recipe>
-  <webLink>http://allrecipes.com/Recipe/Greek-Chicken-Pasta/Detail.aspx?evt19=1</webLink>
-  <name>Greek Chicken Pasta Recipe - Allrecipes.com</name>
-  <textIngredients>
-1 (16 ounce) package linguine pasta.
-1/2 cup chopped red onion.
-1 tablespoon olive oil.
-2 cloves garlic, crushed.
-1 pound skinless, boneless chicken breast meat - cut into bite-size pieces.
-1 (14 ounce) can marinated artichoke hearts, drained and chopped.
-1 large tomato, chopped.
-1/2 cup crumbled feta cheese.
-3 tablespoons chopped fresh parsley.
-2 tablespoons lemon juice.
-2 teaspoons dried oregano.
-salt and pepper to taste.
-2 lemons, wedged, for garnish.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>linguine</name>
-      <quantity>1 (16 ounce) package</quantity>
+      <name>salt</name>
+      <quantity>1 teaspoon</quantity>
     </Ingredient>
     <Ingredient>
       <name>onion</name>
       <quantity>1/2 cup</quantity>
     </Ingredient>
     <Ingredient>
-      <name>oil</name>
-      <quantity>1 tablespoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>clove</name>
-      <quantity>2</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>chicken</name>
-      <quantity>1 pound</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>chop</name>
-      <quantity>1 (14 ounce) can</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>tomato</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>feta</name>
-      <quantity>1/2 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>parsley</name>
+      <name>cilantro</name>
       <quantity>3 tablespoons</quantity>
     </Ingredient>
     <Ingredient>
-      <name>juice</name>
-      <quantity>2 tablespoons</quantity>
+      <name>tomato</name>
+      <quantity>2 roma</quantity>
     </Ingredient>
     <Ingredient>
-      <name>oregano</name>
-      <quantity>2 teaspoons</quantity>
+      <name>garlic</name>
+      <quantity>1 teaspoon</quantity>
     </Ingredient>
     <Ingredient>
-      <name>pepper</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garnish</name>
-      <quantity>2</quantity>
+      <name>cayenne</name>
+      <quantity>1 pinch</quantity>
     </Ingredient>
   </ingredients>
   <textInstructions>
-Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water until tender yet firm to the bit, 8 to 10 minutes; drain.
-Heat olive oil in a large skillet over medium-high heat. Add onion and garlic; saute until fragrant, about 2 minutes. Stir in the chicken and cook, stirring occasionally, until chicken is no longer pink in the center and the juices run clear, about 5 to 6 minutes.
-Reduce heat to medium-low; add artichoke hearts, tomato, feta cheese, parsley, lemon juice, oregano, and cooked pasta. Cook and stir until heated through, about 2 to 3 minutes. Remove from heat, season with salt and pepper, and garnish with lemon wedges.</textInstructions>
+In a medium bowl, mash together the avocados, lime juice, and salt. Mix in onion, cilantro, tomatoes, and garlic. Stir in cayenne pepper. Refrigerate 1 hour for best flavor, or serve immediately.</textInstructions>
 </Recipe>
 
 <Recipe>
@@ -1431,58 +1193,6 @@ Microwave on High until hot, about 3 minutes.</textInstructions>
 </Recipe>
 
 <Recipe>
-  <webLink>http://allrecipes.com/Recipe/Linguine-with-White-Clam-Sauce-I/Detail.aspx?evt19=1</webLink>
-  <name>Linguine with White Clam Sauce I Recipe - Allrecipes.com</name>
-  <textIngredients>
-1 (16 ounce) package linguini pasta.
-1 tablespoon olive oil.
-3 cloves garlic, minced.
-2 (6.5 ounce) cans minced clams, with juice.
-1/4 cup clam juice.
-1 tablespoon chopped fresh parsley.
-salt to taste.
-ground black pepper to taste.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>package</name>
-      <quantity>1 (16 ounce) package</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>oil</name>
-      <quantity>1 tablespoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>clove</name>
-      <quantity>3</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>juice</name>
-      <quantity>2 (6.5 ounce)</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>juice</name>
-      <quantity>1/4 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>parsley</name>
-      <quantity>1 tablespoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-In a large pot with boiling salted water cook linguini pasta until al dente.
-Meanwhile, in a medium sized saucepan using medium heat cook olive oil and minced garlic until garlic is translucent. Add chopped clams, clam juice or water, and chopped parsley. Add salt and ground black pepper to taste. Bring to a boil. Lower heat and simmer for 3 minutes.
-Toss pasta with clam sauce. Serve warm.</textInstructions>
-</Recipe>
-
-<Recipe>
   <webLink>http://allrecipes.com/Recipe/Marinated-Tuna-Steak/Detail.aspx?evt19=1</webLink>
   <name>Marinated Tuna Steak Recipe - Allrecipes.com</name>
   <textIngredients>
@@ -1530,7 +1240,7 @@ Toss pasta with clam sauce. Serve warm.</textInstructions>
     </Ingredient>
     <Ingredient>
       <name>tuna</name>
-      <quantity>4 (4 ounce) tuna</quantity>
+      <quantity>4 (4 ounce)</quantity>
     </Ingredient>
   </ingredients>
   <textInstructions>
@@ -1637,7 +1347,7 @@ Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.
       <quantity>1 tablespoon</quantity>
     </Ingredient>
     <Ingredient>
-      <name>package</name>
+      <name>cream</name>
       <quantity>1 (8 ounce) package</quantity>
     </Ingredient>
     <Ingredient>
@@ -1677,7 +1387,7 @@ Bake for 20 minutes in the preheated oven, or until the mushrooms are piping hot
 1/2 cup grated Parmesan cheese.</textIngredients>
   <ingredients>
     <Ingredient>
-      <name>package</name>
+      <name>pasta</name>
       <quantity>1 (16 ounce) package</quantity>
     </Ingredient>
     <Ingredient>
@@ -1712,20 +1422,17 @@ Stir in pasta, and heat through. Serve with Parmesan cheese.</textInstructions>
 </Recipe>
 
 <Recipe>
-  <webLink>http://allrecipes.com/Recipe/Ratatouille/Detail.aspx?evt19=1</webLink>
-  <name>Ratatouille Recipe - Allrecipes.com</name>
+  <webLink>http://allrecipes.com/Recipe/Pesto-Chicken-Florentine/Detail.aspx?evt19=1</webLink>
+  <name>Pesto Chicken Florentine Recipe - Allrecipes.com</name>
   <textIngredients>
 2 tablespoons olive oil.
-3 cloves garlic, minced.
-2 teaspoons dried parsley.
-1 eggplant, cut into 1/2 inch cubes.
-salt to taste.
-1 cup grated Parmesan cheese.
-2 zucchini, sliced.
-1 large onion, sliced into rings.
-2 cups sliced fresh mushrooms.
-1 green bell pepper, sliced.
-2 large tomatoes, chopped.</textIngredients>
+2 cloves garlic, finely chopped.
+4 skinless, boneless chicken breast halves - cut into strips.
+2 cups fresh spinach leaves.
+1 (4.5 ounce) package dry Alfredo sauce mix.
+2 tablespoons pesto.
+1 (8 ounce) package dry penne pasta.
+1 tablespoon grated Romano cheese.</textIngredients>
   <ingredients>
     <Ingredient>
       <name>oil</name>
@@ -1733,116 +1440,197 @@ salt to taste.
     </Ingredient>
     <Ingredient>
       <name>clove</name>
-      <quantity>3</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>parsley</name>
-      <quantity>2 teaspoons</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>eggplant</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>cube</name>
-      <quantity>1/2 inch</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>cheese</name>
-      <quantity>1 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>zucchini</name>
       <quantity>2</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>onion</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>mushroom</name>
-      <quantity>2 cups</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>bell</name>
-      <quantity>1</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>tomato</name>
-      <quantity>2</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-Preheat oven to 350 degrees F (175 degrees C). Coat bottom and sides of a 1 1/2 quart casserole dish with 1 tablespoon olive oil.
-Heat remaining 1 tablespoon olive oil in a medium skillet over medium heat. Cook and stir garlic until lightly browned. Mix in parsley and eggplant. Cook and stir until eggplant is soft, about 10 minutes. Season with salt to taste.
-Spread eggplant mixture evenly across bottom of prepared casserole dish. Sprinkle with a few tablespoons of Parmesan cheese. Spread zucchini in an even layer over top. Lightly salt and sprinkle with a little more cheese. Continue layering in this fashion, with onion, mushrooms, bell pepper, and tomatoes, covering each layer with a sprinkling of salt and cheese.
-Bake in preheated oven for 45 minutes.</textInstructions>
-</Recipe>
-
-<Recipe>
-  <webLink>http://allrecipes.com/Recipe/Restaurant-Style-Buffalo-Chicken-Wings/Detail.aspx?evt19=1</webLink>
-  <name>Restaurant-Style Buffalo Chicken Wings Recipe - Allrecipes.com</name>
-  <textIngredients>
-1/2 cup all-purpose flour.
-1/4 teaspoon paprika.
-1/4 teaspoon cayenne pepper.
-1/4 teaspoon salt.
-10 chicken wings.
-oil for deep frying.
-1/4 cup butter.
-1/4 cup hot sauce.
-1 dash ground black pepper.
-1 dash garlic powder.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>flour</name>
-      <quantity>1/2 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>paprika</name>
-      <quantity>1/4 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>cayenne</name>
-      <quantity>1/4 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>salt</name>
-      <quantity>1/4 teaspoon</quantity>
     </Ingredient>
     <Ingredient>
       <name>chicken</name>
-      <quantity>10</quantity>
+      <quantity>4</quantity>
     </Ingredient>
     <Ingredient>
-      <name>frying</name>
-      <quantity>oil</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>butter</name>
-      <quantity>1/4 cup</quantity>
+      <name>spinach</name>
+      <quantity>2 cups</quantity>
     </Ingredient>
     <Ingredient>
       <name>sauce</name>
-      <quantity>1/4 cup</quantity>
+      <quantity>1 (4.5 ounce) package</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>pesto</name>
+      <quantity>2 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>pasta</name>
+      <quantity>1 (8 ounce) package</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cheese</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+Heat oil in a large skillet over medium high heat. Add garlic, saute for 1 minute; then add chicken and cook for 7 to 8 minutes on each side. When chicken is close to being cooked through (no longer pink inside), add spinach and saute all together for 3 to 4 minutes.
+Meanwhile, prepare Alfredo sauce according to package directions. When finished, stir in 2 tablespoons pesto; set aside.
+In a large pot of salted boiling water, cook pasta for 8 to 10 minutes or until al dente. Rinse under cold water and drain.
+Add chicken/spinach mixture to pasta, then stir in pesto/Alfredo sauce. Mix well, top with cheese and serve.</textInstructions>
+</Recipe>
+
+<Recipe>
+  <webLink>http://allrecipes.com/Recipe/Pollo-Fajitas/Detail.aspx?evt19=1</webLink>
+  <name>Pollo Fajitas Recipe - Allrecipes.com</name>
+  <textIngredients>
+1 tablespoon Worcestershire sauce.
+1 tablespoon cider vinegar.
+1 tablespoon soy sauce.
+1 teaspoon chili powder.
+1 clove garlic, minced.
+1 dash hot pepper sauce.
+1 1/2 pounds boneless, skinless chicken thighs, cut into strips.
+1 tablespoon vegetable oil.
+1 onion, thinly sliced.
+1 green bell pepper, sliced.
+1/2 lemon, juiced.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>sauce</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>vinegar</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>soy</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>powder</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>garlic</name>
+      <quantity>1</quantity>
     </Ingredient>
     <Ingredient>
       <name>pepper</name>
       <quantity>1 dash</quantity>
     </Ingredient>
     <Ingredient>
-      <name>garlic</name>
-      <quantity>1 dash</quantity>
+      <name>chicken</name>
+      <quantity>1 1/2 pounds</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>vegetable</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>onion</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>bell</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>juice</name>
+      <quantity>1/2</quantity>
     </Ingredient>
   </ingredients>
   <textInstructions>
-In a small bowl mix together the flour, paprika, cayenne pepper and salt. Place chicken wings in a large nonporous glass dish or bowl and sprinkle flour mixture over them until they are evenly coated. Cover dish or bowl and refrigerate for 60 to 90 minutes.
-Heat oil in a deep fryer to 375 degrees F (190 degrees C). The oil should be just enough to cover wings entirely, an inch or so deep. Combine the butter, hot sauce, pepper and garlic powder in a small saucepan over low heat. Stir together and heat until butter is melted and mixture is well blended. Remove from heat and reserve for serving.
-Fry coated wings in hot oil for 10 to 15 minutes, or until parts of wings begin to turn brown. Remove from heat, place wings in serving bowl, add hot sauce mixture and stir together. Serve.</textInstructions>
+In a medium bowl, combine Worcestershire sauce, vinegar, soy sauce, chili powder, garlic and hot pepper sauce. Place chicken in sauce, and turn once to coat. Marinate for 30 minutes at room temperature, or cover and refrigerate for several hours.
+Heat oil in a large skillet over high heat. Add chicken strips to the pan, and saute for 5 minutes. Add the onion and green pepper, and saute another 3 minutes. Remove from heat, and sprinkle with lemon juice.</textInstructions>
+</Recipe>
+
+<Recipe>
+  <webLink>http://allrecipes.com/Recipe/Simple-Spinach-Lasagna/Detail.aspx?evt19=1</webLink>
+  <name>Simple Spinach Lasagna Recipe - Allrecipes.com</name>
+  <textIngredients>
+1 tablespoon extra virgin olive oil.
+2 (10 ounce) packages frozen chopped spinach.
+1/2 onion, chopped.
+1/2 teaspoon dried oregano.
+1/2 teaspoon dried basil.
+2 cloves garlic, crushed.
+1 (32 ounce) jar spaghetti sauce.
+1 1/2 cups water.
+2 cups non-fat cottage cheese.
+1 (8 ounce) package part skim mozzarella cheese, shredded.
+1/4 cup grated Parmesan cheese.
+1/2 cup chopped fresh parsley.
+1 teaspoon salt.
+1/8 teaspoon black pepper.
+1 egg.
+8 ounces lasagna noodles.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>oil</name>
+      <quantity>1 tablespoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>spinach</name>
+      <quantity>2 (10 ounce) packages</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>onion</name>
+      <quantity>1/2</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>oregano</name>
+      <quantity>1/2 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>basil</name>
+      <quantity>1/2 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>clove</name>
+      <quantity>2</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sauce</name>
+      <quantity>1 (32 ounce) jar</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>water</name>
+      <quantity>1 1/2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cottage</name>
+      <quantity>2 cups</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>part</name>
+      <quantity>1 (8 ounce) package</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cheese</name>
+      <quantity>1/4 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>parsley</name>
+      <quantity>1/2 cup</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>salt</name>
+      <quantity>1 teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>pepper</name>
+      <quantity>teaspoon</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>egg</name>
+      <quantity>1</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>noodle</name>
+      <quantity>8 ounces</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+Preheat oven to 350 degrees F (175 degrees C).
+In a large pot over medium heat saute spinach, onion, oregano, basil and garlic in the olive oil. Pour in spaghetti sauce and water; simmer 20 minutes. In a large bowl mix cottage cheese, mozzarella cheese, Parmesan cheese, parsley, salt, pepper and egg.
+Place a small amount of sauce in the bottom of a lasagna pan. Place 4 uncooked noodles on top of sauce and top with layer of sauce. Add 4 more noodles and layer with 1/2 sauce and 1/2 cheese mixture, noodles and repeat until all is layered, finishing with sauce.
+Cover with foil and bake in a preheated oven for 55 minutes. Remove foil and bake another 15 minutes. Let sit 10 minutes before serving.</textInstructions>
 </Recipe>
 
 <Recipe>
@@ -1888,7 +1676,7 @@ Fry coated wings in hot oil for 10 to 15 minutes, or until parts of wings begin 
     </Ingredient>
     <Ingredient>
       <name>tomato</name>
-      <quantity>2 (10.75 ounce)</quantity>
+      <quantity>2 (10.75 ounce) cans</quantity>
     </Ingredient>
     <Ingredient>
       <name>kidney</name>
@@ -1927,8 +1715,8 @@ Fry coated wings in hot oil for 10 to 15 minutes, or until parts of wings begin 
       <quantity>1/4 teaspoon</quantity>
     </Ingredient>
     <Ingredient>
-      <name>sauce</name>
-      <quantity>pepper</quantity>
+      <name>pepper</name>
+      <quantity>teaspoon</quantity>
     </Ingredient>
   </ingredients>
   <textInstructions>
@@ -1969,74 +1757,6 @@ Cover, and cook 8 hours on Low.</textInstructions>
   </ingredients>
   <textInstructions>
 Place the pork tenderloin in a slow cooker; pour the root beer over the meat. Cover and cook on low until well cooked and the pork shreds easily, 6 to 7 hours. Note: the actual length of time may vary according to individual slow cooker. Drain well. Stir in barbecue sauce. Serve over hamburger buns.</textInstructions>
-</Recipe>
-
-<Recipe>
-  <webLink>http://allrecipes.com/Recipe/Stuffed-Peppers/Detail.aspx?evt19=1</webLink>
-  <name>Stuffed Peppers Recipe - Allrecipes.com</name>
-  <textIngredients>
-1 pound ground beef.
-1/2 cup uncooked long grain white rice.
-1 cup water.
-6 green bell peppers.
-2 (8 ounce) cans tomato sauce.
-1 tablespoon Worcestershire sauce.
-1/4 teaspoon garlic powder.
-1/4 teaspoon onion powder.
-salt and pepper to taste.
-1 teaspoon Italian seasoning.</textIngredients>
-  <ingredients>
-    <Ingredient>
-      <name>beef</name>
-      <quantity>1 pound</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>grain</name>
-      <quantity>1/2 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>water</name>
-      <quantity>1 cup</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>bell</name>
-      <quantity>6</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>tomato</name>
-      <quantity>2 (8 ounce)</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>sauce</name>
-      <quantity>1 tablespoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>garlic</name>
-      <quantity>1/4 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>onion</name>
-      <quantity>1/4 teaspoon</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>pepper</name>
-      <quantity>salt</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>taste</name>
-      <quantity>pepper</quantity>
-    </Ingredient>
-    <Ingredient>
-      <name>seasoning</name>
-      <quantity>1 teaspoon</quantity>
-    </Ingredient>
-  </ingredients>
-  <textInstructions>
-Preheat oven to 350 degrees F (175 degrees C).
-Place the rice and water in a saucepan, and bring to a boil. Reduce heat, cover, and cook 20 minutes. In a skillet over medium heat, cook the beef until evenly browned.
-Remove and discard the tops, seeds, and membranes of the bell peppers. Arrange peppers in a baking dish with the hollowed sides facing upward. (Slice the bottoms of the peppers if necessary so that they will stand upright.)
-In a bowl, mix the browned beef, cooked rice, 1 can tomato sauce, Worcestershire sauce, garlic powder, onion powder, salt, and pepper. Spoon an equal amount of the mixture into each hollowed pepper. Mix the remaining tomato sauce and Italian seasoning in a bowl, and pour over the stuffed peppers.
-Bake 1 hour in the preheated oven, basting with sauce every 15 minutes, until the peppers are tender.</textInstructions>
 </Recipe>
 
 <Recipe>
@@ -2103,5 +1823,36 @@ Bake 1 hour in the preheated oven, basting with sauce every 15 minutes, until th
   <textInstructions>
 In a bowl, stir together water, ketchup, soy sauce, cornstarch, honey, crushed red pepper, and ground ginger. Set aside.
 Heat oil in a large skillet over medium-high heat. Stir in green onions and garlic; cook 30 seconds. Stir in shrimp, and toss to coat with oil. Stir in sauce. Cook and stir until sauce is bubbly and thickened.</textInstructions>
+</Recipe>
+
+<Recipe>
+  <webLink>http://allrecipes.com/Recipe/Valentine-Night-Strawberries/Detail.aspx?evt19=1</webLink>
+  <name>Valentine Night Strawberries Recipe - Allrecipes.com</name>
+  <textIngredients>
+20 fresh strawberries.
+1 (3 ounce) package cream cheese, softened.
+2 tablespoons chopped walnuts.
+1 1/2 tablespoons confectioners&apos; sugar.</textIngredients>
+  <ingredients>
+    <Ingredient>
+      <name>strawberry</name>
+      <quantity>20</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>cream</name>
+      <quantity>1 (3 ounce) package</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>walnut</name>
+      <quantity>2 tablespoons</quantity>
+    </Ingredient>
+    <Ingredient>
+      <name>sugar</name>
+      <quantity>1 1/2 tablespoons</quantity>
+    </Ingredient>
+  </ingredients>
+  <textInstructions>
+Dice two strawberries and set aside. Cut the stems off of each of the remaining strawberries, forming a base for strawberries to stand on. Starting at the pointed ends and cutting most of the way, but not completely through the stem end, slice each strawberry into four wedges.
+Beat the cream cheese until fluffy; stir in the diced strawberries, walnuts, and powdered sugar. Spoon or pipe about a teaspoon of mix into each strawberry.</textInstructions>
 </Recipe>
 </List>

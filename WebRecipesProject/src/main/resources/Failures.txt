@@ -5,8 +5,8 @@ bring cook drain transfer cook stir reduce continue preheat spread top arrange c
 1 1/2 | pounds | green bean
 4 | cups | onion
 2 | tablespoons | balsamic vinegar
-3 | null | garlic
-2 | teaspoons | white sugar 
+3 | clove | garlic
+2 | teaspoons | white sugar
 1 | teaspoon | basil
 1 | teaspoon | oregano
 1/4 | cup | Parmesan cheese
@@ -17,44 +17,44 @@ http://allrecipes.com/Recipe/Aaku-Pappu-Dal-with-Greens/Detail.aspx?evt19=1
 cook bring add cook drain stir set heat cook add continue stir
 
 1 | cup | pigeon pea
-2 | cups | water 
-2 | cups | water 
+2 | cups | water
+2 | cups | water
 1/2 | teaspoon | turmeric 
 null | null | salt
-1 | bunch | amaranth greens 
-2 | teaspoons | oil 
+1 | bunch | amaranth
+2 | teaspoons | oil
 1 | teaspoon | black lentil 
 1 | teaspoon | mustard seed 
-1 | teaspoon | cumin seed 
+1 | teaspoon | cumin seed
 4 | null | red chile pepper
 1 | pinch | asafoetida powder 
-2 | null | green chile pepper 
+2 | null | green chile pepper
 1 | sprig | curry leaf
 
 http://allrecipes.com/Recipe/Greek-Chicken-Pasta/Detail.aspx?evt19=1
 
-Boil Cook Drain Heat Add Saute Stir Cook Reduce Add Cook Stir Remove Season Garnish
+boil cook drain heat add saute stir cook reduce add cook stir remove season garnish
 
 1 | package | linguine pasta
-1/2 | cup | red onion
+1/2 | cup | onion
 1 | tablespoon | olive oil
 2 | cloves | garlic
-1 | pound | chicken meat
+1 | pound | chicken breast meat
 1 | can | artichoke heart
 1 | null | tomato
 1/2 | cup | feta cheese
 3 | tablespoons | parsley
 2 | tablespoons | lemon juice
 2 | teaspoons | oregano
-null | null | salt 
+null | null | salt
 null | null | pepper
 2 | null | lemon
 
 http://allrecipes.com/Recipe/Braised-Balsamic-Chicken/Detail.aspx?evt19=1
 
-Season Heat Cook Add Cook Stir Pour Season Simmer
+season heat cook add cook stir pour season simmer
 
-6 | null | chicken breast halve
+6 | halves | chicken breast
 1 | teaspoon | garlic salt
 null | null | black pepper
 2 | tablespoons | olive oil
@@ -68,10 +68,10 @@ null | null | black pepper
 
 http://allrecipes.com/Recipe/Amazing-Pork-Tenderloin-in-the-Slow-Cooker/Detail.aspx?evt19=1
 
-Place Pour Spread Sprinkle Cover Cook Serve
+place pour spread sprinkle cover cook serve
 
 1 | null | pork tenderloin
-1 | null | onion soup mix
+1 | envelope | onion soup mix
 1 | cup | water
 3/4 | cup | red wine
 3 | tablespoons | garlic
@@ -84,18 +84,19 @@ coat lay top season pour stir pour spread cook transfer shred return add stir co
 
 1 | teaspoon | olive oil 		
 4 | null | zucchini		
-1 | null | garlic		
-1 | null | pork roast 
+1 | null | garlic	
+1 | null | pork roast
 3 | tablespoons | curry powder
-null | null | salt 
-null | null | black pepper		
-2 | cans | tomato		
+null | null | salt
+null | null | black pepper
+2 | cans | tomato
+null | null | green chile pepper	
 3 | cubes | vegetable bouillon 
-3/4 | cup | water 
+3/4 | cup | water
 2 | tablespoons | garlic 
-1 | can | white bean		
+1 | can | white bean	
 1 | can | garbanzo bean		
-1/2 | cup | white rice
+1/2 | cup | rice
 
 http://allrecipes.com/Recipe/Stuffed-Peppers/Detail.aspx?evt19=1
 
@@ -146,7 +147,7 @@ null | null | oil
 
 http://allrecipes.com/Recipe/Unbelievable-Chicken/Detail.aspx?evt19=1
 
-Mix Whisk Place Cover Marinate Preheat Oil Place Cook Discard
+mix whisk place cover marinate preheat oil place cook discard
 
 1/4 | cup | cider vinegar
 3 | tablespoons | mustard
@@ -216,25 +217,25 @@ http://allrecipes.com/Recipe/Apple-Cider-Sauce-and-Pork-Loin-Chops/Detail.aspx?e
 
 preheat heat sprinkle place drizzle pour bake remove return stove stir boil stir serve
 
-3 | tablespoons | oil
-4 | null | pork 
+3 | tablespoons | olive oil
+4 | null | pork loin
 null | null | salt
-null | null | pepper
+null | null | black pepper
 null | null | garlic powder
-1/2 | teaspoon | poultry
+1/2 | teaspoon | poultry seasoning
 3 | tablespoons | Worcestershire sauce
 1 | container | cider
 1/4 | cup | sherry
 
 http://allrecipes.com/Recipe/Ginger-Glazed-Mahi-Mahi/Detail.aspx?evt19=1
 
-Stir Season Place Place Cover Refrigerate Heat Remove Reserve Fry Remove Keep Pour Heat Spoon Serve 
+stir season place place cover refrigerate heat remove reserve fry remove keep pour heat spoon serve 
 
 3 | tablespoons | honey
 3 | tablespoons | soy sauce
 3 | tablespoons | balsamic vinegar
 1 | teaspoon | ginger root
-1 | cloves | garlic
+1 | clove | garlic
 2 | teaspoons | olive oil
 4 | null | mahi mahi fillets
 null | null | salt 
@@ -243,7 +244,7 @@ null | null | pepper
 
 http://allrecipes.com/Recipe/Linguine-with-White-Clam-Sauce-I/Detail.aspx?evt19=1
 
-Cook Cook Add Add Bring Lower Simmer Toss Serve
+cook cook add add bring lower simmer toss serve
 
 1 | package | linguini pasta
 1 | tablespoon | olive oil
