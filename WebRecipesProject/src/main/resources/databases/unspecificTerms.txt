@@ -9,3 +9,8 @@ bouillon
 seasoning
 liqueur
 syrup
+cheese
+wine
+vinegar
+oil
+pepper
