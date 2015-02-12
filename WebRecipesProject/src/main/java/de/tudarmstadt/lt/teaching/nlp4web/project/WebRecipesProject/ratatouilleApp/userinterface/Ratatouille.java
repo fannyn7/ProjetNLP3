@@ -55,7 +55,6 @@ public class Ratatouille {
 
 	public static void main(String[] args) throws UIMAException, IOException {
 		new Ratatouille();
-		//ExtractionPipeline.executePipeline("http://allrecipes.com/Recipe/Amazing-Pork-Tenderloin-in-the-Slow-Cooker/Detail.aspx?evt19=1");// brackets 1 (2pound) -> pound (1) 
 	}
 
 	public Ratatouille()	{
@@ -172,7 +171,7 @@ public class Ratatouille {
 			XStream xstream = XStreamFactory.createXStream();
 			myRecipes = (List<Recipe>) xstream.fromXML(new File(BOOK_INIT_FILE_NAME));
 			if (debug) {
-				System.out.println("Couldn't load book. Start with training set");
+				System.out.println("Couldn't load book. Start with evaluated recipes");
 				System.out.println("Number of favorite recipe : "+myRecipes.size());
 				for(Recipe r : myRecipes) {
 					System.out.println("Recipe\nname: "+r.getName()+"\nweb link: "+r.getWebLink()+"\nnumber of ingredients: "+r.getIngredients().size());

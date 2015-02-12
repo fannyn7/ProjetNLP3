@@ -139,7 +139,12 @@ public class AnalyzeResults extends JCasAnnotator_ImplBase{
 			for (IngredientAnnotation a : JCasUtil.select(jcas, IngredientAnnotation.class)){
 				Boolean alreadyAdded = false;
 				for ( Ingredient ing : realIngredientsSet){
-					if(!alreadyAdded && (ing.ingredient.contains(a.getNormalizedName())) && ((a.getAmount()==null && ing.amount.equals("") && ing.unit.equals("")) || (a.getAmount().contains(ing.amount))&& a.getAmount().contains(ing.unit))){
+					if(!alreadyAdded 
+							&& (ing.ingredient.contains(a.getNormalizedName()))
+							&& ( ((a.getAmount()==null) && ing.amount.equals("") && ing.unit.equals("")) 
+									|| ( (a.getAmount() !=null) 
+											&& a.getAmount().contains(ing.amount)
+											&& a.getAmount().contains(ing.unit) ) ) ) {
 						correctI++;
 						alreadyAdded = true;
 					}
